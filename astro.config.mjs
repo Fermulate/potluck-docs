@@ -8,7 +8,7 @@ export default defineConfig({
     starlight({
       title: 'Potluck guide',
       description: 'How to split expenses and plan get-togethers with Potluck.',
-      customCss: ['./src/styles/fonts.css'],
+      customCss: ['./src/styles/fonts.css', './src/styles/theme.css'],
     }),
   ],
 })

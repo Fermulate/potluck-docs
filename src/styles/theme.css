@@ -1,0 +1,179 @@
+/*
+ * Supper Club, the Potluck look: paper and ink, a splash of tomato and saffron.
+ * Values follow packages/tokens/src/color.ts in the app repo.
+ */
+
+/* Dark is Starlight's base theme, so it lives on :root. */
+:root {
+  --pl-paper: #14110e;
+  --pl-card: #1f1b17;
+  --pl-sunken: #0f0d0a;
+  --pl-ink: #f6efe3;
+  --pl-mute: #a89d8f;
+  --pl-line: #322b24;
+  --pl-line-strong: #4a4037;
+
+  --pl-tomato: #ff6a4d;
+  --pl-tomato-ink: #ff8a70;
+  --pl-tomato-soft: #3b1f18;
+  --pl-on-tomato: #1d1a16;
+  --pl-saffron: #ffc65c;
+  --pl-saffron-ink: #ffc65c;
+  --pl-saffron-soft: #382c15;
+  --pl-olive: #8fb062;
+  --pl-olive-ink: #a6c47c;
+  --pl-olive-soft: #222a18;
+  --pl-plum: #c79bd0;
+  --pl-plum-ink: #d6b3dc;
+  --pl-plum-soft: #2d2030;
+
+  /* The balance hero turns into a lit paper slip in the dark. */
+  --pl-hero: #f3e9d8;
+  --pl-on-hero: #1d1a16;
+  --pl-hero-mute: #6c6152;
+  --pl-hero-tomato: #b23a22;
+
+  --pl-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.7);
+  --pl-radius-card: 18px;
+  --pl-radius-input: 12px;
+
+  --sl-color-white: var(--pl-ink);
+  --sl-color-gray-1: #ede4d6;
+  --sl-color-gray-2: #d9cebf;
+  --sl-color-gray-3: var(--pl-mute);
+  --sl-color-gray-4: #7a6f62;
+  --sl-color-gray-5: var(--pl-line-strong);
+  --sl-color-gray-6: var(--pl-line);
+  --sl-color-black: var(--pl-paper);
+
+  --sl-color-accent-low: var(--pl-tomato-soft);
+  --sl-color-accent: var(--pl-tomato);
+  --sl-color-accent-high: var(--pl-tomato-ink);
+
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--pl-tomato-ink);
+  --sl-color-text-invert: var(--pl-on-tomato);
+  --sl-color-bg: var(--pl-paper);
+  --sl-color-bg-nav: var(--pl-paper);
+  --sl-color-bg-sidebar: var(--pl-paper);
+  --sl-color-bg-inline-code: var(--pl-card);
+  --sl-color-bg-accent: var(--pl-tomato);
+  --sl-color-hairline-light: var(--pl-line);
+  --sl-color-hairline: var(--pl-line);
+  --sl-color-hairline-shade: var(--pl-sunken);
+  --sl-color-backdrop-overlay: rgb(5 4 3 / 0.62);
+
+  --sl-color-orange-low: var(--pl-saffron-soft);
+  --sl-color-orange: var(--pl-saffron);
+  --sl-color-orange-high: var(--pl-saffron-ink);
+  --sl-color-green-low: var(--pl-olive-soft);
+  --sl-color-green: var(--pl-olive);
+  --sl-color-green-high: var(--pl-olive-ink);
+  --sl-color-red-low: var(--pl-tomato-soft);
+  --sl-color-red: var(--pl-tomato);
+  --sl-color-red-high: var(--pl-tomato-ink);
+  --sl-color-purple-low: var(--pl-plum-soft);
+  --sl-color-purple: var(--pl-plum);
+  --sl-color-purple-high: var(--pl-plum-ink);
+  --sl-color-blue-low: var(--pl-olive-soft);
+  --sl-color-blue: var(--pl-olive);
+  --sl-color-blue-high: var(--pl-olive-ink);
+
+  --sl-line-height: 1.7;
+  --sl-content-width: 44rem;
+}
+
+:root[data-theme='light'],
+[data-theme='light'] ::backdrop {
+  --pl-paper: #fbf5ea;
+  --pl-card: #ffffff;
+  --pl-sunken: #f4ecde;
+  --pl-ink: #1d1a16;
+  --pl-mute: #716759;
+  --pl-line: #ebe2d3;
+  --pl-line-strong: #d8cab3;
+
+  --pl-tomato: #e8492f;
+  --pl-tomato-ink: #bc3720;
+  --pl-tomato-soft: #fde4da;
+  --pl-on-tomato: #ffffff;
+  --pl-saffron: #f5b53d;
+  --pl-saffron-ink: #8f5c00;
+  --pl-saffron-soft: #fdf0d4;
+  --pl-olive: #5f7a3a;
+  --pl-olive-ink: #4f6a2c;
+  --pl-olive-soft: #e9eedd;
+  --pl-plum: #6b3d6e;
+  --pl-plum-ink: #6b3d6e;
+  --pl-plum-soft: #f1e4ef;
+
+  --pl-hero: #1d1a16;
+  --pl-on-hero: #fbf5ea;
+  --pl-hero-mute: #b9ad9c;
+  --pl-hero-tomato: #ff7a5c;
+
+  --pl-shadow: 0 18px 40px -20px rgb(80 52 20 / 0.35);
+
+  --sl-color-white: var(--pl-ink);
+  --sl-color-gray-1: #2b2620;
+  --sl-color-gray-2: #3b342c;
+  --sl-color-gray-3: var(--pl-mute);
+  --sl-color-gray-4: #a3978a;
+  --sl-color-gray-5: var(--pl-line-strong);
+  --sl-color-gray-6: var(--pl-line);
+  --sl-color-gray-7: var(--pl-sunken);
+  --sl-color-black: var(--pl-paper);
+
+  --sl-color-accent-low: var(--pl-tomato-soft);
+  --sl-color-accent: var(--pl-tomato);
+  --sl-color-accent-high: var(--pl-tomato-ink);
+
+  --sl-color-text-accent: var(--pl-tomato-ink);
+  --sl-color-text-invert: var(--pl-on-tomato);
+  --sl-color-bg-nav: var(--pl-paper);
+  --sl-color-bg-sidebar: var(--pl-paper);
+  --sl-color-bg-inline-code: var(--pl-sunken);
+  --sl-color-bg-accent: var(--pl-tomato-ink);
+  --sl-color-hairline-light: var(--pl-line);
+  --sl-color-hairline-shade: var(--pl-line);
+  --sl-color-backdrop-overlay: rgb(29 26 22 / 0.42);
+
+  --sl-color-orange-low: var(--pl-saffron-soft);
+  --sl-color-orange: var(--pl-saffron);
+  --sl-color-orange-high: var(--pl-saffron-ink);
+  --sl-color-green-low: var(--pl-olive-soft);
+  --sl-color-green: var(--pl-olive);
+  --sl-color-green-high: var(--pl-olive-ink);
+  --sl-color-red-low: var(--pl-tomato-soft);
+  --sl-color-red: var(--pl-tomato);
+  --sl-color-red-high: var(--pl-tomato-ink);
+  --sl-color-purple-low: var(--pl-plum-soft);
+  --sl-color-purple: var(--pl-plum);
+  --sl-color-purple-high: var(--pl-plum-ink);
+  --sl-color-blue-low: var(--pl-olive-soft);
+  --sl-color-blue: var(--pl-olive);
+  --sl-color-blue-high: var(--pl-olive-ink);
+}
+
+::selection {
+  background: var(--pl-saffron);
+  color: #1d1a16;
+}
+
+body {
+  font-feature-settings: 'tnum' 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pl-ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
