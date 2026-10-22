@@ -1,0 +1,179 @@
+/* Type and page furniture. Page titles talk like the app: big serif, tight. */
+
+h1#_top {
+  font-family: var(--pl-font-display);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 2rem + 3vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.sl-markdown-content :is(h2, h3, h4):not(:where(.not-content *)) {
+  font-family: var(--pl-font-ui);
+  color: var(--sl-color-white);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.sl-markdown-content h2:not(:where(.not-content *)) {
+  font-size: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
+  font-weight: 750;
+  margin-top: 2.75rem;
+}
+
+.sl-markdown-content h3:not(:where(.not-content *)) {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.sl-markdown-content :is(p, li) {
+  text-wrap: pretty;
+}
+
+.sl-markdown-content a:not(:where(.not-content *)) {
+  color: var(--pl-tomato-ink);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.2em;
+}
+
+.sl-markdown-content a:not(:where(.not-content *)):hover {
+  color: var(--sl-color-white);
+}
+
+.sl-markdown-content strong {
+  color: var(--sl-color-white);
+  font-weight: 650;
+}
+
+/* The page lede, right under the title. */
+.sl-markdown-content > p:first-child {
+  font-size: 1.125rem;
+  color: var(--sl-color-gray-2);
+}
+
+/* Steps: tomato counters, like the app's primary buttons. */
+.sl-steps > li::before {
+  background-color: var(--pl-tomato);
+  color: var(--pl-on-tomato);
+  font-weight: 800;
+  box-shadow: none;
+}
+
+.sl-steps > li::after {
+  background-color: var(--pl-line);
+}
+
+/* Asides: soft tinted slips with a serif italic title, no side rail. */
+.starlight-aside {
+  border: 1px solid var(--sl-color-asides-border-soft, var(--pl-line));
+  border-radius: var(--pl-radius-card);
+  padding: 1rem 1.25rem;
+}
+
+.starlight-aside__title {
+  font-family: var(--pl-font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.starlight-aside__icon {
+  display: none;
+}
+
+.starlight-aside--note {
+  --sl-color-asides-text-accent: var(--pl-olive-ink);
+  --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-olive) 30%, transparent);
+  background-color: var(--pl-olive-soft);
+}
+
+.starlight-aside--tip {
+  --sl-color-asides-text-accent: var(--pl-saffron-ink);
+  --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-saffron) 40%, transparent);
+  background-color: var(--pl-saffron-soft);
+}
+
+.starlight-aside--caution {
+  --sl-color-asides-text-accent: var(--pl-plum-ink);
+  --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-plum) 30%, transparent);
+  background-color: var(--pl-plum-soft);
+}
+
+.starlight-aside--danger {
+  --sl-color-asides-text-accent: var(--pl-tomato-ink);
+  --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-tomato) 35%, transparent);
+  background-color: var(--pl-tomato-soft);
+}
+
+/* Tables read like a bill: hairlines, tabular figures, no zebra. */
+.sl-markdown-content table:not(:where(.not-content *)) {
+  font-variant-numeric: tabular-nums;
+  border-collapse: collapse;
+  font-size: var(--sl-text-sm);
+}
+
+.sl-markdown-content :is(th, td):not(:where(.not-content *)) {
+  border-bottom: 1px solid var(--pl-line);
+  padding: 0.6rem 0.9rem 0.6rem 0;
+}
+
+.sl-markdown-content th:not(:where(.not-content *)) {
+  color: var(--sl-color-white);
+  font-weight: 700;
+  border-bottom-color: var(--pl-line-strong);
+  background: none;
+}
+
+.sl-markdown-content tr:nth-child(2n):not(:where(.not-content *)) {
+  background: none;
+}
+
+.sl-markdown-content :is(code, kbd):not(:where(.not-content *)) {
+  border-radius: 6px;
+}
+
+.sl-markdown-content kbd:not(:where(.not-content *)) {
+  font-family: var(--pl-font-ui);
+  font-weight: 650;
+  font-size: 0.85em;
+  padding: 0.1em 0.45em;
+  border: 1px solid var(--pl-line-strong);
+  border-bottom-width: 2px;
+  background: var(--pl-card);
+  color: var(--sl-color-white);
+}
+
+/* Sidebar: current page gets a saffron pill, like the app's tab bar. */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover {
+  background: var(--pl-saffron-soft);
+  color: var(--sl-color-white);
+  font-weight: 650;
+  border-radius: 999px;
+}
+
+.sidebar-content .group-label .large {
+  font-family: var(--pl-font-display);
+  font-weight: 400;
+  font-size: 1.35rem;
+  color: var(--sl-color-white);
+}
+
+/* Prev and next links. */
+.pagination-links a {
+  border-radius: var(--pl-radius-card);
+  border-color: var(--pl-line);
+  box-shadow: none;
+}
+
+.pagination-links a:hover {
+  border-color: var(--pl-line-strong);
+}
+
+.pagination-links .link-title {
+  font-family: var(--pl-font-display);
+  font-size: 1.5rem;
+  color: var(--sl-color-white);
+}
