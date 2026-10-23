@@ -1,0 +1,58 @@
+---
+// The pot mark from the app, then the wordmark and a quiet "guide" tag.
+const { siteTitleHref } = Astro.locals.starlightRoute
+---
+
+<a href={siteTitleHref} class="pl-title" aria-label="Potluck guide, home">
+  <svg viewBox="0 0 32 32" aria-hidden="true" class="pl-mark">
+    <path
+      d="M12 3.5c-1.6 1.6 1.6 3.2 0 4.8M18 3.5c-1.6 1.6 1.6 3.2 0 4.8"
+      fill="none"
+      stroke="var(--pl-mute)"
+      stroke-width="1.6"
+      stroke-linecap="round"></path>
+    <circle cx="16" cy="11.4" r="1.8" fill="var(--pl-saffron)"></circle>
+    <path d="M4 14h24c0 7.2-5.4 13-12 13S4 21.2 4 14Z" fill="var(--pl-tomato)"></path>
+    <path d="M3 14h26" stroke="var(--pl-ink)" stroke-width="2" stroke-linecap="round"></path>
+    <path
+      d="M9.5 18.5c1 2.6 3.3 4.4 6.5 4.6"
+      fill="none"
+      stroke="var(--pl-on-tomato)"
+      stroke-opacity="0.55"
+      stroke-width="1.6"
+      stroke-linecap="round"></path>
+  </svg>
+  <span class="pl-word" translate="no">Potluck</span>
+  <span class="pl-tag">guide</span>
+</a>
+
+<style>
+  .pl-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--pl-ink);
+    white-space: nowrap;
+    border-radius: 999px;
+  }
+  .pl-mark {
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+  }
+  .pl-word {
+    font-family: var(--pl-font-display);
+    font-size: 1.75rem;
+    line-height: 1;
+    margin-bottom: -0.15rem;
+  }
+  .pl-tag {
+    font-size: 0.8125rem;
+    font-weight: 650;
+    color: var(--pl-mute);
+    border: 1px solid var(--pl-line-strong);
+    border-radius: 999px;
+    padding: 0.05rem 0.5rem;
+  }
+</style>

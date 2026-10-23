@@ -8,6 +8,10 @@ export default defineConfig({
     starlight({
       title: 'Potluck guide',
       description: 'How to split expenses and plan get-togethers with Potluck.',
+      favicon: '/favicon.svg',
+      components: {
+        SiteTitle: './src/components/SiteTitle.astro',
+      },
       customCss: ['./src/styles/fonts.css', './src/styles/theme.css', './src/styles/content.css'],
     }),
   ],
