@@ -1,0 +1,90 @@
+---
+/**
+ * A real app screenshot that follows the reader's theme.
+ *
+ * Every screen exists as `<name>-<device>-<light|dark>.png` in public/screenshots.
+ * Both images are rendered; CSS on Starlight's `data-theme` attribute hides the one that
+ * does not match, so the manual theme toggle works too (a <picture> media query would
+ * only follow the system setting). Hidden lazy images are never downloaded.
+ */
+interface Props {
+  /** Screen name, e.g. `expense-new-percent`. */
+  name: string
+  /** What the screenshot shows, for people who cannot see it. */
+  alt: string
+  caption?: string
+  device?: 'mobile' | 'desktop'
+}
+
+const { name, alt, caption, device = 'mobile' } = Astro.props
+const size = device === 'mobile' ? { width: 780, height: 1688 } : { width: 1440, height: 900 }
+const src = (theme: 'light' | 'dark') => `/screenshots/${name}-${device}-${theme}.png`
+---
+
+<figure class:list={['pl-shot', `pl-shot--${device}`, 'not-content']}>
+  <div class="pl-shot__frame">
+    <img
+      class="pl-shot__img pl-shot__img--light"
+      src={src('light')}
+      alt={alt}
+      {...size}
+      loading="lazy"
+      decoding="async"
+    />
+    <img
+      class="pl-shot__img pl-shot__img--dark"
+      src={src('dark')}
+      alt={alt}
+      {...size}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .pl-shot {
+    margin: 1.5rem 0 2rem;
+  }
+  .pl-shot__frame {
+    overflow: hidden;
+    background: var(--pl-card);
+    border: 1px solid var(--pl-line);
+    box-shadow: var(--pl-shadow);
+  }
+  .pl-shot--mobile .pl-shot__frame {
+    width: min(17.5rem, 100%);
+    border-radius: 1.75rem;
+  }
+  .pl-shot--desktop .pl-shot__frame {
+    border-radius: var(--pl-radius-card);
+  }
+  .pl-shot__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  :global(:root[data-theme='dark']) .pl-shot__img--light,
+  :global(:root:not([data-theme='dark'])) .pl-shot__img--dark {
+    display: none;
+  }
+  figcaption {
+    margin-top: 0.75rem;
+    max-width: 17.5rem;
+    font-size: var(--sl-text-sm);
+    line-height: 1.5;
+    color: var(--pl-mute);
+  }
+  .pl-shot--desktop figcaption {
+    max-width: none;
+  }
+  @media print {
+    .pl-shot__img--dark {
+      display: none !important;
+    }
+    .pl-shot__img--light {
+      display: block !important;
+    }
+  }
+</style>
