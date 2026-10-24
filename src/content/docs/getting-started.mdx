@@ -1,0 +1,115 @@
+---
+title: Getting started
+description: Create a Potluck account, set up your profile, install the app, and find your way around Home.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+import Screenshot from '~/components/Screenshot.astro'
+
+Potluck runs in your browser, on your phone and on your computer. There is nothing to download first, and it costs nothing.
+
+## Create an account
+
+<Steps>
+
+1. Open [Potluck](https://potluck.potluck-web.workers.dev) and tap **Get started**.
+
+2. On **Join the table**, fill in **Your name**, **Email** and **Password**. The password needs at least 8 characters.
+
+   <Screenshot
+     name="sign-up"
+     alt="The Join the table screen with fields for your name, email and password, and a red Create account button."
+   />
+
+3. Tap **Create account**. If Potluck asks you to confirm your email, open the link it sends you.
+
+</Steps>
+
+Already have an account? Tap **Sign in** instead. You can type your password, or tap **Email me a sign-in link** and sign in from your inbox without one.
+
+:::note[Good to know]
+If someone sent you an invite link, open that link first. The invite page has its own **Create an account to join** button, and you land in the group as soon as you are signed up. See [Joining a group](/groups/invites/#join-with-a-link).
+:::
+
+## Set up your profile
+
+The first time you sign in, Potluck asks two quick things.
+
+<Steps>
+
+1. **First, the basics.** Add a photo if you like (PNG, JPG, WebP or GIF, up to 5 MB), check your **Display name**, and confirm your **Time zone** and **Default currency**. Potluck guesses the time zone from your device. New groups you create start in your default currency.
+
+   <Screenshot
+     name="welcome"
+     alt="Step 1 of 2, First, the basics: a round avatar with initials, an Add a photo link, the display name, a time zone set to America / Toronto, a default currency of USD, and a Looks good button."
+   />
+
+2. Tap **Looks good**.
+
+3. **Start a group.** Pick **Create a group**, or **I have an invite link** to paste a link someone sent you. **Maybe later** takes you straight to Home.
+
+</Steps>
+
+You can change all of this later on the [Me page](/account/).
+
+## Install Potluck as an app
+
+Potluck is a web app you can add to your home screen. It then opens full screen, without the browser bars, and it can send [push notifications](/notifications/).
+
+### iPhone and iPad
+
+<Steps>
+
+1. Open Potluck in **Safari**.
+2. Tap the **Share** button.
+3. Scroll down and tap **Add to Home Screen**, then **Add**.
+
+</Steps>
+
+:::tip[On iPhone]
+Push notifications only work after you add Potluck to your home screen and open it from there.
+:::
+
+### Android
+
+<Steps>
+
+1. Open Potluck in **Chrome**.
+2. Tap the three-dot menu.
+3. Tap **Install app** (on some phones it says **Add to Home screen**).
+
+</Steps>
+
+### Computer
+
+In Chrome or Edge, click the install icon at the right end of the address bar, then **Install**. Potluck gets its own window and a spot in your dock or Start menu.
+
+On Android and on a computer, right-click or long-press the installed icon to jump straight to **Add expense** or **Plan something**.
+
+## A tour of Home
+
+Home is where Potluck tells you what needs you right now.
+
+<Screenshot
+  name="home"
+  alt="Home on a phone. A greeting reads Afternoon, Noor. Below it, a dark balance card says All told, you owe $35.10, split into You owe $35.10 and Owed to you $0.00, with one group listed. Under that, a Needs you card asks about Dinner at mine with Can't and Going buttons, then a Coming up list. The tab bar at the bottom has Home, Groups, a big plus button, Plans and Me."
+/>
+
+- **The greeting** says how many things need you.
+- **Your balance** adds up every group in your default currency: **All told, you owe** or **All told, you are owed**, with **You owe** and **Owed to you** underneath and one line per group. Tap a group to open it. Groups in other currencies show up as **Plus balances in** that currency.
+- **Needs you** lists plans waiting on you: polls where you have not added your times yet, and plans where you have not said whether you are going.
+- **Coming up** shows plans that are on the calendar. **See all** opens [Plans](/plans/).
+- **Your groups** lists your groups, with a shortcut to a **New group**.
+
+### Getting around
+
+On a phone, the tab bar at the bottom has **Home**, **Groups**, **Plans** and **Me**. The big plus button in the middle opens **What are we doing?** with three shortcuts: **Add expense**, **Plan something** and **Settle up**.
+
+<Screenshot
+  name="quick-add"
+  alt="The What are we doing? sheet with three choices: Add expense (Somebody paid for something), Plan something (Find a night that works) and Settle up (Square things away)."
+/>
+
+On a computer, the same places sit in a rail on the left, with an **Add** button at the top and **Notifications** as its own item. On a phone, unread notifications show as a badge on **Me**.
+
+Next: [start a group](/groups/).
