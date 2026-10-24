@@ -1,0 +1,78 @@
+---
+title: Inviting people
+description: Make an invite link, choose who it lets in and for how long, and join a group from a link.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+import Screenshot from '~/components/Screenshot.astro'
+
+People join a group with a link. There are no usernames to look up and no friend requests. Send the link in the group chat and everyone who taps it is in.
+
+## Make an invite link
+
+<Steps>
+
+1. In the group, tap **Invite** (top of every tab) or **Invite people** on the **Members** tab.
+
+2. Tap **Create link**. The summary above the button says what the link allows. By default it is a **Member link** that **anyone** can use and that **expires in 7 days**.
+
+   <Screenshot
+     name="invite-sheet"
+     alt="The Invite people sheet. A link card shows the start of the link, Unlimited, Expires Nov 12, 5 joined, with Copy link and Share buttons and a small X to revoke it. Below, the line Member link: anyone, expires in 7 days, a Link settings toggle, and a New link button."
+   />
+
+3. Tap **Copy link** and paste it wherever your friends are, or tap **Share** to use your phone's share sheet.
+
+</Steps>
+
+### Change what a link allows
+
+Tap **Link settings** before you create the link:
+
+| Setting | Choices |
+| --- | --- |
+| **Joins as** | **Member** or **Admin**. Only the group owner sees this choice. |
+| **Uses** | **1**, **5**, **25** or **Unlimited**. A one-use link is good for inviting a single person. |
+| **Expires** | **1 day**, **7 days**, **30 days** or **Never**. |
+
+Tap **New link** to make another one with different settings. Every link that still works is listed under **Open links**, with how many uses are left, when it expires and how many people joined with it.
+
+### Close a link
+
+Tap the **X** next to a link (**Revoke**). Anyone who opens it afterwards sees that it was revoked. If you tapped it by mistake, tap **Undo** on the message that pops up.
+
+:::note[Good to know]
+- Owners and admins can always invite. Regular members can too, unless an owner or admin turns off **Members can invite people** in [Group settings](/groups/settings/#house-rules).
+- Archived groups and [one-on-one tabs](/friends/) cannot have invite links.
+- The invite page shows the group's name, emoji, how many people are in it and their first names. Anyone holding the link can see that much, so share it with the people you mean to invite.
+:::
+
+## Join with a link
+
+<Steps>
+
+1. Open the link. You see the group, who invited you and who is already in.
+
+   <Screenshot
+     name="invite"
+     alt="The invite page. A large pot emoji, the words You are invited, the group name Supper club, the line Maya wants you at the table, a row of member faces with Maya, Noor, Ike and 3 others are already in, and two buttons: Create an account to join and Sign in to join."
+   />
+
+2. New to Potluck? Tap **Create an account to join**. Already have an account? Tap **Sign in to join**. If you are signed in, the button says **Join** and the group's name.
+
+3. You land in the group. Everyone in it now shows up on your [Friends](/friends/) list.
+
+</Steps>
+
+If you are already in the group, the page says so and offers **Open group**.
+
+### When a link does not work
+
+The page says **This invite has gone cold** and tells you why:
+
+- **This link has expired.** Ask for a fresh one.
+- **This link has been used up.** It hit its limit on uses.
+- **This link was revoked.** Someone closed it.
+- **We could not find that invite.** Check that you copied the whole link.
+
+In every case, ask someone in the group for a new link. Owners and admins can make one in seconds.
