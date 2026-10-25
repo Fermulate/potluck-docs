@@ -1,0 +1,82 @@
+---
+title: Roles and members
+description: What owners, admins and members can do, how to change roles, remove people, leave a group, and hand over ownership.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+import Screenshot from '~/components/Screenshot.astro'
+
+Every group has exactly one **Owner**, any number of **Admins**, and everyone else is a **Member**. You can see each person's role on the **Members** tab.
+
+<Screenshot
+  name="group-members"
+  alt="The Members tab of Supper club. Maya Ruiz (you) is marked Owner and is owed $282.44. Noor Haddad is marked Admin and owes $35.10. Ike Adams, Jo Lindqvist and Kai Moana owe money too. Each other member has a three-dot menu button."
+/>
+
+## Who can do what
+
+| | Owner | Admin | Member |
+| --- | :-: | :-: | :-: |
+| Add expenses, and edit or delete the ones you added or paid | yes | yes | yes |
+| Edit or delete anyone's expense | yes | yes | no |
+| Add your times, RSVP and comment on plans | yes | yes | yes |
+| Plan something and nudge people | yes | yes | yes |
+| Lock in or call off a plan | yes | yes | only plans they organized |
+| Make member invite links | yes | yes | if the group allows it |
+| Make admin invite links | yes | no | no |
+| Change roles and remove people | yes | regular members only | no |
+| Change group settings, archive the group | yes | yes | no |
+| Transfer ownership, delete the group | yes | no | no |
+
+In the app's own words: the owner "runs the place", admins "can edit settings, manage members, and fix anyone's expenses", and members "add expenses, vote on plans, and settle up".
+
+## Change someone's role
+
+<Steps>
+
+1. On the **Members** tab, tap the three-dot button next to the person.
+2. Tap **Make admin** or **Make regular member**, then **Confirm**.
+
+</Steps>
+
+Owners can change anyone except themselves. Admins can only change regular members, which includes promoting a member to admin.
+
+## Remove someone
+
+<Steps>
+
+1. On the **Members** tab, tap the three-dot button next to the person.
+2. Tap **Remove from group**, then **Remove**.
+
+</Steps>
+
+Owners can remove anyone. Admins can remove regular members. Nobody can remove the owner.
+
+## Leave a group
+
+Tap **Leave group** at the bottom of the **Members** tab (it is also under **The exit** in [Group settings](/groups/settings/)), then confirm.
+
+## The open balance rule
+
+You cannot leave a group, or remove someone from it, while that person still owes money or is owed money there. Potluck says **You still have an open balance here. Settle up first.** or **still has an open balance. Settle up first.**
+
+This keeps the books honest. If someone could walk away mid-tab, the rest of the group would be left holding a debt nobody can collect. [Settle up](/balances/settle-up/) until the balance is zero, then leave.
+
+:::note[Good to know]
+Leaving does not erase what you did. Expenses you added or were part of stay in the group, so everyone else's totals still add up.
+:::
+
+## Transfer ownership
+
+The owner cannot leave until someone else owns the group. Potluck says **Hand ownership to someone else before you go.**
+
+<Steps>
+
+1. On the **Members** tab, tap the three-dot button next to the new owner.
+2. Tap **Make owner**, then confirm.
+
+</Steps>
+
+They become the owner and you become an admin. From there you can leave like anyone else.
+
+If you are the only person left in a group you own, you can leave without handing it over. The group is deleted when you go.
