@@ -1,0 +1,89 @@
+---
+title: Splitting
+description: The five ways to split an expense in Potluck, with worked examples, and how leftover cents are handled.
+---
+
+import Screenshot from '~/components/Screenshot.astro'
+
+Under **Split between** on an expense, pick who it was for by tapping their names, then pick how to split it: **Equal**, **Exact**, **Percent**, **Shares** or **By item**. Whatever you choose, the shares always add up to the total, to the cent.
+
+## Equal
+
+Everyone pays the same. This is the default, and the right answer most of the time.
+
+> A $60 grocery run split between Ava, Ben and Cam: $20.00 each.
+
+Tap a name to take someone out of the split, and tap again to bring them back. The line under the list shows what each person pays, for example **$20.00 each**.
+
+## Exact
+
+Type in what each person owes. Use it when you already know the numbers, like a shared delivery order where everyone picked their own meal.
+
+> A $47 takeout order: Ava $18, Ben $16.50, Cam $12.50.
+
+As you type, Potluck tells you how far off you are: **$5.00 left to assign**, **$2.00 too much**, or **Everything adds up**. Tap **Even it out** to start again from equal amounts. You cannot save until it adds up.
+
+## Percent
+
+Slide until it feels fair. The percentages must add up to 100%.
+
+<Screenshot
+  name="expense-new-percent"
+  alt="The Percent split. Six people are ticked: Ike, Jo, Kai, Lena, You and Noor. A colored bar is divided into six segments of 17 percent each, with a handle between each pair of neighbors. Below the bar, Ike's row shows 16.67 percent and $20.00."
+/>
+
+Each person gets a colored segment on one bar. Drag the handle between two people to move share from one to the other. Only those two neighbors change, so the total stays at exactly 100%. You can also type a percentage in each person's row (two decimals are fine, like 16.67), or tap **Even it out** to reset.
+
+> A $1,000 cabin weekend where Ava and Ben took the big room: Ava 30%, Ben 30%, Cam 20%, Dev 20%. That is $300, $300, $200 and $200.
+
+:::tip[Keyboard]
+Tab to a handle and use the arrow keys to move it one percent at a time. Hold Shift for 5%, use Page Up and Page Down for 10%, and Home or End to push it all the way to one side.
+:::
+
+## Shares
+
+Give each person a number of shares and the cost is divided in proportion. The app's own hint says it best: couples count as 2, the kid counts as half.
+
+> A $120 dinner. Ravi and Sam came as a couple (2 shares), Ike and Jo came alone (1 share each). That is 4 shares of $30: Ravi and Sam pay $60 together, Ike $30, Jo $30.
+
+Use the minus and plus buttons next to each name, or type a number. Half shares and other fractions are fine.
+
+## By item
+
+For restaurant bills where people ordered different things. Assign each item to the people who had it, and tax and tip follow along.
+
+<Screenshot
+  name="expense-new-by-item"
+  alt="The By item split. One item, Pasta and wine, costs 148 and is shared by You, Ike, Jo, Kai, Lena and Noor. The totals box shows Subtotal $148.00, Tax 19.24, Tip 26.64 with the 18% chip selected among 15%, 18% and 20%, and Total $193.88. Below, Ike, Jo and You owe $32.31 each, while Kai and Lena owe $32.32."
+/>
+
+1. Type the item's name and **Price**, then tap the names of **Who had it?** An item shared by three is split equally between those three.
+2. Tap **Add item** for the next one.
+3. Enter the **Tax** and the **Tip**. The **15%**, **18%** and **20%** chips fill in the tip as a percentage of the subtotal.
+
+The **Total** comes from the items, so you do not type an amount at the top.
+
+Tax and tip are split in proportion to what each person ordered. If your food was a third of the subtotal, you pay a third of the tax and tip.
+
+> Pizza $30 (Ava and Ben), salad $12 (Ben), drinks $18 (Ava and Cam). Subtotal $60: Ava had $24, Ben $27, Cam $9. Add $6 tax and a $12 tip, $18 in all.
+>
+> Ava had 40% of the food, so she pays 40% of the $18: $7.20, for $31.20. Ben had 45%: $8.10 more, $35.10. Cam had 15%: $2.70 more, $11.70. Together that is the $78 total.
+
+:::note[Good to know]
+Potluck saves what each person owes, not the item list. If you edit a by-item expense later, it opens as **Exact** amounts with everyone's final share filled in.
+:::
+
+## How rounding works
+
+Money only comes in whole cents, and splits rarely divide evenly. Potluck handles it the same way every time:
+
+1. It works out everyone's exact share, fractions of a cent included.
+2. It rounds every share down to the cent.
+3. That leaves a few cents unassigned. They go out one cent at a time, starting with the people whose shares were rounded down the most.
+4. When there is a tie, a fixed order inside Potluck breaks it, so the same expense always rounds the same way.
+
+Nobody ever pays more than one cent above their exact share, and the shares always add up to the total.
+
+The by-item screenshot above shows it. $193.88 split six ways is $32.3133 each. Rounded down, six times $32.31 is $193.86, which leaves 2 cents. Those 2 cents go to two people, so Kai and Lena pay $32.32 and everyone else pays $32.31.
+
+By-item bills are rounded once over the whole bill, not item by item, so small roundings do not pile up.
