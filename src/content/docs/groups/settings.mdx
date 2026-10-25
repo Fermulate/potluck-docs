@@ -1,0 +1,48 @@
+---
+title: Group settings
+description: Rename a group, change its look, set the house rules, and archive, leave or delete it.
+---
+
+import Screenshot from '~/components/Screenshot.astro'
+
+Open a group and tap the **Settings** tab (swipe the tabs left on a phone). Owners and admins can change everything here. Members see the same page read-only, with the note **Only owners and admins can change these.**
+
+<Screenshot
+  name="group-settings"
+  alt="The Group settings tab. Under Details, the group name field reads Supper club, followed by a grid of emoji to pick from and an Or type your own field."
+/>
+
+## Details
+
+- **Group name**, **Emoji** and **Color** change how the group looks on everyone's lists.
+- **Currency** is the currency balances are kept in. It is **Locked once money has been added**, because changing it would change what everyone owes. To track a trip in a new currency, start a new group or add expenses in the other currency (see [Currencies](/expenses/currencies/)).
+
+Tap **Save** when you are done.
+
+## House rules
+
+**Simplify debts**
+: Fewer payments, same totals. Nobody pays more than they owe. On by default. [Simplified debts](/balances/#simplified-debts) shows what it does with an example.
+
+**Members can invite people**
+: Lets regular members make invite links. On by default. When it is off, only owners and admins can. See [Inviting people](/groups/invites/).
+
+## The exit
+
+### Archive a group
+
+**Archive group** hides the group from your list. Balances stay put and nothing is deleted. You can tap **Undo** right away, or find it later under **Show archived** on the **Groups** page and tap **Unarchive group**.
+
+While a group is archived, nobody can add expenses to it or make invite links.
+
+### Leave the group
+
+**Leave group** works when your balance in the group is zero. Owners hand over ownership first. See [Roles and members](/groups/roles/#leave-a-group).
+
+### Delete the group
+
+Only the owner can delete a group, and only once every balance in it is settled. Until then the button explains **Settle all balances before deleting the group.**
+
+:::danger[This cannot be undone]
+**Delete group** removes the group for everyone, with all its expenses, payments and plans. If you only want it out of sight, archive it instead.
+:::
