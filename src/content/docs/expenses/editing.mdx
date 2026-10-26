@@ -1,0 +1,53 @@
+---
+title: Editing and deleting
+description: Fix an expense, delete one, and bring it back with undo or restore.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+
+Typos happen. Here is how to fix them, and who is allowed to.
+
+## Who can change an expense
+
+- The person who added it.
+- The person who paid for it.
+- The group's owner and admins, for any expense.
+
+Anyone else gets **Only the person who added or paid this, or an admin, can change it.** See [Roles and members](/groups/roles/).
+
+## Edit an expense
+
+<Steps>
+
+1. Open the expense from the group's **Expenses** tab.
+2. Tap **Edit**.
+3. Change what you need on **Edit expense**, then tap **Save changes**.
+
+</Steps>
+
+Balances update straight away, and the people in the split get a notification that it changed.
+
+:::note[Good to know]
+- A [by-item](/expenses/splits/#by-item) expense opens as **Exact** amounts, because Potluck keeps each person's share, not the item list.
+- **Repeats** cannot be changed on an existing expense. Manage repeating bills under **Repeating** on the Expenses tab. See [Repeating expenses](/expenses/recurring/).
+- An expense in another currency keeps its saved exchange rate unless you change the currency.
+:::
+
+## Delete an expense
+
+<Steps>
+
+1. Open the expense and tap the trash button (**Delete**).
+2. Confirm. Potluck reminds you: **You can undo this for a little while.**
+
+</Steps>
+
+The expense disappears from the list and balances update.
+
+## Undo and restore
+
+Right after deleting, a message says **Expense deleted.** with an **Undo** button. Tap it and the expense comes back as if nothing happened.
+
+Missed it? Deleted expenses are not gone for good. If you open one later, for example from a notification, it says **This expense was deleted.** Tap **Restore** to bring it back, with its balances.
+
+You cannot edit a deleted expense until you restore it. If someone in the split has left the group since, it cannot be restored.
