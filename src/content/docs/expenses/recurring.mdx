@@ -1,0 +1,42 @@
+---
+title: Repeating expenses
+description: Set up rent, subscriptions and other bills that come back every week, month or year.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+import Screenshot from '~/components/Screenshot.astro'
+
+Rent, the internet bill, a shared streaming subscription. Set them up once and Potluck adds a copy on the day each one is due.
+
+## Make an expense repeat
+
+<Steps>
+
+1. Add the expense as usual, with the first date it happened. See [Adding an expense](/expenses/).
+2. Near the bottom of the form, set **Repeats** to **Every week**, **Every month** or **Every year**.
+3. Tap **Save expense**.
+
+</Steps>
+
+The first copy appears one period after the date you entered. Each copy has the same amount, payer, split and category, and shows a small repeat icon in the list.
+
+## See and manage repeating expenses
+
+Everything that repeats in a group is listed under **Repeating** at the top of the **Expenses** tab, with how many are running and the next date for each.
+
+<Screenshot
+  name="roommates-repeating"
+  alt="The Expenses tab of a two-person group called Flat 4B. A Repeating panel says 1 running and lists Rent, monthly, Next on Dec 5, with pause and delete buttons. Below it, today's Rent expense of 1,450.00 euros shows a repeat icon and you lent 725.00 euros."
+/>
+
+- **Pause** stops new copies until you tap **Resume**.
+- **Stop repeating** ends it for good. Expenses already added stay.
+
+The person who set it up can pause or stop it, and so can the group's owner and admins.
+
+:::note[Good to know]
+- Monthly bills keep their day. Rent on the 31st lands on the last day of shorter months (Feb 28, Apr 30), then goes back to the 31st.
+- You choose **Repeats** when you first add an expense. To change the amount or split of a repeating bill, stop it and set up a new one.
+- If the payer or someone in the split leaves the group, or the group is archived, the repeating expense stops on its own.
+- For a bill in another currency, each copy uses the exchange rate for its own date. See [Currencies](/expenses/currencies/).
+:::
