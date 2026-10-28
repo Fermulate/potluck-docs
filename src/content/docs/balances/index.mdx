@@ -1,0 +1,62 @@
+---
+title: Balances
+description: Read who owes whom in a group, and what simplifying debts does to the list of payments.
+---
+
+import Screenshot from '~/components/Screenshot.astro'
+
+Open a group and tap **Balances** to see where everyone stands.
+
+<Screenshot
+  name="group-balances"
+  alt="The Balances tab. A dark card says You owe $35.10 with a Settle up button. Below, Who pays whom explains: We rearranged who pays whom so there are fewer payments. Totals are the same. The first row, highlighted, says You owe Maya $35.10 with its own Settle up button, followed by Lena owes Maya $70.22 and Jo owes Maya $70.22."
+/>
+
+## Your balance
+
+The card at the top is your total in this group: **You owe**, **You are owed**, or **You are all square**. It counts every expense and payment in the group. **Settle up** starts a payment; see [Recording a payment](/balances/settle-up/).
+
+## Who pays whom
+
+This list says exactly which payments would square the group. Your own rows come first, each with a **Settle up** button.
+
+Below it, **Everyone** shows each member's total: **is owed**, **owes**, or **settled up**.
+
+## Simplified debts
+
+Groups simplify debts unless an owner or admin turns it off in [Group settings](/groups/settings/#house-rules). The app's promise: **Fewer payments, same totals. Nobody pays more than they owe.**
+
+### An example
+
+Three friends, two expenses:
+
+- Ava paid $60 for groceries for herself and Ben. Ben owes Ava $30.
+- Ben paid $60 for concert tickets for himself and Cam. Cam owes Ben $30.
+
+Without simplifying, that is two payments: Ben pays Ava $30, and Cam pays Ben $30. Ben's money just passes through him.
+
+With simplifying, Potluck looks at where everyone ends up:
+
+| | Paid | Their share | Net |
+| --- | --: | --: | --: |
+| Ava | $60 | $30 | is owed $30 |
+| Ben | $60 | $60 | settled up |
+| Cam | $0 | $30 | owes $30 |
+
+So the list shows one payment: **Cam owes Ava $30**. Everyone ends up in the same place, with one payment instead of two.
+
+### How it decides
+
+1. It works out each person's net balance: what they paid, minus their share of everything, adjusted for payments already made.
+2. It takes the person who is owed the most and the person who owes the most, and has the second pay the first as much as they can.
+3. It repeats until everyone is at zero.
+
+A group of five never needs more than four payments this way.
+
+:::note[Good to know]
+Simplifying can ask you to pay someone you never split anything with directly, like Cam paying Ava above. Your total stays the same. If your group prefers each pair to settle on its own, turn off **Simplify debts**. The list is then called **Every debt**, and each pair's debts are netted only against each other.
+:::
+
+## Balances across groups
+
+Each group has its own balances. Home adds them up for you under **Your balance**, and the [Friends](/friends/) page shows your one-on-one tabs. Money owed in one group is never moved into another.
