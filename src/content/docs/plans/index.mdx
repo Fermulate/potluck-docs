@@ -1,0 +1,70 @@
+---
+title: Planning something
+description: Start a poll for a get-together, pick the days and hours that could work, and choose who should answer.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+import Screenshot from '~/components/Screenshot.astro'
+
+The app sums it up: **Pick a few days. Everyone paints when they are free. We find the night.**
+
+A plan starts as a poll. Everyone in the group paints the times that work for them, Potluck ranks the best ones, and the organizer locks one in. Then it is on everyone's calendar.
+
+## Start a poll
+
+<Steps>
+
+1. Tap **Plan something** on the **Plans** page or a group's **Plans** tab. From anywhere else, tap the big plus button, then **Plan something**, and choose the group under **Which group?**
+
+2. **The plan.** Fill in **What's the plan?**, pick an **Emoji**, and add **Where** and **Details** if you know them.
+
+   <Screenshot
+     name="plan-new"
+     alt="The Plan something form. Under The plan: a What's the plan? field with the hint Dinner at ours, beach day, game night, a row of emoji choices with a Your own option, an optional Where field and an optional Details field."
+   />
+
+3. **When.** Set the window and the shape of the event:
+   - **Which days could work?** A **First day** and **Last day**. Potluck starts with tomorrow through a week from today. Keep it to about two months.
+   - **What hours?** The part of each day people can choose from, **From** and **To**. The default is 10 AM to 10 PM.
+   - **How long?** How long the event lasts, from 30 minutes to 12 hours. The default is 2 hours.
+   - **Grid size**: 15, 30 or 60 minute cells for painting. 30 is a good middle.
+   - **Minimum people**: Potluck only suggests times at least this many can make.
+   - **RSVP by** (optional): a gentle deadline for answers.
+
+4. **Who.** Under **Who should add their times?**, everyone in the group is picked. Tap people to leave them out, or use **Everyone** and **Nobody**. They get a nudge as soon as the poll opens.
+
+5. Tap **Start the poll**.
+
+</Steps>
+
+Times are in your time zone, and the form says which one. People in other time zones see the same poll in their own local time.
+
+## What happens next
+
+<Steps>
+
+1. Everyone [paints their availability](/plans/availability/) on a grid.
+2. Potluck ranks the [best times](/plans/best-time/) as answers come in.
+3. The organizer, or an owner or admin, [locks in](/plans/lock-in/) a time. Everyone gets a heads up and can RSVP.
+
+</Steps>
+
+## The Plans page
+
+**Plans** collects plans from all your groups. Filter by group at the top.
+
+<Screenshot
+  name="plans"
+  alt="The Plans page with a Plan something button. Under Coming up: Saturday, Dinner at mine, Nov 7 at 6:00 PM at Maya's place, with an RSVP tag. Under Waiting on others: Dumpling night, a poll for Nov 13 to 19, marked Picking a time. Under Been there: Nothing in the rear view mirror yet."
+/>
+
+- **Still polling**: polls waiting for your times.
+- **Coming up**: plans that are on the calendar. See [Timeline](/plans/timeline/).
+- **Waiting on others**: polls you have answered that are still open.
+- **Been there**: plans that already happened.
+
+Each plan has a status: **Finding a time** while it polls, **On the calendar** once locked in, **Called off** if cancelled, and **Done and dusted** after it ends.
+
+:::note[Good to know]
+Anyone in a group can plan something. On each plan, **Chatter** is a comment thread for the details: who brings what, who needs a ride.
+:::
