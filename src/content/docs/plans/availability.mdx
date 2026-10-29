@@ -1,0 +1,77 @@
+---
+title: Painting your availability
+description: Paint the times that work for you with a mouse, a finger or the keyboard, and read the live group heatmap.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+import Screenshot from '~/components/Screenshot.astro'
+
+When a poll opens, Potluck asks **When are you free?** You answer by painting a grid: days across the top, times down the side, in your own time zone.
+
+## Paint your times
+
+<Steps>
+
+1. Open the plan from **Needs you** on Home, from **Plans**, or from the notification. Until you answer, the plan opens on **Your times**.
+
+   <Screenshot
+     name="event-poll-painter"
+     alt="The Dumpling night plan, marked Finding a time. A card titled When are you free? has a Your times and Everyone switch, a brush picker with Free, Maybe and Erase, the count 0 slots painted, the hint Press and drag to paint the times that work, and an empty grid with days Friday 13 to Thursday 19 across the top and 5 PM to 9 PM down the side."
+   />
+
+2. Pick a brush:
+   - **Free**: this time works for you.
+   - **Maybe**: you could make it if you must.
+   - **Erase**: clear cells.
+
+3. Press and drag across the grid. Everything in the rectangle between where you started and where you are gets painted.
+
+4. Switch brushes and paint again as needed. The counter shows how many cells you have painted.
+
+</Steps>
+
+There is no save button. Potluck saves as you go and shows **Saving...** and then **Saved** under the grid.
+
+:::tip[Painting is a toggle]
+If you start dragging on a cell that already has the brush's color, the drag erases instead. Tap a painted cell once to clear it.
+:::
+
+## Mouse, touch and keyboard
+
+**Mouse or trackpad:** click and drag. One click paints one cell.
+
+**Touch:** press and drag with one finger. While your finger is on the grid, the page does not scroll, so you can paint downwards. Scroll by dragging outside the grid.
+
+**Keyboard:** press Tab to move into the grid, then:
+
+| Keys | What they do |
+| --- | --- |
+| <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> | Move between cells |
+| <kbd>Space</kbd> or <kbd>Enter</kbd> | Paint the cell with the current brush, or clear it if it already has that brush |
+| <kbd>Shift</kbd> + an arrow | Paint as you go, carrying the brush into each cell you move to |
+| <kbd>Tab</kbd> | Leave the grid |
+
+Screen readers announce each cell's day, time and state, for example "not set" or "Works for me".
+
+## The live heatmap
+
+Tap **Everyone** to see **Group availability**. Each cell gets warmer the more people can make it, from **Nobody** (pale) to **Everyone** (full tomato). A **Maybe** counts as half a person.
+
+<Screenshot
+  name="event-poll-heatmap"
+  alt="The Group availability heatmap for the same week. Friday and Sunday evenings glow the strongest red, Saturday is lighter, and the rest of the week is pale. A legend runs from Nobody to Everyone. Below, Still waiting on shows 5 of 6 responded and lists Lena Weber with a Nudge button."
+/>
+
+- Hover or tap a cell to see who is free then, for example **4 of 6 free**, with **Free:** and **Maybe:** names.
+- Cells you painted yourself carry a small dot.
+- The grid updates live. When a friend paints, their cells warm up while you watch.
+
+When you are on **Everyone** and have not answered yet, a reminder appears with an **Add your times** button.
+
+## Nudge people
+
+**Still waiting on** lists who has not added their times yet, with a count like **5 of 6 responded**. Tap **Nudge** next to a person, or **Nudge everyone**, to send them a notification. Potluck shows when you last nudged someone, and the button turns into **Nudge again**.
+
+:::note[Good to know]
+Anyone in the group can paint and nudge until the plan is locked in. After that, the grid closes and people [RSVP](/plans/lock-in/#rsvp) instead.
+:::
