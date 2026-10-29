@@ -1,0 +1,53 @@
+---
+title: How best times are ranked
+description: How Potluck scores each possible start time, and why a time might not show up at all.
+---
+
+import Screenshot from '~/components/Screenshot.astro'
+
+As people paint, Potluck ranks the possible start times under **Best times**. The top one is the **Best bet**. The next few are **Runners up**.
+
+<Screenshot
+  name="event-poll"
+  alt="Best times for Dumpling night. A saffron Best bet card shows Friday, November 13, 6:00 PM to 8:00 PM, 4 yes, 0 maybe, four avatars and the note Without Kai and Lena, with a Lock it in button. Below, Runners up lists Sun, Nov 15 at 5:00 PM with 3 yes, 1 maybe; Fri, Nov 13 at 6:30 PM with 3 yes, 0 maybe; Fri, Nov 13 at 7:00 PM with 3 yes, 0 maybe; and Sat, Nov 14 at 6:00 PM with 2 yes, 1 maybe. Each has a Pick this one button."
+/>
+
+## The rules
+
+**1. Everyone must be free for the whole thing.** A start time only counts you in if you painted every cell from the start to the end of the event. If dinner is 2 hours and you are free for the first 90 minutes, that start time counts you out.
+
+**2. Free counts 1, Maybe counts half.** If you painted the whole stretch **Free**, you add 1 to that time's score. If any of it is **Maybe** (and the rest **Free**), you add a half.
+
+**3. Not enough people, no suggestion.** Times where fewer people can come than the plan's **Minimum people** are left out. Both Free and Maybe count toward the minimum.
+
+**4. Highest score wins, earliest breaks ties.** When two times score the same, the earlier one ranks first.
+
+## A worked example
+
+The screenshot above is a 2-hour dinner in a group of six, painted on a 30-minute grid.
+
+| Start | Free | Maybe | Score |
+| --- | --: | --: | --: |
+| Fri, Nov 13, 6:00 PM | 4 | 0 | 4 |
+| Sun, Nov 15, 5:00 PM | 3 | 1 | 3.5 |
+| Fri, Nov 13, 6:30 PM | 3 | 0 | 3 |
+| Fri, Nov 13, 7:00 PM | 3 | 0 | 3 |
+| Sat, Nov 14, 6:00 PM | 2 | 1 | 2.5 |
+
+Friday at 6:00 wins with four people free from 6:00 to 8:00. Sunday comes second: one fewer person is fully free, but a Maybe adds half a point. Friday at 6:30 and 7:00 tie at 3, so the earlier one is listed first.
+
+Each suggestion says who would miss out, like **Without Kai and Lena**, or **Everyone can make it**.
+
+## Why is a time missing?
+
+- **Someone's painting stops short.** For a 2-hour event, a 7 PM start needs people free until 9 PM. Painting until 8:30 does not count.
+- **It falls under the minimum.** Fewer people can make it than the plan's **Minimum people**. Nudge the people who have not answered yet.
+- **Nobody painted it.** Potluck only suggests start times that someone painted.
+
+If no time works yet, the card says **No time works for enough people yet. Nudge the stragglers or widen the window.**
+
+:::tip[See it on the grid]
+Hover over or focus a suggestion to light up its cells on the group heatmap. Handy for spotting near misses: a time where one person is 30 minutes short.
+:::
+
+When you are ready, [lock in a time](/plans/lock-in/).
