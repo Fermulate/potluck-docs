@@ -1,0 +1,66 @@
+---
+title: Notifications
+description: The inbox, what Potluck tells you about, and how to turn push notifications on or off.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+import Screenshot from '~/components/Screenshot.astro'
+
+Potluck keeps you posted in two ways. The **inbox** inside the app always has every update. **Push notifications** are optional pings on your phone or computer.
+
+## The inbox
+
+On a computer, click **Notifications** in the left rail. On a phone, tap **Me**, then **Open inbox**. The red badge on **Me** (or next to **Notifications**) counts what you have not read.
+
+<Screenshot
+  name="notifications"
+  alt="The Notifications inbox with 6 unread and a Mark all as read button. Under New: You got paid, Noor paid you $35.10, then several New face in Supper club notices such as Lena just joined. Say hi. Each has a red unread dot and says 1 hour ago."
+/>
+
+New updates are under **New**, older ones under **Earlier**. Tap one to go straight to the expense, plan or group it is about. Tap **Mark all as read** to clear the badge. When there is nothing left, the inbox says **All caught up**.
+
+## What you hear about
+
+| Notification | When | Who gets it |
+| --- | --- | --- |
+| **New expense in** a group | Someone adds an expense | The people in the split and the payer |
+| **Expense updated** | Someone changes an expense | The people in it |
+| **You got paid** | Someone records a payment to you | The person paid |
+| **New face in** a group | Someone joins | The owner and admins |
+| **Something is cooking** | Someone starts a plan | The group |
+| **When are you free?** | Someone nudges you to add your times | The people nudged |
+| **It's a date** | A plan is locked in | The group |
+| **Plans changed** | A plan is called off | The group |
+| **Coming up** | About a day before a plan | People going or maybe |
+| **Are you in?** | About a day before a plan | People who have not answered |
+| **New comment** | Someone comments | People in that expense, or the organizer and people coming to that plan |
+
+You never get notified about your own actions.
+
+## Turn on push notifications
+
+<Steps>
+
+1. Go to **Me** and find **Notifications**.
+2. Turn on **Push notifications**.
+3. When your browser asks for permission, tap **Allow**.
+
+</Steps>
+
+When it works, the switch says **Push is on for this device.** Push is set per device: turn it on separately on your phone and your laptop.
+
+:::tip[On iPhone and iPad]
+Add Potluck to your home screen first and open it from there, then turn on push. Safari in a normal tab cannot show notifications. See [Install Potluck as an app](/getting-started/#install-potluck-as-an-app).
+:::
+
+## Turn push off
+
+Turn off **Push notifications** on **Me**. That device stops getting pings right away. The inbox keeps working, as the app says: **You will always see updates in your inbox.**
+
+You can also block notifications for Potluck in your browser or phone settings. Potluck then shows **Notifications are blocked in your browser settings.** To turn push back on later, allow notifications for the site in those settings first.
+
+:::note[Good to know]
+Push is all or nothing for now. You cannot pick which kinds of notifications to get pushed. The inbox always gets all of them.
+:::
+
+If push does not arrive, see [Troubleshooting](/troubleshooting/#push-notifications-do-not-arrive).
