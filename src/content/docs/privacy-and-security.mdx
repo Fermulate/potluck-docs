@@ -1,0 +1,43 @@
+---
+title: Privacy and security
+description: What Potluck stores about you, who can see it, and what leaves the app.
+---
+
+Potluck is free software with no ads and no tracking code. It stores what it needs to split money and plan things, and shows it only to the people you share a group with.
+
+## What is stored, and who sees it
+
+| What | Who can see it |
+| --- | --- |
+| Your email and password | Nobody in the app. Your password is stored scrambled (hashed), never as text. |
+| Your name, photo, time zone and default currency | You, and people you share a group with |
+| Groups, members and roles | The members of that group |
+| Expenses, splits, payments and comments | The members of that group |
+| Receipts | The members of that group. They are private files, not public links. |
+| Plans, availability and RSVPs | The members of that group |
+| Invite links | Owners and admins, and whoever made the link |
+| Notifications and push settings | Only you |
+
+Someone who leaves a group, or is removed, loses access to it right away.
+
+## Things worth knowing
+
+- **Profile photos** are stored at a link that is hard to guess but not secret. Anyone who has seen the link can open the photo.
+- **Invite links** show the group's name, emoji, member count and first names to whoever opens them. Make links that run out (see [Inviting people](/groups/invites/#change-what-a-link-allows)) and revoke the ones you do not need.
+- **Your calendar feed link** shows your plans' titles, times, places and group names to whoever has it. Keep it to yourself, and [reset it](/account/#reset-the-link) if it leaks.
+- **Receipt photos** can contain card digits, addresses or location data. Crop before you upload.
+
+## What leaves the app
+
+- **Push notifications** pass through your browser maker's push service (Google, Mozilla or Apple). They are encrypted for your device, so that service cannot read them.
+- **Exchange rates** are fetched from a public source of reference rates. Nothing about you is sent.
+- **Emails** for sign-in links and password resets are sent by Potluck's email provider.
+- **Calendar files** you download, and Google Calendar links you open, contain the plan's details. That copy is yours to manage.
+
+## Deleting your data
+
+You can delete your account at any time from **Me**. Your profile, photo and email are removed, and most of your personal data with them. Shared money records stay so your friends' balances do not change, labeled **Former member**. The full list is on [Your account](/account/#what-happens-to-shared-tabs).
+
+## Open source
+
+Every line of Potluck's code is public on [GitHub](https://github.com/Fermulate/potluck) under the AGPL-3.0 license. Anyone can check how it handles data. To report a security problem, follow the project's [security policy](https://github.com/Fermulate/potluck/security/policy) instead of opening a public issue.
