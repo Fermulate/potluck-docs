@@ -1,0 +1,88 @@
+---
+title: Your account
+description: Change your profile, theme, time zone and currency, subscribe to your calendar feed, sign out, or delete your account.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+import Screenshot from '~/components/Screenshot.astro'
+
+Everything about you lives on **Me**: your profile, your preferences, and, in the app's words, your exit.
+
+<Screenshot
+  name="me"
+  alt="The Me page. Under Profile: a round avatar with the initials MR and a Change photo link, a Display name field reading Maya Ruiz with a Save button, and the account email. Under Preferences: Time zone set to America / Toronto with the hint Times show up in this zone, and Default currency set to USD."
+/>
+
+## Profile
+
+- **Change photo** to upload a new picture (PNG, JPG, WebP or GIF, up to 5 MB). Potluck crops it square.
+- **Display name** is how friends see you on shared tabs and plans. Edit it and tap **Save**.
+- **Email** is the address you sign in with.
+
+## Preferences
+
+**Time zone**
+: Every time in Potluck shows in this zone. If your device is somewhere else (say you are traveling), a **Use my current time zone** button appears.
+
+**Default currency**
+: New groups you create start in this currency, and the balance on Home adds up groups in it. Existing groups keep their own currency. See [Currencies](/expenses/currencies/).
+
+**Appearance**
+: **System** follows your device's light or dark setting. **Light** and **Dark** pick one. This is saved on each device separately.
+
+Changes save as soon as you make them.
+
+## Notifications
+
+**Open inbox** takes you to your notifications. **Push notifications** turns pings on or off for this device. See [Notifications](/notifications/).
+
+## Calendar feed
+
+Your calendar feed is a private link that lists every plan from all your groups that has a time locked in. Calendar apps check it regularly, so new plans, changes and called-off plans show up on their own.
+
+<Steps>
+
+1. On **Me**, find **Calendar**, then **Calendar feed**.
+2. Tap **Subscribe** to open your calendar app and add it. Or tap **Copy feed link** and paste it into your calendar app's "add calendar from URL" option (in Google Calendar, that is **Other calendars**, then **From URL**).
+
+</Steps>
+
+Calendar apps refresh subscribed calendars on their own schedule, from a few minutes to several hours, so a new plan may take a while to appear.
+
+### Reset the link
+
+Anyone with your feed link can see your plans' titles, times, places and group names. If you shared it by accident, tap **Reset link** and confirm. **The old link stops working**, so subscribe again with the new one.
+
+:::note[Good to know]
+**Connect a calendar**, which would mark the times you are already busy on the availability grid, is marked **Coming soon**.
+:::
+
+## Sign out
+
+Tap **Sign out** at the bottom of **Me**. You are signed out on this device only.
+
+## Delete your account
+
+<Steps>
+
+1. At the bottom of **Me**, tap **Delete account**.
+2. Read what will happen, then type **DELETE** in the box.
+3. Tap **Delete my account**.
+
+</Steps>
+
+:::danger[This cannot be undone]
+You are signed out and cannot sign back in to this account.
+:::
+
+### What happens to shared tabs
+
+Your friends' money should not change because you left, so Potluck keeps the shared records and removes you from them:
+
+- Your **name, photo and email** are removed. In every group you were in, you show as **Former member**.
+- **Expenses and payments** you were part of stay, so everyone's totals still add up.
+- **Open balances stay.** If you owed someone, the group still shows that debt against **Former member**. Settle up first so nobody is left waiting. See [Recording a payment](/balances/settle-up/).
+- **Groups you own** pass to the longest-standing admin, or the longest-standing member if there is no admin. Groups with nobody else in them are deleted.
+- Your availability, RSVPs, notifications, push settings, friends list and calendar feed are deleted. Invite links you made stop working.
+
+See [Privacy and security](/privacy-and-security/) for what Potluck stores in the first place.
