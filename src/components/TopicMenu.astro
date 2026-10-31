@@ -1,0 +1,125 @@
+---
+// Every page of the guide, grouped the way the app is: people, money, plans, you.
+const courses = [
+  {
+    name: 'Your people',
+    items: [
+      { href: '/getting-started/', title: 'Getting started', text: 'Sign up, set up, install the app' },
+      { href: '/groups/', title: 'Groups', text: 'Start one and find your way around' },
+      { href: '/groups/invites/', title: 'Inviting people', text: 'Links, limits, joining' },
+      { href: '/groups/roles/', title: 'Roles and members', text: 'Who can do what, leaving' },
+      { href: '/groups/settings/', title: 'Group settings', text: 'House rules, archive, delete' },
+      { href: '/friends/', title: 'Friends', text: 'One-on-one tabs' },
+    ],
+  },
+  {
+    name: 'The money',
+    items: [
+      { href: '/expenses/', title: 'Adding an expense', text: 'Who paid, who it was for' },
+      { href: '/expenses/splits/', title: 'Splitting', text: 'Five ways, and the leftover cents' },
+      { href: '/expenses/currencies/', title: 'Currencies', text: 'Exchange rates, locked on save' },
+      { href: '/expenses/recurring/', title: 'Repeating expenses', text: 'Rent and other regulars' },
+      { href: '/expenses/receipts/', title: 'Receipts', text: 'Photos and PDFs' },
+      { href: '/expenses/editing/', title: 'Editing and deleting', text: 'Fixes, undo, restore' },
+      { href: '/balances/', title: 'Balances', text: 'Who owes whom, simplified' },
+      { href: '/balances/settle-up/', title: 'Recording a payment', text: 'Settle up' },
+    ],
+  },
+  {
+    name: 'The plans',
+    items: [
+      { href: '/plans/', title: 'Planning something', text: 'Start a poll' },
+      { href: '/plans/availability/', title: 'Painting your availability', text: 'The grid and the heatmap' },
+      { href: '/plans/best-time/', title: 'How best times are ranked', text: 'Yes, maybe, the minimum' },
+      { href: '/plans/lock-in/', title: 'Locking in a time', text: 'RSVP, calendars, calling off' },
+      { href: '/plans/timeline/', title: 'Timeline', text: 'What is coming up' },
+    ],
+  },
+  {
+    name: 'You',
+    items: [
+      { href: '/notifications/', title: 'Notifications', text: 'Inbox and push' },
+      { href: '/account/', title: 'Your account', text: 'Profile, calendar feed, deleting' },
+      { href: '/privacy-and-security/', title: 'Privacy and security', text: 'What is stored, who sees it' },
+      { href: '/faq/', title: 'FAQ', text: 'Short answers' },
+      { href: '/troubleshooting/', title: 'Troubleshooting', text: 'When something goes wrong' },
+    ],
+  },
+]
+---
+
+<nav class="pl-menu not-content" aria-labelledby="pl-menu-title">
+  <h2 id="pl-menu-title">Everything in the guide</h2>
+  <div class="pl-menu__grid">
+    {
+      courses.map((course) => (
+        <section>
+          <h3>{course.name}</h3>
+          <ul>
+            {course.items.map((item) => (
+              <li>
+                <a href={item.href}>{item.title}</a>
+                <span>{item.text}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</nav>
+
+<style>
+  .pl-menu {
+    margin-top: 5rem;
+  }
+  h2 {
+    margin: 0 0 1.75rem;
+    font-family: var(--pl-font-display);
+    font-weight: 400;
+    font-size: clamp(2.25rem, 1.75rem + 2vw, 3rem);
+    line-height: 1;
+    color: var(--pl-ink);
+  }
+  .pl-menu__grid {
+    display: grid;
+    gap: 2.5rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+  h3 {
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--pl-line-strong);
+    font-family: var(--pl-font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.625rem;
+    line-height: 1.1;
+    color: var(--pl-ink);
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+  li {
+    display: grid;
+    gap: 0.1rem;
+  }
+  a {
+    font-weight: 700;
+    color: var(--pl-ink);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--pl-tomato-ink);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+  span {
+    font-size: var(--sl-text-sm);
+    color: var(--pl-mute);
+  }
+</style>
