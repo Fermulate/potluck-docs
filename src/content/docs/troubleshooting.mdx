@@ -1,0 +1,117 @@
+---
+title: Troubleshooting
+description: Fixes for sign-in links, invites, uploads, push notifications and other things that can go wrong.
+---
+
+Start with the message Potluck shows you. Most of them say what to do next. If yours is not here, open an issue on [GitHub](https://github.com/Fermulate/potluck/issues).
+
+## Signing in
+
+### The sign-in link says it has expired
+
+**That link has expired or was already used.** Sign-in links work once and only for a short time. Go back to **Sign in** and ask for a new one. Open it on the same device and browser you asked from.
+
+### The email never arrived
+
+Check your spam folder, then tap **Send it again**. Make sure the address is right; **Use a different email** lets you fix it.
+
+### "Confirm your email first"
+
+Your account needs the confirmation link Potluck sent when you signed up. Find that email and open the link, then sign in again.
+
+### I forgot my password
+
+On **Sign in**, tap **Forgot password?**, enter your email and tap **Send reset link**. If the reset link has expired, ask for a new one.
+
+### "Your session timed out"
+
+You were signed out for safety. Sign in again and you will be back where you were.
+
+## Groups and invites
+
+### The invite link does not work
+
+The page says **This invite has gone cold** and gives the reason: expired, used up, revoked, or not found. Ask someone in the group for a fresh link. See [Inviting people](/groups/invites/#when-a-link-does-not-work).
+
+### Where are the link settings?
+
+In the **Invite people** sheet, tap **Link settings** below your current link. Only the group owner sees **Joins as**. If the sheet says **Only owners and admins can invite people to this group.**, the group has turned off member invites.
+
+### I cannot leave a group, or remove someone
+
+Balances must be zero first. [Settle up](/balances/settle-up/), then try again. If you own the group, [transfer ownership](/groups/roles/#transfer-ownership) first.
+
+### A group disappeared from my list
+
+It may be archived. On **Groups**, tap **Show archived**. If it is not there, someone removed you or the owner deleted it.
+
+## Expenses
+
+### I cannot save an expense
+
+Read the message under the form:
+
+- **The split needs to add up to the total.** In **Exact**, the amounts must match the total exactly.
+- **Percentages need to add up to 100%.** Drag the bar or tap **Even it out**.
+- **Pick at least one person to split with.**
+- **No exchange rate for that currency yet.** Pick another currency, or convert it yourself. See [Currencies](/expenses/currencies/).
+
+### I cannot edit or delete an expense
+
+Only the person who added or paid for it, and the group's owner and admins, can change it. Ask one of them. See [Editing and deleting](/expenses/editing/).
+
+### A receipt will not upload
+
+- **That file is over 10 MB.** Take a smaller photo or a screenshot of it.
+- **Use a photo or a PDF.** Other file types are not accepted.
+- If it failed for another reason, save without it and try **Edit**, then **Add receipt** later.
+
+### My balance looks wrong
+
+Open the group's **Expenses** tab and check each line's **you lent** or **you borrowed**. Common causes: the wrong person under **Paid by**, someone left out of the split, or a payment recorded twice. If simplify debts is on, the list of who pays whom may look different from your own expenses but totals the same. See [Balances](/balances/#simplified-debts).
+
+## Plans
+
+### My times did not save
+
+Under the grid, Potluck says **Your times did not save. We will keep trying.** It retries on its own when you are back online. If it gives up, tap **Try again**.
+
+### The grid scrolls instead of painting
+
+On a phone, start your drag inside the grid. Dragging from outside scrolls the page. See [Painting your availability](/plans/availability/#mouse-touch-and-keyboard).
+
+### The time I wanted is not in Best times
+
+Everyone counted has to be free for the whole length of the plan, and the time has to reach the plan's minimum. See [Why is a time missing?](/plans/best-time/#why-is-a-time-missing).
+
+### Times look off by a few hours
+
+Potluck shows times in the zone set on **Me**. Check **Time zone** there, or tap **Use my current time zone**.
+
+## Notifications
+
+### Push notifications do not arrive
+
+- Check that **Push notifications** is on under **Me** for this device. It says **Push is on for this device.**
+- If it says **Notifications are blocked in your browser settings.**, allow notifications for Potluck in your browser or phone settings, then turn push on again.
+- On iPhone and iPad, Potluck must be [added to your home screen](/getting-started/#iphone-and-ipad) and opened from there.
+- If it says **This browser cannot do push notifications**, try a current version of Chrome, Edge, Firefox or Safari.
+- If it says **Push is not set up on this server yet**, push is not available on this Potluck server. The inbox still has everything.
+
+### The calendar feed is not updating
+
+Calendar apps refresh subscribed feeds on their own schedule, sometimes only every few hours. If it never updates, check that you did not [reset the link](/account/#reset-the-link) since subscribing.
+
+## Everything else
+
+### "This version is out of date"
+
+Refresh the page, or close and reopen the app, to load the latest version.
+
+### "Easy there. Try again in a moment."
+
+Too many requests in a short time. Wait a few seconds and try again.
+
+### "Something burned in the kitchen"
+
+An unexpected error. Try again. If it keeps happening, open an issue on [GitHub](https://github.com/Fermulate/potluck/issues) and say what you were doing.
