@@ -16,7 +16,10 @@ import Default from '@astrojs/starlight/components/Footer.astro'
       <a href="https://github.com/Fermulate/potluck-docs">Improve this guide</a>
     </li>
   </ul>
-  <p>Guide text licensed under CC BY-SA 4.0.</p>
+  <p>
+    Guide text and screenshots under
+    <a href="https://github.com/Fermulate/potluck-docs/blob/main/LICENSE">CC BY-SA 4.0</a>.
+  </p>
 </div>
 
 <style>
@@ -60,6 +63,9 @@ import Default from '@astrojs/starlight/components/Footer.astro'
   }
   ul a:hover {
     color: var(--pl-ink);
+  }
+  p a {
+    color: inherit;
   }
   p {
     flex-basis: 100%;
