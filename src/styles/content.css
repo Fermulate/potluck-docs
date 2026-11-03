@@ -52,6 +52,17 @@ h1#_top {
   color: var(--sl-color-gray-2);
 }
 
+/* Worked examples are blockquotes, drawn as little paper slips. */
+.sl-markdown-content blockquote:not(:where(.not-content *)) {
+  margin-inline: 0;
+  padding: 0.85rem 1.1rem;
+  border: 1.5px dashed var(--pl-line-strong);
+  border-radius: 14px;
+  background: var(--pl-card);
+  color: var(--sl-color-white);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Steps: tomato counters, like the app's primary buttons. */
 .sl-steps > li::before {
   background-color: var(--pl-tomato);
