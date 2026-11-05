@@ -27,6 +27,8 @@ jobs:
         run: npm ci
 
       - name: No em or en dashes
+        env:
+          LC_ALL: C.UTF-8
         run: |
           if grep -rnP '[\x{2013}\x{2014}]' src README.md .github astro.config.mjs; then
             echo "::error::Use a comma, colon, parentheses or a hyphen instead of an em or en dash."
