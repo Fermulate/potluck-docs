@@ -1,11 +1,11 @@
 ---
 title: Splitting
-description: The five ways to split an expense in Potluck, with worked examples, and how leftover cents are handled.
+description: The six ways to split an expense in Potluck, with worked examples, a group default split, and how leftover cents are handled.
 ---
 
 import Screenshot from '~/components/Screenshot.astro'
 
-Under **Split between** on an expense, pick who it was for by tapping their names, then pick how to split it: **Equal**, **Exact**, **Percent**, **Shares** or **By item**. Whatever you choose, the shares always add up to the total, to the cent.
+Under **Split between** on an expense, pick who it was for by tapping their names, then pick how to split it: **Equal**, **Exact**, **Percent**, **Shares**, **Adjust** or **By item**. On a phone the row of choices scrolls sideways. Whatever you choose, the shares always add up to the total, to the cent.
 
 ## Equal
 
@@ -48,6 +48,21 @@ Give each person a number of shares and the cost is divided in proportion. Coupl
 
 Use the minus and plus buttons next to each name, or type a number. Half shares and other fractions are fine.
 
+## Adjustment
+
+Everyone pays the same, except for a few dollars here and there. Tap **Adjust**, then add or take off an amount for anyone who should pay more or less. Potluck takes the adjustments off the top and splits the rest equally.
+
+> A $96 dinner for Ava, Ben and Cam. Ben ordered a $15 bottle of wine just for himself, so give him +$15. That leaves $81 to split equally: Ava $27, Ben $27 + $15 = $42, Cam $27.
+
+To take something off, tap the minus button next to the person's amount. Say Cam skipped dessert and should pay $6 less. With Ben at +$15 and Cam at -$6, the equal part is $96 - $15 + $6 = $87, or $29 each. Ava pays $29, Ben $44 and Cam $23.
+
+The line under the list shows the equal part, for example **$87.00 split equally, then the adjustments**. Leave a person's adjustment empty and they simply pay the equal part.
+
+Two things are not allowed:
+
+- Adjustments that add up to more than the total: **The adjustments add up to more than the total.**
+- A minus that takes someone below zero: **A minus adjustment takes someone below zero.**
+
 ## By item
 
 For restaurant bills where people ordered different things. Assign each item to the people who had it, and tax and tip follow along.
@@ -59,19 +74,45 @@ For restaurant bills where people ordered different things. Assign each item to 
 
 1. Type the item's name and **Price**, then tap the names of **Who had it?** An item shared by three is split equally between those three.
 2. Tap **Add item** for the next one.
-3. Enter the **Tax** and the **Tip**. The **15%**, **18%** and **20%** chips fill in the tip as a percentage of the subtotal.
+3. Enter the **Tax** and the **Tip**. The **15%**, **18%** and **20%** chips fill in the tip as a percentage of the subtotal. Tap a chip again to clear it, or type your own tip.
+4. Got a coupon or a happy hour deal? Enter it under **Discount**.
 
-The **Total** comes from the items, so you do not type an amount at the top.
+The **Total** is the subtotal plus tax and tip, minus the discount. It comes from the items, so you do not type an amount at the top.
 
-Tax and tip are split in proportion to what each person ordered. If your food was a third of the subtotal, you pay a third of the tax and tip.
+Tax, tip and discount are split in proportion to what each person ordered. If your food was a third of the subtotal, you pay a third of the tax and tip, and you get a third of the discount.
 
 > Pizza $30 (Ava and Ben), salad $12 (Ben), drinks $18 (Ava and Cam). Subtotal $60: Ava had $24, Ben $27, Cam $9. Add $6 tax and a $12 tip, $18 in all.
 >
 > Ava had 40% of the food, so she pays 40% of the $18: $7.20, for $31.20. Ben had 45%: $8.10 more, $35.10. Cam had 15%: $2.70 more, $11.70. Together that is the $78 total.
 
 :::note[Good to know]
-Potluck saves what each person owes, not the item list. If you edit a by-item expense later, it opens as **Exact** amounts with everyone's final share filled in.
+Potluck keeps the bill as you entered it: every item, who had it, and the tax, tip and discount. The expense page lists them under **Items**. When you edit the expense, the items open again, ready to change. By-item expenses saved before Potluck kept items open as **Exact** amounts instead, with a note saying so.
 :::
+
+## Default split
+
+If your group splits most things the same way, save it as the group's default split. Every new expense in that group then starts with it, and you only change it for the odd one out.
+
+> Ravi and Sam share a flat with Ike. Ravi and Sam have the big room, so rent and bills are split by shares: Ravi 2, Sam 2, Ike 1. Save that once, and every new expense in the group opens that way.
+
+A default split can be **Equal** (between everyone or only some people), **Percent** or **Shares**. **Exact**, **Adjust** and **By item** depend on the amount, so they cannot be a default.
+
+There are two places to set it.
+
+**From an expense**
+: Set up the split the way you want on **New expense**. Tick **Use this split for new expenses in this group** under the split, then save the expense.
+
+**From group settings**
+: Open the group's **Settings** tab and find **Default split**. Tap **Change**, pick the people and the split, and tap **Save default split**. See [Group settings](/groups/settings/#default-split).
+
+When a new expense opens with the default, a note under the split says **This is the group default for new expenses.** Tap **Back to equal** there, or in settings, to go back to an equal split between everyone.
+
+Good to know about the default split:
+
+- It applies to that group only. Your other groups keep their own default, or none.
+- Anyone in the group can change it, not only owners and admins.
+- It only shapes where new expenses start. It never changes an expense that is already saved, and it never moves a balance.
+- People who have left the group are dropped from it. New members are included automatically when the default is **Equal** between everyone.
 
 ## How rounding works
 
