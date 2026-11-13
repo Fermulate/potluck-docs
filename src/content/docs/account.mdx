@@ -1,6 +1,6 @@
 ---
 title: Your account
-description: Change your profile, language, theme, time zone and currency, save your payment methods, change your email and password, turn on two-step sign in, subscribe to your calendar feed, manage the people you blocked, sign out, or delete your account.
+description: Change your profile, language, theme, time zone and currency, save your payment methods, change your email and password, turn on two-step sign in, subscribe to your calendar feed, manage the people you blocked, export your data, sign out, or delete your account.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -208,6 +208,44 @@ To unblock someone, tap **Unblock** next to their name. Potluck says they are un
 Unblocking does not make you friends again. Add them back with your [friend link](/friends/#your-friend-link), or from a group you share. Any invite email that was held back because of the block goes out now, unless another block still stands in the way, the group is archived, or the person who sent it has left the group. See [Block and report](/friends/#block-and-report).
 
 To block someone, open their page from **Friends** while they are still your friend. See [Block someone](/friends/#block-someone).
+
+## Export your data
+
+Everything you put in Potluck is yours. **Your data** on **Me** has three downloads. Each one is made fresh when you tap it, and Potluck says where the file went.
+
+### Download a backup
+
+Under **Backup**, tap **Download a backup**. You get one JSON file with:
+
+- your profile: name, sign-in email, photo link, time zone, default currency and language,
+- your own [payment methods](#payment-methods), and nobody else's,
+- your friends list,
+- every group you are in, archived ones and your [one-on-one tabs](/friends/#split-something-with-one-friend) too, with its members and roles,
+- every expense, with who paid, each share, line items and comments,
+- every payment, with its comments,
+- repeating expenses,
+- plans, with RSVPs, availability and comments,
+- the names of everyone the file mentions, including [people not on Potluck yet](/groups/#people-not-on-potluck-yet) and people who left.
+
+Deleted expenses and payments are in it too, marked as deleted, since you can still restore them. Deleted comments are not. Receipt photos are not in the file, only a note of where each one is stored. For what is left out and how to keep the file safe, see [What your backup contains](/privacy-and-security/#what-your-backup-contains).
+
+The backup is for keeping. The [import screen](/groups/settings/#import-expenses) reads spreadsheets, not backups.
+
+### Every group as a spreadsheet
+
+Under **Every group as a spreadsheet**, tap **Export everything**. You get one CSV file with every group you are in, your one-on-one tabs included, one after another. It uses the same layout as a [group's spreadsheet](/groups/#download-a-groups-expenses): every expense and payment, who paid, each person's share and balance, and a **Balance** row closing each group and one-on-one tab.
+
+### What you share with one person
+
+Under **What you share with one person**, pick a friend and tap **Export**. You get every expense and payment between the two of you, from your one-on-one tab and every group you share.
+
+This file keeps only your columns and theirs. Everyone else is still named in **Paid by**, so each row makes sense. Instead of balance columns, it has **Between you and** their name: what each row did between you two. Positive means they owe you. The total for each group, and for your one-on-one tab, is what the two of you owe each other there.
+
+This file leaves the others out, so it cannot be imported into a group. Export the whole group for that.
+
+:::tip[Moving from Splitwise?]
+Open the Potluck group the expenses belong in, then **Settings**, **Import**. See [Import expenses](/groups/settings/#import-expenses).
+:::
 
 ## Sign out
 

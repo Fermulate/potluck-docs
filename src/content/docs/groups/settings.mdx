@@ -1,11 +1,12 @@
 ---
 title: Group settings
-description: Rename a group, change its look, set the house rules and the default split, and archive, leave or delete it.
+description: Rename a group, change its look, set the house rules and the default split, export it, import expenses from Splitwise or a Potluck spreadsheet, and archive, leave or delete it.
 ---
 
+import { Steps } from '@astrojs/starlight/components'
 import Screenshot from '~/components/Screenshot.astro'
 
-Open a group and tap the **Settings** tab (swipe the tabs left on a phone). Owners and admins can change everything here. Members see the same page read-only, with the note **Only owners and admins can change these.** The one exception is the [default split](#default-split), which anyone in the group can change.
+Open a group and tap the **Settings** tab (swipe the tabs left on a phone). Owners and admins can change everything here. Members see the same page read-only, with the note **Only owners and admins can change these.** The exceptions are the [default split](#default-split) and [Spreadsheets](#spreadsheets), which anyone in the group can use.
 
 <Screenshot
   name="group-settings"
@@ -38,6 +39,113 @@ Tap **Save** when you are done.
 To go back, tap **Back to equal** in the same sheet. New expenses then split equally between everyone again.
 
 The default split applies to this group only, and it never changes expenses that are already saved. You can also save one straight from an expense. See [Default split](/expenses/splits/#default-split).
+
+## Spreadsheets
+
+Anyone in the group can use this part, not just owners and admins.
+
+- **Export** downloads the group as a spreadsheet, the same file as the button on the **Expenses** tab. See [Download a group's expenses](/groups/#download-a-groups-expenses).
+- **Import** opens [Import expenses](#import-expenses).
+
+## Import expenses
+
+Bring a group over from Splitwise, or load a Potluck spreadsheet back in. Nothing is saved until you tap **Import**.
+
+<Steps>
+
+1. Open the group the expenses belong in, then **Settings**.
+2. Under **Spreadsheets**, tap **Import**.
+3. Choose the file, or drop it on the page.
+4. Match the names in the file to people in the group.
+5. Sort out any exchange rates, and check **What gets imported**.
+6. Tap **Import**.
+
+</Steps>
+
+When it is done, Potluck says how many rows went in and takes you back to the group. The group's activity gets one line for the whole import, and nobody gets a ping for every row.
+
+An archived group cannot take an import. [Unarchive it](#archive-a-group) first.
+
+### Export from Splitwise
+
+On splitwise.com, open the group and choose **Export as spreadsheet**. Save the file somewhere you can find it. Splitwise exports in any language work.
+
+Splitwise only says what each row did to each person, not who paid what. Potluck works it out from those numbers:
+
+- With **one payer**, or **two payers and an equal split between everyone**, the expense comes back exactly as it was.
+- With anything else, every person's balance still comes out exactly right, but how the bill was split between the payers may look different.
+- Rows with a negative cost come in as [refunds](/expenses/#refunds). Rows with the category Payment come in as payments.
+- Categories are matched to Potluck's, like **Dining out** to **Food**. Anything without a match becomes **Other**.
+- Rows that move no money stay out, and the preview counts them.
+
+Items, receipts and comments do not come over from Splitwise.
+
+The **Total balance** lines at the bottom of the file are used as a check. The preview says **Adds up to the total balance in the file** when everything matches. If it does not, someone may have edited the file.
+
+### Pick the file
+
+Tap **Choose a CSV file**. Potluck reads two kinds:
+
+- **A Splitwise export.**
+- **A Potluck spreadsheet**, from the **Export** button on any group, or **Export everything** on **Me**. Rows come back with their payers and shares, refunds as refunds and payments as payments. Line items do not come back as items, but stay readable in the file's **Items** column.
+
+If the file has several groups (like **Export everything**), pick one under **Which group from the file**. Import the others into their own groups. A one-on-one tab in the file shows up there too and can go into a regular group, but a one-on-one tab cannot take an import.
+
+A file of [what you share with one person](/account/#what-you-share-with-one-person) cannot be imported, because it leaves everyone else out. Export the whole group instead.
+
+Picked the wrong one? Tap **Choose another file**.
+
+### Who is who
+
+Under **Who is who**, Potluck matches each name in the file to someone in the group, guessing by name. Check each one and change it if it is wrong.
+
+- **Two names can be the same person.** Maybe someone shows up as "Sam" in one place and "Sam Lee" in another. Pick the same member for both.
+- **People not on Potluck yet.** Anyone [added by name](/groups/#people-not-on-potluck-yet) shows in the list as their name and **(not on Potluck yet)**. Their rows come in like anyone's, and are theirs once they take their seat. Add them to the group before you import, so they are there to pick.
+- **Leaving someone out.** Pick **Leave out their rows**. Every row with them in it stays out, and the preview counts those rows.
+- **Someone who left.** They show as their name and **(left the group)**. Nothing may change the balance of someone who left, so rows with them cannot come in. Leave their rows out, or invite them back first.
+
+Payments follow the same rules as [recording one](/balances/settle-up/). A member can bring in payments they made or got. Only owners and admins can bring in a payment between two other people. If the file has those, leave one of the two people out, or ask an admin to import the file.
+
+### Exchange rates
+
+Rows in another currency than the group's need an exchange rate. Potluck uses the rate it has for each row's day, just as for an expense you add yourself. See [Where the rates come from](/expenses/currencies/#where-the-rates-come-from).
+
+**When Potluck has no rate for those days**
+: Under **Exchange rates**, it says which currency and which days. Type the rate in the box, like **Rate: 1 EUR in USD**, and tap **Use this rate** or press Enter. A comma works as the decimal mark. Or tick **Leave these rows out**. Balances in the preview show once every row has a rate or is left out.
+
+**When a rate you type looks far off**
+: If it is less than a fifth or more than five times the rate Potluck has nearest those days, Potluck shows both and asks you to check it. The same goes when Potluck has no rate to compare it with. If it is right, tick **This rate is right**.
+
+**When Potluck has no rates for a currency at all**
+: You cannot type one in. Leave those rows out, or import the file into a group that uses that currency.
+
+**The file's own rates**
+: A Potluck spreadsheet imported into a group with the same currency keeps the **Rate** each row was exported with, so the balances come back exactly, even if Potluck's stored rates changed since. The screen says how many rows keep their rate, and how many differ from the rate Potluck has for that day. If one of the file's rates is far off, confirm it with **This rate is right**, as above.
+
+Every row in the preview is converted with the rate it will be saved with, so **Balances after the import** is exactly what the group will show.
+
+### Rows already in the group
+
+Potluck points out anything that might come in twice. It never refuses it on its own.
+
+- **The same file.** If this file went into the group before, it says so, like **This file already went into Trip 2 days ago**.
+- **Matching rows.** An expense with the same day, amount, currency and description, or a payment with the same **Paid on** day, amount, currency and people, counts as already there. Tick **Leave those rows out** to skip them.
+
+### Dates from a spreadsheet
+
+Dates can be written as 2026-03-01, or the way a spreadsheet saves them, like 3/1/26 or 01/03/2026. Potluck works out from the file whether the month or the day comes first, and says which, like **Dates read as month/day/year**. When the file could be read either way, tap **Read them as day/month/year** (or the other way round) to switch.
+
+A payment's date becomes its **Paid on** day.
+
+### Big files
+
+One import takes up to 5,000 rows. A longer file, up to 50,000 rows, goes in as several imports of 5,000, one after another. The screen says so before you start, and shows how far along it is while it runs.
+
+### All or nothing
+
+Each import of up to 5,000 rows is all or nothing. If one row has a problem, none of that part is saved, and Potluck names the row, like **Row 12: ...**. Fix it, or leave it out, and import again.
+
+In a file that goes in as several parts, the parts before the failed one stay in. Potluck says how many rows went in, updates the balances, and ticks **Leave those rows out** for you, so importing again does not bring those rows in twice.
 
 ## The exit
 
