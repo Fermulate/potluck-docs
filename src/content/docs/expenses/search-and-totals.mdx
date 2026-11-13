@@ -1,0 +1,96 @@
+---
+title: Search and totals
+description: Find any expense or payment across your groups, and see what you spent by month and category.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+
+Looking for that taco night from March? Wondering where all the money went this year? Search finds it, and Totals adds it up.
+
+## Search everything
+
+Search looks through every group you are in at once: expenses and payments, old and new.
+
+### Open search
+
+- On a computer, click **Search** in the menu on the left.
+- On a phone, tap the search button at the top of **Home**, or **Search** on the **Groups** page.
+- On a keyboard, press <kbd>/</kbd> from anywhere in Potluck, as long as you are not typing in a field. If you are already on Search, it jumps back to the search box and keeps what you typed.
+
+### What it finds
+
+Type a word, a name or an amount into **Search everything**. Potluck looks in:
+
+- **Descriptions**, like "tacos" or "Uber".
+- **Notes** on expenses and on payments.
+- **Comments** on expenses and on payments.
+- **People**: who paid, who was in the split, and who paid whom.
+- **Amounts**, like 42.50.
+
+Bits of words count too, so "taco" finds "Tacos al pastor". Results are grouped by group, newest first. When something matched for a reason other than its name, a line under it says why: **Comment:** with the words that matched, **In the notes**, **With Ben**, or **Amount matches**. Tap a result to open it. If there are more, tap **Show more** at the bottom.
+
+:::note[Amounts with a comma or a dot]
+Some countries write one thousand as 1,000 and others as 1.000. When you type an amount with three digits after the comma or dot, Potluck tries it both ways. So **1,000** finds a $1,000.00 expense, and **2.500** finds €2,500.00 as well as $2.50. It will not find a $1.00 expense for **1,000**, because dollars only have two decimal places.
+:::
+
+Deleted expenses and payments do not show up in search. To find those, use [Recently deleted](/expenses/editing/#undo-and-restore).
+
+### Filter the results
+
+Tap the filters button next to the search box. Pick as many as you like, and the results update as you go:
+
+- **When**: **Any time**, **This month**, **Last month**, **This year**, or **Pick dates** for your own **From** and **To**.
+- **Who**: someone who paid, or is in the split.
+- **Category**: one or more, like Food and Drinks.
+- **Group**: one group, or **All groups**.
+- **Type**: **Everything**, just **Expenses**, or just **Payments**. Payments have no category, so the category filter hides while you look at payments.
+
+Each filter that is on shows as a chip under the search box. Tap a chip to remove it, or open the filters and tap **Clear all**. You do not need to type anything: filters on their own work too, for example every Lodging expense from last year.
+
+What you searched for is part of the page address, so you can bookmark a search or come back to it with the back button.
+
+## Totals and charts
+
+Totals shows what you spent, what you paid and where it went, by month and by category. There are two places to see it.
+
+### A group's Totals tab
+
+In a group (or a one-on-one tab with a friend), open the **Totals** tab.
+
+At the top, choose a period: **Month**, **Year** or **All time**. Use the arrows (**Earlier** and **Later**) to step through months or years.
+
+The big number is **Your share**: your part of everything bought in that period. Under it:
+
+- **Total group spending**: what the whole group spent.
+- **You paid for**: what you paid, including other people's shares.
+- **Payments you made** and **Payments you received**: money that changed hands to settle up.
+- **Change in your balance**: whether that period moved your balance **up**, **down**, or made **no change**.
+
+The totals match the **Balances** tab to the cent, refunds and several payers included.
+
+At the bottom of the tab are two links: **Group activity**, for who added, changed and paid what, and [Recently deleted](/expenses/editing/#undo-and-restore).
+
+### Spending across all your groups
+
+For everything at once, open **Spending**: tap **Spending** on the **Groups** page, or the **Spending** row on **Home**. It has the same period, totals and charts, plus a **By group** chart. Tap a group there to open its Totals tab.
+
+### The charts
+
+- **By month** shows a column for each month. Use **Show** to switch between **Your share** and **Everyone** (what the whole group spent). The other charts follow the same choice. Tap a month to see its totals.
+- **By category** lists each category with its amount and its part of the total, largest first.
+- **By group** (on Spending only) does the same for your groups.
+
+Prefer numbers? Tap **Show as a table** under the month chart to see every month and its amount in a list. The category and group charts already print every amount. You can also move through the bars with the keyboard.
+
+### Everything in one currency
+
+Each group keeps its own currency. If your groups use more than one, or one that is not your own, the **Show** menu on Spending lets you choose how to see them:
+
+- **Everything in** your currency, for example **Everything in USD**. Potluck converts each expense and payment at the exchange rate on its own date, the same rates it uses when you save an expense in another currency. This is the view you start with. The currency is your **Default currency** from the [Me page](/account/#preferences).
+- **USD groups only**, **EUR groups only** and so on: just the groups in that currency, with nothing converted.
+
+If Potluck has no exchange rate for something, it leaves it out instead of guessing, and says so by name. For example: **2 items have no exchange rate yet, so they are left out: Ski trip (CHF).** Once a rate is available, they are added in. When two currencies have no direct rate, Potluck goes through US dollars or euros to find one.
+
+:::note[Good to know]
+A converted total can be a cent off from adding up the converted pieces yourself, because each amount is rounded on its own. Balances are never converted: they always stay in each group's own currency. See [Currencies](/expenses/currencies/).
+:::
