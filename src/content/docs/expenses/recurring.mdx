@@ -1,42 +1,155 @@
 ---
 title: Repeating expenses
-description: Set up rent, subscriptions and other bills that come back every week, month or year.
+description: Set up rent, subscriptions and other bills that come back every week, every 2 weeks, every month or every year, and change them as they go.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
-import Screenshot from '~/components/Screenshot.astro'
 
-Rent, the internet bill, a shared streaming subscription. Set them up once and Potluck adds a copy on the day each one is due.
+Rent, the internet bill, a shared streaming subscription. Set them up once and Potluck adds a copy on the day each one is due. When the rent goes up, change it once and every copy after that uses the new amount.
 
 ## Make an expense repeat
 
 <Steps>
 
 1. Add the expense as usual, with the first date it happened. See [Adding an expense](/expenses/).
-2. Near the bottom of the form, set **Repeats** to **Every week**, **Every month** or **Every year**.
+2. Near the bottom of the form, set **Repeats** to **Every week**, **Every 2 weeks**, **Every month** or **Every year**.
 3. Tap **Save expense**.
 
 </Steps>
 
-The first copy appears one period after the date you entered. Each copy has the same amount, payer, split and category, and shows a small repeat icon in the list.
+The form tells you when the next one goes in: one period after the date you entered. If you pick a date in the past, Potluck adds the copies you missed right away. Each copy has the same amount, payers, split, category and notes, and shows a small repeat icon in the list.
+
+A refund cannot repeat.
+
+### Make an expense you already added repeat
+
+Already added this month's rent? You do not have to add it again.
+
+<Steps>
+
+1. Open the expense.
+2. Tap **Make it repeat**.
+3. Pick how often, then tap **Repeat it**.
+
+</Steps>
+
+Before you confirm, Potluck shows when the first copy goes in. It is one period after the expense's date. If that date has already passed, it is the next date still to come, so nobody gets charged for dates that went by.
+
+You see **Make it repeat** on expenses you can edit. It is not there for a refund, an expense that already repeats, or one that names someone who left the group.
+
+## How often
+
+| **Repeats** | A copy goes in |
+| --- | --- |
+| **Every week** | Every 7 days, on the same weekday |
+| **Every 2 weeks** | Every 14 days, on the same weekday |
+| **Every month** | On the same day each month |
+| **Every year** | On the same day each year |
+
+### The repeat day stays put
+
+Monthly and yearly expenses remember their day. Rent on the 31st lands on the last day of shorter months (Feb 28, Apr 30), then goes back to the 31st.
+
+Changing only how often keeps that day too. If you switch from **Every week** or **Every 2 weeks** to **Every month** or **Every year**, the day comes from the next date instead. A weekly bill next on Thursday the 12th becomes monthly on the 12th. Picking a new **Next one** date sets a new day.
 
 ## See and manage repeating expenses
 
-Everything that repeats in a group is listed under **Repeating** at the top of the **Expenses** tab, with how many are running and the next date for each.
+Everything that repeats in a group is listed under **Repeating** on the group's **Expenses** tab. Tap **Repeating** to open the list. It shows how many are running or paused, how often each one repeats, who pays and the next date.
 
-<Screenshot
-  name="roommates-repeating"
-  alt="The Expenses tab of a two-person group called Flat 4B. A Repeating panel says 1 running and lists Rent, monthly, Next on Dec 5, with pause and delete buttons. Below it, today's Rent expense of 1,450.00 euros shows a repeat icon and you lent 725.00 euros."
-/>
+Tap one to open it. If you can change it (see [Who can change it](#who-can-change-it)), it opens in the same form as an expense. If not, you see a summary: the amount, when the next one comes, who pays, how it splits, your share each time and any notes.
 
-- **Pause** stops new copies until you tap **Resume**.
-- **Stop repeating** ends it for good. Expenses already added stay.
+You can also open it from any copy. On the expense's page, the **Repeats** card says how often it repeats and when the next one comes. Tap **Edit repeat** (or **Details** if you cannot change it).
 
-The person who set it up can pause or stop it, and so can the group's owner and admins.
+### Change the amount, payers or split
+
+<Steps>
+
+1. Open the repeating expense from the **Repeating** list, or tap **Edit repeat** on any copy.
+2. Change what you need: the amount, currency, description, category, who paid, the split, the notes, how often it repeats or the **Next one** date.
+3. Tap **Save changes**.
+
+</Steps>
+
+Changes start with the next one. Expenses already added stay exactly as they are. So if rent goes from $1,500 to $1,600, last month's copy still says $1,500. To fix a copy that already went in, edit that expense on its own. See [Editing and deleting](/expenses/editing/).
+
+The **Next one** date cannot be earlier than today.
+
+### Skip the next one
+
+Away for a month, or the bill is free this time? Tap **Skip next**. Potluck tells you which date it skips and when the one after that comes, and asks before it changes anything. Nothing goes in on the skipped date.
+
+There is no undo button. To bring a skipped date back, open the repeating expense and set **Next one** back to that date.
+
+If you skip while the editor is open, your unsaved changes stay put.
+
+### Pause and resume
+
+**Pause** stops new copies until you tap **Resume**. When you resume, it carries on from the next date still to come. It does not add the ones it missed while paused.
+
+### Stop repeating
+
+**Stop repeating** ends it for good. Potluck asks first. Expenses already added stay.
+
+### Where to find each button
+
+| | **Skip next** | **Pause** and **Resume** | **Stop repeating** |
+| --- | --- | --- | --- |
+| The **Repeating** list | Yes | Yes | Yes |
+| The editor | Yes | Yes | Yes |
+| The **Repeats** card on a copy | Yes | Tap **Edit repeat** | Tap **Edit repeat** |
+
+## Notes on each copy
+
+Whatever you write in **Notes** is copied to every copy, like a door code or the account number for the bill. Change the notes and the next copy gets the new ones. A [by-item](/expenses/splits/#by-item) bill keeps its items, tax, tip and discount on each copy too.
+
+Receipts are not copied. Add one to each copy if you need it. See [Receipts](/expenses/receipts/).
+
+## Who can change it
+
+A repeating expense can be changed by more people than an ordinary [expense](/expenses/editing/):
+
+- Anyone it involves: whoever set it up, anyone who pays and anyone in the split.
+- The group's owner and admins.
+
+That goes for skipping, pausing and stopping too. Everyone else sees the summary, with the note **Only the people in it or an admin can change this one.** Every change shows in the group's activity, so nobody changes the rent quietly.
+
+In an [archived group](/groups/settings/#archive-a-group), no new copies go in and nobody can change the repeating expenses.
+
+## A heads-up the day before
+
+The day before a copy goes in, everyone in it gets a heads-up: the people who pay and the people with a share. It arrives at 09:00 in your time zone, the one on [Me](/account/#preferences). It names the actual date, your share and the deadline, like this:
+
+> **Rent goes in on Fri, Jan 10**
+>
+> Your share will be $500.00 of $1,500.00 in Flat 4B. Skip or change it before Thu, Jan 9, 7:10 PM.
+
+If you pay but are not in the split, it says **You cover the $1,500.00 in Flat 4B.** instead. Tap it to open the repeating expense.
+
+The deadline is when the copy goes in, shown in your own time. Copies go in just after midnight UTC on their date, which can be the evening before where you live. In New York in winter, that is 7:10 PM the day before (8:10 PM in summer).
+
+If someone sets it up or moves the date after 09:00 has passed, you hear as soon as Potluck can, still before the copy goes in. If that late heads-up would land at night (between 22:00 and 07:00 your time), it goes to your inbox only, with no push or email, so it does not wake you.
+
+You get one heads-up per date. To stop them, turn off **Reminders** under [What to hear about](/notifications/#what-to-hear-about). That only affects you. There is no switch on the repeating expense itself, so nobody can turn the heads-up off for everyone else.
+
+## When someone leaves the group
+
+A repeating expense cannot charge someone who is no longer in the group. So when a person it names leaves, is removed or closes their account, it pauses right away. Expenses already added stay.
+
+Whoever set it up gets a notice called **"Internet" is paused** that says **Ben left Flat 4B. Take them out of the split to start it again.** If the person who set it up is gone too, the group's owner and admins get it instead. It also shows in the group's activity, and the **Repeating** list marks it **Paused: Ben left**.
+
+**Resume** stays off until that person is out. To start it again:
+
+<Steps>
+
+1. Open the repeating expense.
+2. Take them out of the split. If they were paying, pick someone else to pay.
+3. Tap **Save changes**, then **Resume**.
+
+</Steps>
+
+Until then, you can still change the description, category and notes, but not the amount, payers or split unless the change takes them out.
 
 :::note[Good to know]
-- Monthly bills keep their day. Rent on the 31st lands on the last day of shorter months (Feb 28, Apr 30), then goes back to the 31st.
-- You choose **Repeats** when you first add an expense. To change the amount or split of a repeating bill, stop it and set up a new one.
-- If the payer or someone in the split leaves the group, or the group is archived, the repeating expense stops on its own.
 - For a bill in another currency, each copy uses the exchange rate for its own date. See [Currencies](/expenses/currencies/).
+- An expense that names someone who left the group cannot start repeating.
 :::
