@@ -44,7 +44,7 @@ Each screen is saved four times: `<name>-<mobile|desktop>-<light|dark>.png`. Use
 ```mdx
 import Screenshot from '~/components/Screenshot.astro'
 
-<Screenshot name="settle" alt="What the screen shows, in a sentence or two." />
+<Screenshot name="expense-new" alt="What the screen shows, in a sentence or two." />
 <Screenshot name="home" device="desktop" alt="..." />
 ```
 
