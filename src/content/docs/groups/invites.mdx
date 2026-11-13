@@ -1,12 +1,14 @@
 ---
 title: Inviting people
-description: Make an invite link, choose who it lets in and for how long, and join a group from a link.
+description: Make an invite link, choose who it lets in and for how long, join a group from a link, take a seat saved for you, and the daily invite limit.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
 import Screenshot from '~/components/Screenshot.astro'
 
-People join a group with a link. There are no usernames to look up and no friend requests. Send the link in the group chat and everyone who taps it is in.
+People join a group with a link. There are no usernames to look up. Send the link in the group chat and everyone who taps it is in.
+
+Someone not on Potluck yet? You can also [add them by name](/groups/#people-not-on-potluck-yet) and split with them before they join. They take their seat with a [claim link](#claim-links).
 
 ## Make an invite link
 
@@ -76,3 +78,46 @@ The page says **This invite has gone cold** and tells you why:
 - **We could not find that invite.** Check that you copied the whole link.
 
 In every case, ask someone in the group for a new link. Owners and admins can make one in seconds.
+
+## Claim links
+
+When someone [adds you by name](/groups/#people-not-on-potluck-yet) before you are on Potluck, they save you a seat. That seat has its own link, called a claim link. You get it in an invite email, or from a friend who taps **Share their link**.
+
+A claim link is for one person and works once. It stops working if the seat is removed, or if someone changes the email saved on it (the new address gets a fresh link).
+
+### Take a saved seat
+
+<Steps>
+
+1. Open the link. The page says **A seat is saved for you**, with the group's name and a line like **Ava saved a seat for Sam.** If an email is saved on the seat, it also says which one to use, like **Use s\*\*\*@example.com to take it.**
+
+2. New to Potluck? Tap **Create an account to take it**. Already have an account? Tap **Sign in to take it**. If you are signed in, tap **Take my seat**.
+
+3. Confirm your email if Potluck asks. A seat can only be taken with a confirmed email.
+
+</Steps>
+
+Potluck says **Welcome. Everything split for Sam is yours now.** Your balance is the same one the seat had. See [When they join](/groups/#when-they-join).
+
+You do not always need the link. Sign up with the email saved on a seat, confirm it, and the seat is yours on its own.
+
+### The wrong email warning
+
+If an email is saved on the seat and you are signed in with a different one, the page says **This seat is saved for s\*\*\*@example.com. Sign in with that address to take it.** Tap **Use another account** to sign out and sign back in with the right one.
+
+Only part of the address is shown, so the page does not give anyone's email away. If the email is wrong, ask whoever added you (or an owner or admin) to [change it](/groups/#change-their-name-or-email).
+
+If you are already in the group under your own name, the seat cannot be taken. Potluck says **You are already in this group under your own name.**
+
+## The daily invite limit
+
+To keep Potluck from being used to send unwanted email, each person can send **20 invite emails a day**. These count toward it:
+
+- adding someone by name with an email,
+- giving a saved seat a new email,
+- adding someone who is already on Potluck by their email,
+- sending a reminder.
+
+Removing a seat or deleting a group does not give any back. Past the limit, Potluck says **That is a lot of invites for one day. Try again tomorrow.**
+
+Invite links you share yourself, and seats added without an email, do not count. [Friend invites by email](/friends/#add-a-friend) have their own limit of 20 a day.
