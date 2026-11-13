@@ -1,10 +1,9 @@
 ---
 title: Recording a payment
-description: Settle up with someone by recording a payment you made in cash, by bank transfer or with a payment app.
+description: Settle up by recording a payment, open a payment app with the amount filled in, remind someone who owes you, settle a whole group or a friend in one go, and fix a payment later.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
-import Screenshot from '~/components/Screenshot.astro'
 
 Potluck does not move money. You pay people the way you already do (cash, a bank transfer, a payment app) and then record it in Potluck so the balance goes down.
 
@@ -14,33 +13,180 @@ Potluck does not move money. You pay people the way you already do (cash, a bank
 
 1. On the group's **Balances** tab, tap **Settle up**. You can also tap the big plus button, then **Settle up**, and choose the group under **Which group are you settling?**
 
-2. Under **Who are you paying?**, pick the person. People you owe are listed first under **Suggested**, with the amount. Anyone else in the group is under **Everyone else**.
+2. Under **Who are you paying?**, pick the person. People you owe are listed under **You owe**, and people who owe you under **Owed to you**, each with the amount. Anyone else in the group is under **Everyone else**.
 
-   <Screenshot
-     name="settle"
-     alt="The Settle up screen asking Who are you paying? with the hint Payments go from you to them. Under Suggested, Maya Ruiz with You owe Maya $70.22. Under Everyone else, Jo Lindqvist, Kai Moana, Lena Weber and Noor Haddad."
-   />
+3. Check the **Amount**. It starts at what is owed, and you can change it to pay part of it (a partial payment) or a different amount.
 
-3. Check the **Amount**. It starts at what you owe that person, and you can pay less (a partial payment) or a different amount.
+4. Check **Paid on**. It starts at today. See [Paid on another day](#paid-on-another-day).
 
-4. Add a **Note** if you like, such as how you paid.
+5. Add a **Note** if you like, such as how you paid.
 
-5. Tap **Record payment**.
+6. Tap **Record payment**.
 
 </Steps>
 
-If that clears it, you see **All square with** their name and the balance ticks down to zero. If you paid part of it, Potluck says **Payment recorded** and how much you **still owe**. Tap **Back to** the group to return.
+If that clears it, you see **All square with** their name and the balance ticks down to zero. If you paid part of it, Potluck says **Payment recorded** and how much is still owed. Tap **Back to** the group to return.
 
-The person you paid gets a **You got paid** notification, and the payment shows in the group's expense list, for example **Noor paid you $35.10**.
+The other person gets a notification, and the payment shows in the group's expense list, for example **Noor paid you $35.10**.
 
-:::note[Good to know]
-- Payments always go **from you** to the other person. If someone paid you, they record it on their side.
-- Payments are in the group's currency.
-- In a [one-on-one tab](/friends/), tap **Settle up** on its **Balances** tab the same way.
+:::tip
+On the **Balances** tab, each of your own rows under **Who pays whom** has its own **Settle up** button. It opens the form with that person and amount filled in.
 :::
 
-## Recorded a payment by mistake?
+### Someone paid you
 
-Find the payment in the group's **Expenses** tab, tap the **…** menu on its row and choose **Delete payment**. Confirm, and balances go back to how they were.
+Payments can go either way. If a friend handed you cash, record it yourself instead of waiting for them:
 
-You can delete a payment if you made it, received it or recorded it. Group owners and admins can delete any payment. There is no undo, so check the row first.
+- On **Who are you paying?**, pick them under **Owed to you**. The form reads **Noor paid you** and starts at what they owe you.
+- Or, on the form, tap **Swap who paid** (the arrows between the two pictures) to turn it around.
+
+They get a **Payment recorded** notification saying you marked their payment as received.
+
+### Between two other people
+
+Group owners and admins can record a payment that does not involve them, for example when Jo pays Lena in cash and asks you to note it. On the form, change **Paid by** and **Paid to** to the two people. Everyone else can only record payments they made or received. Potluck says **Only owners and admins can record a payment between two other people.** if you try.
+
+### Paid on another day
+
+Forgot to record last week's transfer? Change **Paid on** to the day the money moved. You cannot pick a day in the future.
+
+- The day is a day in **your** time zone, the one on [Me](/account/#preferences). The payment shows on that day for everyone, whatever time it is elsewhere.
+- If you paid in another currency (tap the currency next to the amount to pick one), Potluck converts it at **that day's rate**, the same way it does for [expenses](/expenses/currencies/#where-the-rates-come-from). The form shows the conversion before you save.
+
+:::note[Good to know]
+- In a [one-on-one tab](/friends/), tap **Settle up** on its **Balances** tab the same way.
+- To settle with someone across every group you share, see [Settle up with a friend across groups](#settle-up-with-a-friend-across-groups).
+:::
+
+## Pay with an app
+
+If the person you are paying saved their [payment methods](/account/#payment-methods), the settle up form lists them under **How** their name **likes to be paid**. They only show when you are the one paying.
+
+<Steps>
+
+1. Fill in the **Amount** first. The buttons wait until there is one.
+2. Tap **Pay with** and the app, for example **Pay with Venmo**. The app or its website opens in a new tab.
+3. Send the money there.
+4. Back in Potluck, answer **Did it go through?**
+
+</Steps>
+
+Tap **Yes, record it** and Potluck records the payment with the amount, day and note on the form. Tap **Not yet** and nothing is recorded, so you can try again or record it later.
+
+Potluck cannot see your payment app, so it never records a payment on its own. It only saves you typing.
+
+### Which apps fill in the amount
+
+Under each button, Potluck tells you what to expect: **Opens** the app **with** the amount **filled in**, or **Opens** the app. **Type in** the amount **there.**
+
+| App | Amount filled in |
+| --- | --- |
+| PayPal | Yes, in any currency |
+| Venmo | In US dollars |
+| Cash App | In US dollars and British pounds |
+| Monzo | In British pounds |
+| UPI | In Indian rupees. UPI only shows for payments in rupees. |
+| Revolut | No, type it in Revolut |
+| Interac e-Transfer | No link. Tap **Copy** to copy their email or phone number. |
+| Bank transfer | No link. Tap **Copy** to copy their bank details. |
+
+When you copy details, Potluck says **Copied. Paste it into your banking app.** Once the money is on its way, tap **Record payment** yourself.
+
+## Remind someone
+
+On the **Balances** tab, every row where someone owes you has a **Remind** button.
+
+<Steps>
+
+1. Tap **Remind**.
+2. Add a **Note** if you like, such as **Rent is due Friday**. It is optional.
+3. Tap **Send reminder**.
+
+</Steps>
+
+They get **A friendly nudge** in their inbox, and on their phone if they turned on push. It says how much they owe and in which group, plus your note.
+
+You can remind each person once a day. After that the button says **Reminded**, and tapping it again tells you **You already nudged** them **today. Try again tomorrow.**
+
+## Settle everything at once
+
+When you owe, or are owed by, more than one person in a group, the card at the top of **Balances** has a **Settle everything** button next to **Settle up**.
+
+<Steps>
+
+1. Tap **Settle everything**.
+2. Check the list. It shows every payment that would square you with everyone in the group, in both directions, like **Jo paid you $20.00** and **You paid Maya $35.10**.
+3. Tap **Record** with the number of payments.
+
+</Steps>
+
+Potluck records them all in one go, dated today and in the group's currency, and says you are all square. Only your own balances change: debts between other people stay as they are.
+
+:::caution[Only once the money has moved]
+**Settle everything** records every payment as done. Use it after everyone has actually paid. Potluck works out the amounts at the moment you tap, so a payment someone recorded a second earlier is never counted twice.
+:::
+
+## Settle up with a friend across groups
+
+If you share several groups with someone, you can settle all of them from the [Friends](/friends/) page instead of opening each group.
+
+<Steps>
+
+1. Open **Groups**, then **Friends**.
+2. Under the friend's name, tap **Settle up**. The line beside it says how many groups have a balance, like **across 3 groups**.
+3. Every group where the two of you have a balance is listed and ticked, with the full amount and who owes whom.
+4. Change what you need:
+   - **Untick** a group to leave it as it is.
+   - **Lower an amount** to pay part of that group's debt. You cannot go above what is owed there; Potluck says **Enter an amount up to** the full amount.
+5. Check **Paid on**, then tap **Record** with the number of payments.
+
+</Steps>
+
+Potluck records **one payment in each group you picked**, in that group's currency. Balances stay separate: money owed in one group is never moved into another, and each payment works like any other (you can edit, delete or comment on it). If you settled everything, Potluck says **All square with** your friend.
+
+:::note[Good to know]
+- Archived groups are shown faded and are not settled. Unarchive one to settle there.
+- Your friend gets one notification per group.
+- The amounts are what each group's **Balances** tab shows between the two of you, following that group's [simplify debts](/balances/#simplified-debts) setting.
+:::
+
+## The payment page
+
+Tap a payment in the group's **Expenses** tab to open its page. It shows who paid whom, the amount (and what it came to in the group currency, if it was paid in another one), the day, the note, and who recorded it and when.
+
+**Comments**
+: Talk about a payment the same way as an expense: "sent from my other account", "thanks!". The payer, the person paid and whoever recorded it get a **New comment** notification.
+
+## Edit a payment
+
+<Steps>
+
+1. Open the payment and tap **Edit**. Or tap the **…** menu on its row in the **Expenses** tab and choose **Edit payment**.
+2. Change who paid, who was paid, the amount, currency, day or note.
+3. Tap **Save changes**.
+
+</Steps>
+
+Potluck says **Payment updated.** and balances follow.
+
+If someone in the payment has left the group, only the note and the day can change, and it cannot be deleted. That keeps the balances of people who left from moving.
+
+## Delete a payment
+
+Recorded a payment by mistake? Open it and tap the bin, or tap the **…** menu on its row and choose **Delete payment**. Confirm, and balances go back to how they were.
+
+A message says **Payment deleted.** with an **Undo** button. Tap it and the payment comes back.
+
+### Restore a deleted payment
+
+Missed the undo? Deleted payments are not gone for good. If you open one later, for example from a notification, it says **This payment was deleted.** Tap **Restore**, and Potluck says **Payment restored. The balance is back.** If someone in the payment has left the group since, it cannot be restored.
+
+### Who can change a payment
+
+The person who paid, the person who was paid, and whoever recorded it can edit, delete and restore it. Group owners and admins can change any payment in their group. The people in the payment are notified when someone else changes, deletes or restores it. See [Notifications](/notifications/#kinds-of-notifications).
+
+## Archived groups
+
+An [archived group](/groups/settings/#archive-a-group) is read only. Its balances stay, but there is no **Settle up**, **Remind** or **Settle everything**. Its payments can be opened and read, and the payment page says **Supper club is archived, so its payments can be read but not changed.** (with your group's name). There is no **Edit**, **Delete** or **Restore**, and no new comments.
+
+To settle up there, an owner or admin unarchives the group first. See [Archive a group](/groups/settings/#archive-a-group).

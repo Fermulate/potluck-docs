@@ -1,6 +1,6 @@
 ---
 title: Friends
-description: Who shows up as a friend, and how to keep a one-on-one tab with someone outside any group.
+description: Who shows up as a friend, what you owe each other across groups, settling up with a friend in one go, and keeping a one-on-one tab outside any group.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -8,12 +8,37 @@ import Screenshot from '~/components/Screenshot.astro'
 
 Your friends are the people you share a group with. Nobody sends friend requests: when someone joins one of your groups, you show up on each other's list.
 
-Open **Groups** and tap **Friends** to see them. Each row shows where you stand with that person one-on-one: **owes you**, **you owe**, **settled up**, or **no tab yet**.
+Open **Groups** and tap **Friends** to see them. Each row shows where you stand with that person across every group you share, your one-on-one tab included: **owes you**, **you owe**, **settled up**, or **no tab yet**.
 
 <Screenshot
   name="friends"
   alt="The Friends page with the line Anyone you share a group with. Settle one-on-one, no group needed. An Add a friend button sits at the top right. Five friends are listed, each marked no tab yet."
 />
+
+## What the totals mean
+
+A friend's total adds up what the two of you owe each other in every shared group.
+
+- **Groups in the same currency are added up.** If you owe Kai $20 in one group and Kai owes you $15 in another, the row says **you owe** $5.00.
+- **Currencies are never converted.** Each currency gets its own amount, joined with "and", like **you owe** $20.00 and €8.00.
+- **Each direction gets its own line.** If you owe Kai dollars but Kai owes you euros, the row shows both: **you owe** $20.00 on one line and **owes you** €15.00 on the next. One never hides the other.
+- **Archived groups count too.** Their balances stay, so they are part of the total.
+
+When you have a balance with someone, a line under their name says how many groups it is in, like **in 1 group** or **across 3 groups**, with a **Settle up** button. If all of those groups are archived, there is no button.
+
+## Settle up with a friend
+
+**Settle up** on a friend's row settles every group you share with them in one go.
+
+<Steps>
+
+1. Tap **Settle up** under the friend's name. The sheet is titled **Settle up with** their name.
+2. Each group with a balance is listed and ticked, with the full amount and whether you owe or they owe you. Untick a group to leave it, or lower an amount to pay part of it.
+3. Check **Paid on**, then tap **Record** with the number of payments.
+
+</Steps>
+
+Potluck records one payment in each group you picked, in that group's currency. Archived groups are shown faded and stay as they are. For the details, see [Settle up with a friend across groups](/balances/settle-up/#settle-up-with-a-friend-across-groups).
 
 ## Split something with one friend
 
@@ -30,7 +55,7 @@ Not everything belongs in a group. Coffee with a roommate, a concert ticket for 
 A one-on-one tab has only **Expenses** and **Balances**. There are no plans, invite links or roles to manage. You settle up the same way as in a group: see [Recording a payment](/balances/settle-up/).
 
 :::note[Good to know]
-A one-on-one tab is separate from the groups you share. Money you owe someone in a group stays in that group, and money on your one-on-one tab stays there.
+A one-on-one tab is separate from the groups you share. Money you owe someone in a group stays in that group, and money on your one-on-one tab stays there. The total on **Friends** adds them up, and [Settle up with a friend](#settle-up-with-a-friend) pays each one separately.
 :::
 
 ## Add a friend
