@@ -1,12 +1,12 @@
 ---
 title: Notifications
-description: The inbox, what Potluck tells you about, and how to turn push notifications on or off.
+description: The inbox, what Potluck tells you about, how to choose what pings you or lands in your email, and how to unsubscribe.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
 import Screenshot from '~/components/Screenshot.astro'
 
-Potluck keeps you posted in two ways. The **inbox** inside the app always has every update. **Push notifications** are optional pings on your phone or computer.
+Potluck keeps you posted in three ways. The **inbox** inside the app always has every update. **Push notifications** are optional pings on your phone or computer. **Email** is coming soon, and you will choose what lands there too.
 
 ## The inbox
 
@@ -19,23 +19,66 @@ On a computer, click **Notifications** in the left rail. On a phone, tap **Me**,
 
 New updates are under **New**, older ones under **Earlier**. Tap one to go straight to the expense, plan or group it is about. Tap **Mark all as read** to clear the badge. When there is nothing left, the inbox says **All caught up**.
 
-## What you hear about
+## Kinds of notifications
 
-| Notification | When | Who gets it |
-| --- | --- | --- |
-| **New expense in** a group | Someone adds an expense | The people in the split and the payer |
-| **Expense updated** | Someone changes an expense | The people in it |
-| **You got paid** | Someone records a payment to you | The person paid |
-| **New face in** a group | Someone joins | The owner and admins |
-| **Something is cooking** | Someone starts a plan | The group |
-| **When are you free?** | Someone nudges you to add your times | The people nudged |
-| **It's a date** | A plan is locked in | The group |
-| **Plans changed** | A plan is called off | The group |
-| **Coming up** | About a day before a plan | People going or maybe |
-| **Are you in?** | About a day before a plan | People who have not answered |
-| **New comment** | Someone comments | People in that expense, or the organizer and people coming to that plan |
+| Notification | When | Who gets it | Setting |
+| --- | --- | --- | --- |
+| **New expense in** a group | Someone adds an expense | The people in the split and the payer | New expenses |
+| **Expense updated** | Someone changes an expense | The people in it | Edits and deletions |
+| **Expense deleted** | Someone deletes an expense | The people in it | Edits and deletions |
+| **Expense restored** | Someone brings back a deleted expense | The people in it | Edits and deletions |
+| **You got paid** | Someone records a payment to you | The person paid | Payments |
+| **Payment recorded** | The person you paid marks it as received, or someone else records your payment | The person who paid | Payments |
+| **New face in** a group | Someone joins a group you run | The owner and admins | Groups |
+| **Something is cooking** | Someone starts a plan | The group | Plans |
+| **When are you free?** | Someone nudges you to add your times | The people nudged | Plans |
+| **It's a date** | A plan is locked in | The group | Plans |
+| **Plans changed** | A plan is called off | The group | Plans |
+| **Coming up** | About a day before a plan | People going or maybe | Reminders |
+| **Are you in?** | About a day before a plan | People who have not answered | Reminders |
+| **New comment** | Someone comments | People in that expense, or the organizer and people coming to that plan | Comments |
+| **Your month in Potluck** | The first of each month | You, if you owe or are owed money | Monthly summary |
 
 You never get notified about your own actions.
+
+## What to hear about
+
+Your inbox gets everything. Under **What to hear about** on **Me**, you pick what also pings your devices or lands in your email.
+
+Each kind of update has its own row with a **Push** switch, except **Monthly summary**, which is never a push and has no **Push** switch. Once email is on, every row gets an **Email** switch too. The rows are:
+
+- **New expenses**: someone adds an expense you are in.
+- **Edits and deletions**: an expense you are in is changed, deleted or restored.
+- **Payments**: someone pays you or records a payment with you.
+- **Comments**: new comments on expenses and plans you are part of.
+- **Groups**: someone joins a group you run.
+- **Plans**: new plans, locked in times, cancellations and availability requests.
+- **Reminders**: plans coming up and RSVPs you still owe.
+- **Monthly summary**: your balances on the first of each month.
+
+Every switch starts on, with one exception: plans can get chatty, so **Plans** starts with push only and no email. Flip any switch and it saves right away.
+
+These settings follow your account, so they apply on every device you use. Turning a switch off only stops that ping or email. The update still shows up in your inbox.
+
+### Push on this device
+
+The **Push notifications** switch above the list still decides whether this device gets pings at all. If push is off or blocked here, the **Push** column looks faded and Potluck says **Push is off on this device, so these only reach your other devices.** If push is just off, tap **Turn on push here**. If it is blocked, allow notifications for Potluck in your browser or phone settings first.
+
+### When you are offline
+
+You can still flip switches. Potluck says **You are offline. Your change will save when you are back.** and saves it once you reconnect. If a change does not go through, the switch flips back and Potluck says **That setting did not save. Try again?**
+
+### Monthly summary
+
+On the first of each month, Potluck puts a **Your month in Potluck** card in your inbox. It lists your groups with what you owe or are owed, like **Supper club: you are owed $42.00**. If you are settled up in every group, there is no card that month.
+
+The summary is never a push. Once email is on, you can also get it by email with the **Email** switch on its row.
+
+### Email
+
+Email notifications are not on yet. Until the Potluck team turns them on, **Me** says **Email notifications are on their way. Until then, your inbox has it all.** When they arrive, the **Email** switches appear on their own, already set to the defaults above.
+
+Potluck waits a minute before sending an email, so several quick changes to one expense come as one email. If an expense is added and deleted right away, no email goes out at all.
 
 ## Turn on push notifications
 
@@ -47,7 +90,7 @@ You never get notified about your own actions.
 
 </Steps>
 
-When it works, the switch says **Push is on for this device.** Push is set per device: turn it on separately on your phone and your laptop.
+When it works, the switch says **Push is on for this device.** Push is set per device: turn it on separately on your phone and your laptop. Then use [What to hear about](#what-to-hear-about) to pick which updates ping you.
 
 :::tip[On iPhone and iPad]
 Add Potluck to your home screen first and open it from there, then turn on push. Safari in a normal tab cannot show notifications. See [Install Potluck as an app](/getting-started/#install-potluck-as-an-app).
@@ -57,10 +100,36 @@ Add Potluck to your home screen first and open it from there, then turn on push.
 
 Turn off **Push notifications** on **Me**. That device stops getting pings right away. The inbox keeps working, as the app says: **You will always see updates in your inbox.**
 
+To keep push on but hear about less, turn off the **Push** switch for just those rows under [What to hear about](#what-to-hear-about).
+
 You can also block notifications for Potluck in your browser or phone settings. Potluck then shows **Notifications are blocked in your browser settings.** To turn push back on later, allow notifications for the site in those settings first.
 
-:::note[Good to know]
-Push is all or nothing for now. You cannot pick which kinds of notifications to get pushed. The inbox always gets all of them.
-:::
-
 If push does not arrive, see [Troubleshooting](/troubleshooting/#push-notifications-do-not-arrive).
+
+## Unsubscribe from emails
+
+Every Potluck notification email has an unsubscribe link. Some links stop one kind of email, like comments. Others stop all notification emails from Potluck. You do not need to sign in to use them. Sign-in links and password reset emails are not notifications, so they keep arriving when you ask for them.
+
+If your mail app shows its own **Unsubscribe** button next to the sender, tapping it works in one go.
+
+The link in the email opens a page that asks first:
+
+<Steps>
+
+1. Open the unsubscribe link in the email. The page says **Stop these emails?** and shows which account it is for, with part of the address hidden.
+2. Check that it is the right account, then tap **Unsubscribe**.
+3. The page says **You are off the list**.
+
+</Steps>
+
+Opening the link alone changes nothing. Some email services open every link in a message to check it for safety, so Potluck waits for your tap.
+
+Unsubscribing only stops notification emails. Your Potluck inbox is not affected, and your push settings stay as they are.
+
+### Changed your mind?
+
+Right after you unsubscribe, tap **Keep sending them** and your emails come back as they were. If you open an old link for emails that are already off, the page says **You are already off the list** and offers **Send them again**.
+
+To change anything else, tap **All notification settings**. It takes you to **Me** (or to sign in first).
+
+If the page says **This link does not work**, the link may have been cut off when it was copied. Try the link in your latest Potluck email, or change your settings under [What to hear about](#what-to-hear-about).
