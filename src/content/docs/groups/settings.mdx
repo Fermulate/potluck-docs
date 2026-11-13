@@ -1,11 +1,11 @@
 ---
 title: Group settings
-description: Rename a group, change its look, set the house rules, and archive, leave or delete it.
+description: Rename a group, change its look, set the house rules and the default split, and archive, leave or delete it.
 ---
 
 import Screenshot from '~/components/Screenshot.astro'
 
-Open a group and tap the **Settings** tab (swipe the tabs left on a phone). Owners and admins can change everything here. Members see the same page read-only, with the note **Only owners and admins can change these.**
+Open a group and tap the **Settings** tab (swipe the tabs left on a phone). Owners and admins can change everything here. Members see the same page read-only, with the note **Only owners and admins can change these.** The one exception is the [default split](#default-split), which anyone in the group can change.
 
 <Screenshot
   name="group-settings"
@@ -27,13 +27,25 @@ Tap **Save** when you are done.
 **Members can invite people**
 : Lets regular members make invite links. On by default. When it is off, only owners and admins can. See [Inviting people](/groups/invites/).
 
+## Default split
+
+**Default split** shows where new expenses in this group start, for example **Equally between everyone** or **By shares: you 2, Ben 1**. New expenses here start with this split. Anyone in the group can change it.
+
+1. Tap **Change**.
+2. Pick **Equal**, **Percent** or **Shares**, and who is in it.
+3. Tap **Save default split**.
+
+To go back, tap **Back to equal** in the same sheet. New expenses then split equally between everyone again.
+
+The default split applies to this group only, and it never changes expenses that are already saved. You can also save one straight from an expense. See [Default split](/expenses/splits/#default-split).
+
 ## The exit
 
 ### Archive a group
 
 **Archive group** hides the group from your list. Balances stay put and nothing is deleted. You can tap **Undo** right away, or find it later under **Show archived** on the **Groups** page and tap **Unarchive group**.
 
-While a group is archived, nobody can add expenses to it or make invite links.
+While a group is archived, nobody can add expenses to it, change its expenses or make invite links. See [Archived groups are read only](/expenses/editing/#archived-groups-are-read-only).
 
 ### Leave the group
 

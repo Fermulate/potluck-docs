@@ -1,6 +1,6 @@
 ---
 title: Editing and deleting
-description: Fix an expense, delete one, and bring it back with undo or restore.
+description: Fix an expense, see what changed, delete one, and bring it back with undo or restore.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -10,7 +10,7 @@ Typos happen. Here is how to fix them, and who is allowed to.
 ## Who can change an expense
 
 - The person who added it.
-- The person who paid for it.
+- Anyone who paid for it, including each payer when [several people paid](/expenses/#several-people-paid).
 - The group's owner and admins, for any expense.
 
 Anyone else gets **Only the person who added or paid this, or an admin, can change it.** See [Roles and members](/groups/roles/).
@@ -27,8 +27,22 @@ Anyone else gets **Only the person who added or paid this, or an admin, can chan
 
 Balances update straight away, and the people in the split get a notification that it changed.
 
+## Edit history
+
+Every expense keeps a **History** on its page. It lists who added it, who edited it, and who deleted it or brought it back, with when.
+
+Under each edit, Potluck lists every field that changed, with the old value and the new one:
+
+- **Amount: $90.00 to $96.00**
+- **Paid by: you to you $60.00 and Ben $36.00**
+- **Name**, **Currency**, **Split**, **Date**, **Category** and **Notes**
+- For by-item bills: **Items**, **Tax**, **Tip** and **Discount**
+- **Marked as a refund** or **No longer a refund**, **Receipt added** or **Receipt removed**, and **Linked to a different plan**
+
+So if a number looks off, open the expense and check who changed what. Edits made before Potluck kept this detail show who edited it, without the list of changes.
+
 :::note[Good to know]
-- A [by-item](/expenses/splits/#by-item) expense opens as **Exact** amounts, because Potluck keeps each person's share, not the item list.
+- A [by-item](/expenses/splits/#by-item) expense opens with its items, tax, tip and discount, ready to change. One saved before Potluck kept items opens as **Exact** amounts.
 - **Repeats** cannot be changed on an existing expense. Manage repeating bills under **Repeating** on the Expenses tab. See [Repeating expenses](/expenses/recurring/).
 - An expense in another currency keeps its saved exchange rate unless you change the currency.
 :::
@@ -51,3 +65,9 @@ Right after deleting, a message says **Expense deleted.** with an **Undo** butto
 Missed it? Deleted expenses are not gone for good. If you open one later, for example from a notification, it says **This expense was deleted.** Tap **Restore** to bring it back, with its balances.
 
 You cannot edit a deleted expense until you restore it. If someone in the split has left the group since, it cannot be restored.
+
+## Archived groups are read only
+
+When a group is [archived](/groups/settings/#archive-a-group), its expenses stay there to look at, but nobody can change them. The expense page says **Supper club is archived, so its expenses can be read but not added or changed.** (with your group's name), and there is no **Edit**, **Delete** or **Restore**, and no new comments.
+
+To change something, an owner or admin unarchives the group first. See [Archive a group](/groups/settings/#archive-a-group).

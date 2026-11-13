@@ -23,9 +23,9 @@ An expense says three things: how much, who paid, and who it was for. Potluck wo
 
 3. Fill in **What was it?** and pick a **Category**: Food, Groceries, Drinks, Transport, Gas, Lodging, Tickets, Rent, Utilities, Shopping, Gifts or Other.
 
-4. Check **Paid by** (you, unless you change it) and the **Date**.
+4. Check **Paid by** (you, unless you change it) and the **Date**. If more than one person paid, see [Several people paid](#several-people-paid).
 
-5. Under **Split between**, choose who it was for and how to split it. **Equal** with everyone ticked is the default. The five ways to split are explained in [Splitting](/expenses/splits/).
+5. Under **Split between**, choose who it was for and how to split it. **Equal** with everyone ticked is the default, unless your group has saved a [default split](/expenses/splits/#default-split). The six ways to split are explained in [Splitting](/expenses/splits/).
 
 6. Add **Notes** or a **Receipt** if you like, and choose whether it **Repeats** (see [Repeating expenses](/expenses/recurring/)).
 
@@ -34,8 +34,59 @@ An expense says three things: how much, who paid, and who it was for. Potluck wo
 </Steps>
 
 :::note[Good to know]
-You can add an expense that someone else paid. Pick them under **Paid by**. Anyone in the group can add expenses, and the person who added it or paid it can change it later. See [Editing and deleting](/expenses/editing/).
+You can add an expense that someone else paid. Pick them under **Paid by**. Anyone in the group can add expenses, and the person who added it or anyone who paid it can change it later. See [Editing and deleting](/expenses/editing/).
 :::
+
+## Several people paid
+
+Sometimes the bill gets paid in pieces. Ava put $60 on her card and Ben paid the other $30 in cash. Record it as one expense with two payers.
+
+<Steps>
+
+1. Type the **Amount** first, so Potluck knows the total.
+2. Tap **Paid by**. The **Who paid?** sheet opens.
+3. Switch from **One person** to **Several people**.
+4. Enter what each person paid. Leave anyone who paid nothing empty.
+5. Tap **Done**.
+
+</Steps>
+
+The amounts must add up to the total. The bottom of the sheet keeps count as you type: **$30.00 left to assign**, **$5.00 too much**, or **Everything adds up**. If something is still left, a **Rest to** button (for example **Rest to Ben**) gives the whole remainder to the first person with nothing typed yet. You cannot save until it adds up.
+
+> A $90 dinner split equally between Ava, Ben and Cam, so $30 each. Ava paid $60 and Ben paid $30. Ava is owed $30, Ben is square, and Cam owes Ava $30.
+
+On the expense and in the list, every payer is named, for example **Ava and Ben paid $90.00**. To go back to a single payer, open **Paid by** again and pick **One person**.
+
+## Refunds
+
+Money that comes back is a refund: a returned jacket, a cancelled booking, a deposit you got back. Record it so it lowers what people owe.
+
+<Steps>
+
+1. Add an expense as usual, with the amount that came back.
+2. Turn on **This is a refund**, just under **Paid by**.
+3. **Paid by** becomes **Received by**. Pick whoever got the money. Several people can share it, the same way as [several payers](#several-people-paid).
+4. Under **Split between**, pick who the money belongs to, and split it any way you like.
+5. Tap **Save expense**.
+
+</Steps>
+
+A refund works like an expense in reverse. Whoever got the money owes everyone in the split their part of it.
+
+> Ava paid $120 for four concert tickets, split equally between Ava, Ben, Cam and Dev. One show was moved and the venue sent Ava $40 back. Record a $40 refund, received by Ava, split equally between the same four. Ben, Cam and Dev each owe $10 less, and Ava is owed $30 less.
+
+Refunds carry a **Refund** badge in the list. Your line reads **you get back** when someone else got the money, or **you owe** when you did. A refund cannot repeat, so **Repeats** is hidden while the switch is on.
+
+## Quick split for two
+
+When a group or one-on-one tab has just two people, four buttons save you a few taps:
+
+- **You paid, split equally**
+- **Ben owes you all of it**
+- **Ben paid, split equally**
+- **You owe Ben all of it**
+
+Each one sets **Paid by** and the split in one tap: the **split equally** buttons halve it, and the **all of it** buttons put the whole amount on the other person. On a phone they sit right under **Paid by**. On a wider screen they are at the top of **Split between**, under **Quick split**. Anything else, like percentages or exact amounts, is still there in the full split options below.
 
 ## Reading the expense list
 
@@ -44,6 +95,8 @@ The **Expenses** tab lists expenses and payments by day, newest first. Each line
 - **you lent** an amount: you paid, and others owe you their share.
 - **you borrowed** an amount: someone else paid, and this is your share.
 - **not involved**: you were not part of the split.
+
+[Refunds](#refunds) read the other way round: **you get back** or **you owe**.
 
 Payments between people show as, for example, **Noor paid you $35.10**. Use **Search expenses** to find something by name, or tap a category chip to see only that kind of expense.
 
@@ -56,7 +109,7 @@ Tap an expense to open it.
   alt="The detail page for a Rent expense of 1,450.00 euros, converted to $1,566.00 in USD at 1.08. It was paid by Ravi on Thursday, November 5, 2026. The card below says Split equally: You owe 725.00 euros, and Ravi paid with a share of 725.00 euros. It notes Added by Ravi 1 hour ago, then a Comments section with a Say something nice field."
 />
 
-You see who paid, how it was split and what each person owes, who added it and when, the receipt and notes, and the exchange rate if it was in another currency. At the bottom, **Comments** is a place for the group to talk about this expense ("was the tip in there?").
+You see who paid (and how much each, if several people did), how it was split and what each person owes, the items of a [by-item](/expenses/splits/#by-item) bill, the receipt and notes, and the exchange rate if it was in another currency. **History** lists who added and changed it; see [Edit history](/expenses/editing/#edit-history). At the bottom, **Comments** is a place for the group to talk about this expense ("was the tip in there?").
 
 ## Expenses for a plan
 
