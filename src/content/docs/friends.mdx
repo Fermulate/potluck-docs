@@ -1,12 +1,12 @@
 ---
 title: Friends
-description: Who shows up as a friend, what you owe each other across groups, settling up with a friend in one go, your activity together, and keeping a one-on-one tab outside any group.
+description: Who shows up as a friend, adding friends with a link or email, the friend page, what you owe each other across groups, settling up with a friend in one go, keeping a one-on-one tab outside any group, and removing, blocking and reporting people.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
 import Screenshot from '~/components/Screenshot.astro'
 
-Your friends are the people you share a group with. Nobody sends friend requests: when someone joins one of your groups, you show up on each other's list.
+Your friends are the people you share a group with, plus anyone you add with your friend link. When someone joins one of your groups, you show up on each other's list without asking.
 
 Open **Groups** and tap **Friends** to see them. Each row shows where you stand with that person across every group you share, your one-on-one tab included: **owes you**, **you owe**, **settled up**, or **no tab yet**.
 
@@ -14,6 +14,57 @@ Open **Groups** and tap **Friends** to see them. Each row shows where you stand 
   name="friends"
   alt="The Friends page with the line Anyone you share a group with. Settle one-on-one, no group needed. An Add a friend button sits at the top right. Five friends are listed, each marked no tab yet."
 />
+
+People [not on Potluck yet](/groups/#people-not-on-potluck-yet) are never on your Friends list. They show up once they join and take their seat.
+
+## Add a friend
+
+On **Friends**, tap **Add a friend**. The sheet has a few ways to do it. A friend link or email invite needs no shared group.
+
+### Your friend link
+
+**Your friend link** is at the top of the sheet. Anyone who opens it can add you as a friend.
+
+- Tap **Copy link** to paste it anywhere, or **Share** to use your phone's share sheet.
+- The link keeps working until you change it. If it ended up somewhere it should not be, tap **Make a new link** (the arrows next to it). Potluck says **Old link closed. Here is a fresh one.**
+
+When someone opens your link, they see **Your name wants to split with you** and tap **Add** your name **as a friend**. New to Potluck? They tap **Create an account to accept** first, or **Sign in to accept**. You get a **New friend** notification, and you are on each other's list.
+
+### Invite by email
+
+Under **Invite by email**, type their address and tap **Invite**. Potluck opens your own email app with a message and a link ready to send, so the invite comes from you.
+
+That link is just for them: **only that email can use it, once**. They need to sign in with that address and confirm it. Anyone else who opens it is told **This invite was sent to a different email address.** The link lasts 30 days.
+
+You can make 20 of these a day. Past that, Potluck says **That is a lot of invites for one day. Try again tomorrow.**
+
+### Add back someone from your groups
+
+Under **People from your groups**, Potluck lists people you share a group with who are not on your list, for example someone you [removed](#remove-a-friend). Tap **Add** next to them, and Potluck says they are your friend again.
+
+### Invite them to a group
+
+Under **Or invite them to one of your groups**, pick a group. Potluck makes a one-use invite link for that group that lasts a week, and opens your share sheet so you can send it. When they join, they appear on your Friends list.
+
+No groups yet? Potluck asks you to start one first. See [Groups](/groups/).
+
+## The friend page
+
+Tap a friend on **Friends** to open their page. At the top is their name and where you stand overall, like **You are owed** $20.00, or **All settled up**. Below that:
+
+**Add expense**
+: Opens a new expense on your [one-on-one tab](#split-something-with-one-friend). The first time, it starts the tab.
+
+**Settle up**
+: Shows when you have a balance. It works like [settling up with a friend](#settle-up-with-a-friend).
+
+**Where you stand**
+: Your one-on-one tab and every group you share, each with your balance there. Tap one to open it.
+
+**Everything you share**
+: Every expense and payment between the two of you, newest day first, each marked **One-on-one** or **In** and the group's name.
+
+The **…** button holds **Remove friend**, **Report** and **Block**. See [Remove a friend](#remove-a-friend) and [Block and report](#block-and-report).
 
 ## What the totals mean
 
@@ -46,13 +97,17 @@ Not everything belongs in a group. Coffee with a roommate, a concert ticket for 
 
 <Steps>
 
-1. On **Friends**, tap the person.
-2. Potluck opens your tab together, titled **You and** their name. The first time, it starts a fresh tab.
-3. Tap **Add expense** and split it as usual. See [Adding an expense](/expenses/).
+1. On **Friends**, tap the person to open [their page](#the-friend-page).
+2. Tap **Add expense**. The first time, Potluck starts a fresh tab for the two of you, titled **You and** their name.
+3. Split it as usual. See [Adding an expense](/expenses/).
 
 </Steps>
 
+To open the tab itself, tap **One-on-one** under **Where you stand** on their page.
+
 A one-on-one tab has only **Expenses**, **Balances** and **Totals** (see [Totals and charts](/expenses/search-and-totals/#totals-and-charts)). There are no plans, invite links or roles to manage. You settle up the same way as in a group: see [Recording a payment](/balances/settle-up/).
+
+You can only start a one-on-one tab with someone on your Friends list. Otherwise Potluck says **You can only split with friends.**
 
 :::note[Good to know]
 A one-on-one tab is separate from the groups you share. Money you owe someone in a group stays in that group, and money on your one-on-one tab stays there. The total on **Friends** adds them up, and [Settle up with a friend](#settle-up-with-a-friend) pays each one separately.
@@ -60,7 +115,7 @@ A one-on-one tab is separate from the groups you share. Money you owe someone in
 
 ## Activity with a friend
 
-Want to see everything you and one friend have been up to? Open your one-on-one tab (tap them on **Friends**) and tap **Activity with** their name, under what you owe each other.
+Want to see everything you and one friend have been up to? Open your one-on-one tab and tap **Activity with** their name, under what you owe each other.
 
 The activity feed opens with only what involves both of you, across every group you share:
 
@@ -70,8 +125,54 @@ The activity feed opens with only what involves both of you, across every group 
 
 A chip at the top says **You and** their name. Tap **Show all activity** to go back to the full feed.
 
-## Add a friend
+## Remove a friend
 
-Tap **Add a friend** and pick one of your groups under **Invite them to**. Potluck makes a one-use invite link for that group that lasts a week, and opens your share sheet so you can send it. When they join, they appear on your Friends list.
+On their page, tap **…**, then **Remove friend**, and confirm.
 
-No groups yet? Potluck asks you to start one first. See [Groups](/groups/).
+- You come off each other's lists. **Shared groups stay as they are**, with every expense and balance in them.
+- Settle your one-on-one tab first. If there is still money on it, Potluck says **Settle your one-on-one balance first.**
+
+Want to block them too? [Block them](#block-someone) instead: blocking also ends the friendship, and once they are off **Friends** their page is no longer listed there.
+
+Changed your mind? While you still share a group, add them back under [People from your groups](#add-back-someone-from-your-groups). Otherwise, send them your [friend link](#your-friend-link).
+
+## Block and report
+
+### Block someone
+
+On their page, tap **…**, then **Block** and their name, and confirm. Their page opens from your **Friends** list, so block someone while they are still your friend. Saved seats cannot be blocked.
+
+**Blocks are quiet.** They are not told when you block or unblock them. Anywhere a block stops them, they see what anyone would see for a closed link or a stranger, never that they were blocked.
+
+While someone is blocked:
+
+- **You stop being friends**, in both directions.
+- **You get no notifications about what they do**, even in groups you share. Their expenses and payments still show in those groups, and your balances there still count.
+- **No new one-on-one tabs.** Neither of you can start one with the other.
+- **No friend links.** They cannot use your friend link or add you back from a group, and you cannot add them.
+- **No joining groups across the block.** Neither of you can join a group the other is in. The invite link looks revoked.
+- **Groups you already share keep working** for everyone in them.
+
+#### An existing one-on-one tab
+
+If you already had a one-on-one tab, it stays, but it freezes for them. They can no longer add, edit, delete or restore expenses, payments or repeating expenses there, or comment. They are told **You can only split with friends.**
+
+You can still do all of that, including settling up, so nothing changes your balance behind your back.
+
+A repeating expense on that tab keeps running until one of you turns it off. Either of you can always turn it off.
+
+#### Seats and held invites
+
+A block also reaches [saved seats](/groups/#people-not-on-potluck-yet). If you add a seat with the email of someone you blocked (or who blocked you), the seat is still made, so nothing gives the block away, but its invite email is not sent. A reminder you send for it is held back the same way. And typing the email of someone with a block between them and anyone in the group makes a seat, instead of adding their account.
+
+**Once the block is lifted**, the held invite or reminder goes out, from the same person who sent it, unless another block still stands in the way, the group is archived, or the person who sent it has left the group.
+
+### Unblock someone
+
+On **Me**, find **Blocked people** and tap **Unblock** next to them. See [Blocked people](/account/#blocked-people). Unblocking does not make you friends again. Send them your [friend link](#your-friend-link) or add them back from a shared group.
+
+### Report someone
+
+On their page, tap **…**, then **Report** and their name. Write **What happened** in a few words and tap **Send report**. The Potluck team reads every report, and the person is not told.
+
+Reporting and blocking are separate. Block them as well if you want to stop hearing from them.
