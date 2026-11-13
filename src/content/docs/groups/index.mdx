@@ -163,7 +163,31 @@ Removing a seat closes its claim link, and nothing more is sent to its email. Ex
 
 ## Download a group's expenses
 
-On the **Expenses** tab, tap the download button next to the search field (**Export CSV**). You get a spreadsheet with the date, description, category, who paid, the amount and currency, the exchange rate, the amount in the group currency, notes, and each person's share. When several people paid, **Paid by** lists each of them with what they paid. Refunds show as negative amounts and shares.
+On the **Expenses** tab, tap the download button next to the search field (**Export CSV**). The **Export** button in [Group settings](/groups/settings/#spreadsheets) gives you the same file.
+
+You get a spreadsheet with every expense and payment in the group, one per row. Column names follow the language you use Potluck in.
+
+| Column | What it holds |
+| --- | --- |
+| **Date** | The expense day. For a payment, the day it was recorded, in your time zone. |
+| **Group**, **Type** | The group name, and **Expense**, **Refund**, **Payment** or **Balance**. |
+| **Description**, **Category** | As entered. A payment reads like "Ava paid Ben". |
+| **Amount**, **Currency**, **Rate** | What was entered, and the exchange rate into the group currency. |
+| **Group currency**, **Amount in group currency** | The amount converted with that rate. |
+| **Paid by** | One name, or each payer with what they paid, like "Ava 60.00; Ben 30.00". |
+| _Name_ **paid**, _Name_ **share** | For each person, what they paid and their share, in the row's currency. |
+| _Name_ **balance** | What the row did to that person, in the group currency. Positive means they are owed. |
+| **Notes**, **Items** | Notes, and for [by-item](/expenses/splits/#by-item) bills each item with who had it. |
+
+Refunds are negative in amount, paid and share. A payment is "paid" by whoever paid and is the "share" of whoever got it.
+
+The last row of the group is the **Balance** row. Each person's balance column adds up to their balance, and the Balance row shows that total. It matches the [Balances](/balances/) tab to the cent.
+
+You can bring this file back into a group with [Import expenses](/groups/settings/#import-expenses). For every group at once, or just what you share with one friend, see [Export your data](/account/#export-your-data).
+
+:::note[Good to know]
+Text that would start a spreadsheet formula, like a description beginning with `=`, gets an apostrophe in front, so opening the file never runs anything.
+:::
 
 ## Archived groups
 
