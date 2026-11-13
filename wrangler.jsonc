@@ -5,5 +5,10 @@
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
-  }
+  },
+  // Listing the custom domain keeps `wrangler deploy` from detaching it.
+  "routes": [{ "pattern": "docs.potluck.fermulate.com", "custom_domain": true }],
+  // With `routes` set, wrangler turns workers.dev off unless asked. Keep the old
+  // potluck-docs.potluck-web.workers.dev URL working.
+  "workers_dev": true
 }

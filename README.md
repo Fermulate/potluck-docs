@@ -1,6 +1,6 @@
 # Potluck guide
 
-The user guide for [Potluck](https://potluck.potluck-web.workers.dev), the free app for splitting expenses with friends and planning get-togethers. The app's code lives in [Fermulate/potluck](https://github.com/Fermulate/potluck).
+The user guide for [Potluck](https://potluck.fermulate.com), the free app for splitting expenses with friends and planning get-togethers. The app's code lives in [Fermulate/potluck](https://github.com/Fermulate/potluck).
 
 The guide is a static site built with [Astro Starlight](https://starlight.astro.build). It has built-in search and follows the reader's light or dark theme, screenshots included.
 
@@ -58,9 +58,9 @@ Phone shots are the default. The component renders the light and dark images and
 
 ## Deploy
 
-Pushing to `main` builds the site and deploys `dist/` to Cloudflare Workers as static assets (worker name `potluck-docs`, see `wrangler.jsonc`). The workflow needs:
+The guide is live at https://docs.potluck.fermulate.com. Pushing to `main` builds the site and deploys `dist/` to Cloudflare Workers as static assets (worker name `potluck-docs`, see `wrangler.jsonc`). `wrangler.jsonc` lists `docs.potluck.fermulate.com` as a custom domain route, so a deploy keeps it attached, and keeps https://potluck-docs.potluck-web.workers.dev working too. The workflow needs:
 
-- the repository secret `CLOUDFLARE_API_TOKEN`
+- the repository secret `CLOUDFLARE_API_TOKEN`, with Workers Routes edit on the `fermulate.com` zone
 - the repository variable `CLOUDFLARE_ACCOUNT_ID`
 
 Without the token, the workflow builds and skips the deploy. Pull requests build and check links in `ci.yml`.

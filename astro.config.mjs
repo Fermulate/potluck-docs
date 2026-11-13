@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight'
 import starlightLinksValidator from 'starlight-links-validator'
 
 export default defineConfig({
-  site: 'https://potluck-docs.potluck-web.workers.dev',
+  site: 'https://docs.potluck.fermulate.com',
   trailingSlash: 'always',
   integrations: [
     starlight({
