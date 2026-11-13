@@ -68,7 +68,7 @@ An archived group cannot take an import. [Unarchive it](#archive-a-group) first.
 
 ### Export from Splitwise
 
-On splitwise.com, open the group (or the friend) and choose **Export as spreadsheet**. Save the file somewhere you can find it. Splitwise exports in any language work.
+On splitwise.com, open the group and choose **Export as spreadsheet**. Save the file somewhere you can find it. Splitwise exports in any language work.
 
 Splitwise only says what each row did to each person, not who paid what. Potluck works it out from those numbers:
 
@@ -129,11 +129,13 @@ Every row in the preview is converted with the rate it will be saved with, so **
 Potluck points out anything that might come in twice. It never refuses it on its own.
 
 - **The same file.** If this file went into the group before, it says so, like **This file already went into Trip 2 days ago**.
-- **Matching rows.** An expense with the same day, amount, currency and description, or a payment with the same day, amount, currency and people, counts as already there. Tick **Leave those rows out** to skip them.
+- **Matching rows.** An expense with the same day, amount, currency and description, or a payment with the same **Paid on** day, amount, currency and people, counts as already there. Tick **Leave those rows out** to skip them.
 
 ### Dates from a spreadsheet
 
 Dates can be written as 2026-03-01, or the way a spreadsheet saves them, like 3/1/26 or 01/03/2026. Potluck works out from the file whether the month or the day comes first, and says which, like **Dates read as month/day/year**. When the file could be read either way, tap **Read them as day/month/year** (or the other way round) to switch.
+
+A payment's date becomes its **Paid on** day.
 
 ### Big files
 
@@ -144,10 +146,6 @@ One import takes up to 5,000 rows. A longer file, up to 50,000 rows, goes in as 
 Each import of up to 5,000 rows is all or nothing. If one row has a problem, none of that part is saved, and Potluck names the row, like **Row 12: ...**. Fix it, or leave it out, and import again.
 
 In a file that goes in as several parts, the parts before the failed one stay in. Potluck says how many rows went in, updates the balances, and ticks **Leave those rows out** for you, so importing again does not bring those rows in twice.
-
-### One-on-one tabs and blocks
-
-You can import into a [one-on-one tab](/friends/#split-something-with-one-friend) like any group. But if the other person blocked you, the tab is [frozen for you](/friends/#an-existing-one-on-one-tab), and that includes imports. Potluck says **You can only split with friends.**
 
 ## The exit
 
