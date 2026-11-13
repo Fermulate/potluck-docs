@@ -1,6 +1,6 @@
 ---
 title: Painting your availability
-description: Paint the times that work for you with a mouse, a finger or the keyboard, and read the live group heatmap.
+description: Paint the times that work for you with a mouse, a finger or the keyboard, and read the live group heatmap, and let guests answer through a link.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -67,6 +67,58 @@ Tap **Everyone** to see **Group availability**. Each cell gets warmer the more p
 - The grid updates live. When a friend paints, their cells warm up while you watch.
 
 When you are on **Everyone** and have not answered yet, a reminder appears with an **Add your times** button.
+
+## Guest links
+
+Some people you want at the table are not in the group, or not on Potluck at all. A guest link lets them add their times with just a name. No account, no app, no group invite.
+
+### Share with guests
+
+<Steps>
+
+1. Open a plan that is still finding a time. Under **Guests**, tap **Share with guests**.
+
+2. Pick how long the link stays open: **24 hours**, **7 days** or **30 days**.
+
+3. Pick how many guests can answer through it: **5**, **10**, **25**, or **Custom** for any number from 1 to 100. The cap counts people, not saves: a guest who changes their times later does not take a second seat.
+
+4. Tap **Create guest link**, then **Copy guest link** or the share button to send it to a group chat.
+
+</Steps>
+
+Anyone in the group can make a guest link. Each open link is listed on the plan with how many guests have used it, for example **3 of 10 guests**, and when it closes. A link that has run out of seats shows **Full**.
+
+To close a link early, tap **Turn off** next to it and confirm. Whoever made the link, the organizer and group admins can turn it off. Answers guests already gave stay on the plan. A link that is off stays off; to let more guests in, make a new one. A plan can have up to 20 open guest links at a time.
+
+### What guests see
+
+A guest opens the link and sees the plan's title, who invited them, the days and hours of the poll, in their own time zone. They paint their times with the same **Free**, **Maybe** and **Erase** brushes, type their name under the grid, and tap **Send my times**.
+
+After that they see **Everyone**: how many people are free at each time, never who. It starts on the time that suits the most people; tap any other time to see its count. Guests do not see names, balances, expenses or anything else about the group.
+
+The same browser can come back to the link and tap **Change my times** until the link closes. A guest who clears their browser data, or opens the link on another device, answers as a new guest.
+
+A guest link stops taking answers when:
+
+- it expires or someone turns it off,
+- the plan is locked in or called off,
+- the group is archived.
+
+The guest then sees **This link has closed**, with a way to sign up for Potluck. If the link closed while they were still painting, the page also says their times were not saved. Once the plan is locked in, a guest who answered from that browser sees the day and time the group picked instead, in their own time zone, with a thank you by name. Anyone else with the link just sees that it has closed. Nobody can change their times any more, and the location stays private.
+
+When every seat is taken, new guests see **This link is full**; guests who already answered can still change their times.
+
+### Guests on the plan
+
+Guest answers count everywhere member answers do: in the live heatmap, in the best times, and toward the plan's minimum number of people. Their names carry a **(guest)** tag, and the **Guests** card lists everyone who answered through a link.
+
+The organizer and group admins can remove a guest with the **X** next to their name, after confirming. Their times go with them and their seat on the link opens up again for someone new. The browser they answered from is blocked: opening the link there says their answer was taken off, and it cannot answer again. Someone on another browser or device could still answer as a new guest while the link has room, so turn the link off if you need to close the door completely.
+
+After the plan is locked in, it keeps the list of who answered as a guest.
+
+:::note[Good to know]
+Guests are not members. A guest link never adds anyone to the group; send a [group invite](/groups/invites/) for that.
+:::
 
 ## Nudge people
 
