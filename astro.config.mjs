@@ -48,6 +48,7 @@ export default defineConfig({
             'expenses/recurring',
             'expenses/receipts',
             'expenses/editing',
+            'expenses/search-and-totals',
           ],
         },
         { label: 'Balances', items: ['balances', 'balances/settle-up'] },

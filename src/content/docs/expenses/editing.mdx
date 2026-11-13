@@ -1,6 +1,6 @@
 ---
 title: Editing and deleting
-description: Fix an expense, see what changed, delete one, and bring it back with undo or restore.
+description: Fix an expense, see what changed, delete one, and bring it back with undo, restore or Recently deleted.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -65,6 +65,28 @@ Right after deleting, a message says **Expense deleted.** with an **Undo** butto
 Missed it? Deleted expenses are not gone for good. If you open one later, for example from a notification, it says **This expense was deleted.** Tap **Restore** to bring it back, with its balances.
 
 You cannot edit a deleted expense until you restore it. If someone in the split has left the group since, it cannot be restored.
+
+### Recently deleted
+
+Each group keeps a list of what was taken out of it. Open the group's **Totals** tab and tap **Recently deleted** at the bottom.
+
+It lists deleted expenses and payments, most recently deleted first. Each one shows the amount, the date it was from, and who deleted it and when, for example **Deleted by Ben 2 days ago**. Tap one to open it.
+
+<Steps>
+
+1. Find the expense or payment in **Recently deleted**.
+2. Tap **Restore** next to it.
+
+</Steps>
+
+It goes back where it was, with its balances, and Potluck says so, for example **"Taco night" is back.** Nothing deleted yet? The list says **Nothing in the bin**.
+
+You see **Restore** on the items you are allowed to bring back:
+
+- **Expenses**: the person who added it, anyone who paid for it, and the group's owner and admins.
+- **Payments**: the person who paid, the person who was paid, whoever recorded it, and the group's owner and admins. See [Restore a deleted payment](/balances/settle-up/#restore-a-deleted-payment).
+
+In an [archived group](#archived-groups-are-read-only), the list is there to read, but nothing can be restored.
 
 ## Archived groups are read only
 
