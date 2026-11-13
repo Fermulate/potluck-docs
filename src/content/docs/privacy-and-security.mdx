@@ -1,6 +1,6 @@
 ---
 title: Privacy and security
-description: What Potluck stores about you, who can see it, and what leaves the app.
+description: What Potluck stores about you, who can see it, how two-step sign in and security emails protect you, and what leaves the app.
 ---
 
 Potluck is free software with no ads and no tracking code. It stores what it needs to split money and plan things, and shows it only to the people you share a group with.
@@ -10,6 +10,7 @@ Potluck is free software with no ads and no tracking code. It stores what it nee
 | What | Who can see it |
 | --- | --- |
 | Your email and password | Nobody in the app. Your password is stored scrambled (hashed), never as text. |
+| Your two-step sign in key and recovery codes | Nobody in the app. Recovery codes are stored scrambled too. |
 | Your name, photo, time zone and default currency | You, and people you share a group with |
 | Groups, members and roles | The members of that group |
 | Expenses, splits, payments and comments | The members of that group |
@@ -19,6 +20,24 @@ Potluck is free software with no ads and no tracking code. It stores what it nee
 | Notifications and your push and email notification settings | Only you |
 
 Someone who leaves a group, or is removed, loses access to it right away.
+
+## Two-step sign in protects everything
+
+With [two-step sign in](/account/#two-step-sign-in) on, a password or sign-in link alone gets nobody into your account. Until the code from your authenticator app is in, Potluck shows and changes nothing: no groups, no expenses, no plans, no live updates, and no files, like receipts. Your email, password and two-step settings cannot be changed either.
+
+This is checked by Potluck's servers, not just the app, so it holds even against someone who skips the app and talks to the servers directly.
+
+## Security emails
+
+Potluck emails you when:
+
+- your password changes,
+- your email changes,
+- two-step sign in is turned on or off.
+
+If a recovery code turns two-step sign in off, you also get a **Two-step sign in is off** notice in your inbox and on your devices, and by email once email notifications are on.
+
+These always arrive. They have no setting on **Me** and no unsubscribe link, and unsubscribing from other emails does not stop them. If one surprises you, [change your password](/account/#change-your-password) right away.
 
 ## Things worth knowing
 
@@ -31,7 +50,7 @@ Someone who leaves a group, or is removed, loses access to it right away.
 
 - **Push notifications** pass through your browser maker's push service (Google, Mozilla or Apple). They are encrypted for your device, so that service cannot read them.
 - **Exchange rates** are fetched from a public source of reference rates. Nothing about you is sent.
-- **Emails** for sign-in links and password resets are sent by Potluck's email provider. Once email notifications are on, so are the notification emails you get. Unlike push, they are not encrypted for your device: they carry the update itself, like an expense, payment, comment or your balances, and your mail service and the email provider can read them. To stop them, turn off the **Email** switches on **Me** (see [What to hear about](/notifications/#what-to-hear-about)).
+- **Emails** for sign-in links, password resets, email changes and [security alerts](#security-emails) are sent by Potluck's email provider. Once email notifications are on, so are the notification emails you get. Unlike push, they are not encrypted for your device: they carry the update itself, like an expense, payment, comment or your balances, and your mail service and the email provider can read them. To stop them, turn off the **Email** switches on **Me** (see [What to hear about](/notifications/#what-to-hear-about)).
 - **Calendar files** you download, and Google Calendar links you open, contain the plan's details. That copy is yours to manage.
 
 ## Deleting your data

@@ -1,6 +1,6 @@
 ---
 title: Your account
-description: Change your profile, theme, time zone and currency, subscribe to your calendar feed, sign out, or delete your account.
+description: Change your profile, language, theme, time zone and currency, your email and password, turn on two-step sign in, subscribe to your calendar feed, sign out, or delete your account.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -17,9 +17,12 @@ Everything about you lives on **Me**: your profile, your preferences, and, in th
 
 - **Change photo** to upload a new picture (PNG, JPG, WebP or GIF, up to 5 MB). Potluck crops it square.
 - **Display name** is how friends see you on shared tabs and plans. Edit it and tap **Save**.
-- **Email** is the address you sign in with.
+- **Email** is the address you sign in with. To change it, see [Change your email](#change-your-email).
 
 ## Preferences
+
+**Language**
+: Pick **English**, **Español**, **Français**, **Deutsch** or **Português**. The app switches right away, no reload needed. Your choice is saved to your account, so it follows you to your other devices and is still there after you sign out and back in. Anything not translated yet shows in English.
 
 **Time zone**
 : Every time in Potluck shows in this zone. If your device is somewhere else (say you are traveling), a **Use my current time zone** button appears.
@@ -31,6 +34,108 @@ Everything about you lives on **Me**: your profile, your preferences, and, in th
 : **System** follows your device's light or dark setting. **Light** and **Dark** pick one. This is saved on each device separately.
 
 Changes save as soon as you make them.
+
+## Sign in and security
+
+This part of **Me** holds your email, your password, two-step sign in and your devices.
+
+### Change your email
+
+<Steps>
+
+1. Under **Sign in and security**, next to **Email**, tap **Change email**.
+2. Type your **New email** and tap **Send confirmation links**.
+3. Open the link we sent to your **old** address, and the one we sent to your **new** address. Either order works.
+
+</Steps>
+
+Nothing changes until both are confirmed. That way, someone who gets hold of your phone cannot quietly move your account to their inbox. Until then, **Me** says it is waiting for you to confirm from both inboxes. Once you open one link, Potluck reminds you to open the other.
+
+**Cancel a pending change**
+: Changed your mind, or made a typo? Tap **Cancel the change** under the waiting message. Both links stop working and your email stays as it was.
+
+### Change your password
+
+<Steps>
+
+1. Under **Sign in and security**, next to **Password**, tap **Change password**.
+2. Type your **Current password**.
+3. Type your **New password** (at least 8 characters), then type it again.
+4. Tap **Save password**.
+
+</Steps>
+
+If you signed in more than a day ago, Potluck also emails you a 6-digit code to check it is really you. Enter the **Code from the email** and tap **Save password** again.
+
+Once it is saved, your other devices are signed out. The one you are using stays signed in.
+
+**Forgot your password?**
+: Tap **Forgot it?** next to **Current password**. It opens **Reset your password** with your email filled in. Tap **Send reset link** and pick a new password from the email. This also works if you have only ever signed in with emailed sign-in links and never had a password.
+
+**Set a password**
+: If you only ever signed in with Google or Apple, the button says **Set a password** instead. There is no current password to type, so just pick a new one. After that, you can sign in with your email and password too.
+
+### Sign out everywhere
+
+Lost a phone, or signed in on a shared computer? Next to **Devices**, tap **Sign out everywhere** and confirm. Every phone, tablet and browser on your account has to sign in again, including the one you are using.
+
+## Two-step sign in
+
+Two-step sign in adds a second check. After your password, sign-in link, or Google or Apple, Potluck asks for a 6-digit code from an authenticator app on your phone. Someone who learns your password still cannot get in without it.
+
+### Set it up
+
+You need an authenticator app, like 1Password, Google Authenticator or Authy.
+
+<Steps>
+
+1. Under **Sign in and security**, next to **Two-step sign in**, tap **Set up**.
+2. Scan the QR code with your authenticator app. Cannot scan it? Tap **Copy key** and type or paste the key into the app instead.
+3. Enter the 6-digit code the app shows and tap **Turn on**.
+4. Save your recovery codes (see below), then tap **I saved them**.
+
+</Steps>
+
+**Me** now shows **On**, the date you turned it on, and how many recovery codes you have left.
+
+### Recovery codes
+
+When you turn on two-step sign in, Potluck shows you ten recovery codes. They are your way back in if you lose your phone. Tap **Copy codes** or **Download**, and keep them somewhere safe, like a password manager.
+
+:::caution[You only see them once]
+The codes are shown when you set up, and never again. The window only closes when you tap **I saved them**.
+:::
+
+Each code works once. Running low, or worried someone saw them? Tap **New recovery codes** and confirm. Your old codes stop working right away, and you get a fresh set of ten to save.
+
+### Sign in with a code
+
+When you sign in, Potluck shows **One more step**. Open your authenticator app, enter the 6-digit code for Potluck, and tap **Verify**.
+
+Signed in to the wrong account? Tap **Use another account** to go back to **Sign in**.
+
+### Lost your phone
+
+<Steps>
+
+1. Sign in as usual. On **One more step**, tap **Use a recovery code**.
+2. Enter one of the codes you saved and tap **Verify**.
+
+</Steps>
+
+You are in, and two-step sign in is now **off**, so you can set it up again on your new phone. Do that from **Me** right away. Your old recovery codes stop working.
+
+You get five tries every 15 minutes. After that, wait 15 minutes and try again.
+
+Potluck also sends you a notice, **Two-step sign in is off**, to your inbox and devices, and to your email once email notifications are on. If you did not use a recovery code, someone else has your password and one of your codes: [change your password](#change-your-password) now and set up two-step sign in again.
+
+:::note[No phone and no codes?]
+Potluck cannot let you in on its own. Open an issue on [GitHub](https://github.com/Fermulate/potluck/issues), but leave out your email and any codes. Someone will check it is really you before turning two-step sign in off by hand.
+:::
+
+### Turn it off
+
+Next to **Two-step sign in**, tap **Turn off**. Enter a code from your authenticator app and tap **Turn off**. Asking for a fresh code means a borrowed, unlocked phone is not enough. Your recovery codes are deleted too.
 
 ## Notifications
 
@@ -61,7 +166,7 @@ Anyone with your feed link can see your plans' titles, times, places and group n
 
 ## Sign out
 
-Tap **Sign out** at the bottom of **Me**. You are signed out on this device only.
+Tap **Sign out** at the bottom of **Me**. You are signed out on this device only. To sign out on all of them, see [Sign out everywhere](#sign-out-everywhere).
 
 ## Delete your account
 
