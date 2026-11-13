@@ -1,6 +1,6 @@
 ---
 title: Notifications
-description: The inbox, what Potluck tells you about, how to choose what pings you or lands in your email, and how to unsubscribe.
+description: The inbox, what Potluck tells you about (payment changes and reminders included), how to choose what pings you or lands in your email, and how to unsubscribe.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -29,6 +29,10 @@ New updates are under **New**, older ones under **Earlier**. Tap one to go strai
 | **Expense restored** | Someone brings back a deleted expense | The people in it | Edits and deletions |
 | **You got paid** | Someone records a payment to you | The person paid | Payments |
 | **Payment recorded** | The person you paid marks it as received, or someone else records your payment | The person who paid | Payments |
+| **Payment changed** | Someone changes who paid, who was paid, the amount, currency or day of a payment | The payer and the person paid | Payments |
+| **Payment deleted** | Someone deletes a payment | The payer and the person paid | Payments |
+| **Payment restored** | Someone brings back a deleted payment | The payer and the person paid | Payments |
+| **A friendly nudge** | Someone you owe taps [Remind](/balances/settle-up/#remind-someone) | The person who owes | Reminders |
 | **New face in** a group | Someone joins a group you run | The owner and admins | Groups |
 | **Something is cooking** | Someone starts a plan | The group | Plans |
 | **When are you free?** | Someone nudges you to add your times | The people nudged | Plans |
@@ -36,11 +40,23 @@ New updates are under **New**, older ones under **Earlier**. Tap one to go strai
 | **Plans changed** | A plan is called off | The group | Plans |
 | **Coming up** | About a day before a plan | People going or maybe | Reminders |
 | **Are you in?** | About a day before a plan | People who have not answered | Reminders |
-| **New comment** | Someone comments | People in that expense, or the organizer and people coming to that plan | Comments |
+| **New comment** | Someone comments | People in that expense, the payer, the person paid and whoever recorded that payment, or the organizer and people coming to that plan | Comments |
 | **Your month in Potluck** | The first of each month | You, if you owe or are owed money | Monthly summary |
 | **Two-step sign in is off** | A [recovery code](/account/#lost-your-phone) turns off two-step sign in | You | None, it always arrives |
 
 You never get notified about your own actions, except **Two-step sign in is off**, in case it was not you.
+
+### Payment changes
+
+When someone else edits, deletes or restores a payment you are in, you hear about it, for example **Payment changed: Maya changed a $35.10 payment in Supper club**. Tap it to open the payment. A few things to know:
+
+- Changing only the note does not send a notification. It still shows in the group's activity.
+- If an edit swaps who paid or who was paid, both the old and the new people hear about it.
+- [Settling up with a friend across groups](/balances/settle-up/#settle-up-with-a-friend-across-groups) records one payment per group, so your friend gets one notification for each.
+
+### Payment reminders
+
+**A friendly nudge** says how much you owe and in which group, like **Jo says you owe $20.00 in Supper club**, plus the note if Jo added one. Tap it to go straight to settling up with Jo in that group. Each person can remind you once a day. See [Remind someone](/balances/settle-up/#remind-someone).
 
 ## What to hear about
 
@@ -50,11 +66,11 @@ Each kind of update has its own row with a **Push** switch, except **Monthly sum
 
 - **New expenses**: someone adds an expense you are in.
 - **Edits and deletions**: an expense you are in is changed, deleted or restored.
-- **Payments**: someone pays you or records a payment with you.
+- **Payments**: someone pays you or records a payment with you, or changes, deletes or restores one.
 - **Comments**: new comments on expenses and plans you are part of.
 - **Groups**: someone joins a group you run.
 - **Plans**: new plans, locked in times, cancellations and availability requests.
-- **Reminders**: plans coming up and RSVPs you still owe.
+- **Reminders**: plans coming up, RSVPs you still owe, and nudges about money you owe.
 - **Monthly summary**: your balances on the first of each month.
 
 Every switch starts on, with one exception: plans can get chatty, so **Plans** starts with push only and no email. Flip any switch and it saves right away.

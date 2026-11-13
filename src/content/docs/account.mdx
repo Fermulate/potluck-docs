@@ -1,6 +1,6 @@
 ---
 title: Your account
-description: Change your profile, language, theme, time zone and currency, your email and password, turn on two-step sign in, subscribe to your calendar feed, sign out, or delete your account.
+description: Change your profile, language, theme, time zone and currency, save your payment methods, change your email and password, turn on two-step sign in, subscribe to your calendar feed, sign out, or delete your account.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -34,6 +34,41 @@ Everything about you lives on **Me**: your profile, your preferences, and, in th
 : **System** follows your device's light or dark setting. **Light** and **Dark** pick one. This is saved on each device separately.
 
 Changes save as soon as you make them.
+
+## Payment methods
+
+Save how you like to be paid, and people who owe you get a **Pay with** button for your app when they [settle up](/balances/settle-up/#pay-with-an-app). Potluck never moves money: the button only opens the app with your handle (and usually the amount) filled in.
+
+<Steps>
+
+1. On **Me**, under **Payment methods**, tap **Add a payment method**.
+2. Under **Which app?**, pick one.
+3. Type your handle, for example your **Venmo username** or **Cashtag**. Pasting your profile link works too, like `paypal.me/yourname`.
+4. Tap **Save**.
+
+</Steps>
+
+You can save one of each:
+
+| App | What to enter |
+| --- | --- |
+| PayPal | Your PayPal.me username |
+| Venmo | Your Venmo username |
+| Cash App | Your Cashtag |
+| Revolut | Your Revolut username |
+| Monzo | Your Monzo.me username |
+| UPI | Your UPI ID, like `name@bank` |
+| Interac e-Transfer | The email or phone number you take e-Transfers on |
+| Bank transfer | Your bank details, like an IBAN, or a sort code and account number |
+
+If a handle does not look right for that app, Potluck says so before saving. Interac and bank details have no link: people see a **Copy** button instead.
+
+**Change or remove one**
+: Tap the pencil next to it to change it. Tap the bin to remove it. A message says it was removed, with an **Undo** button to bring it straight back.
+
+### Who can see them
+
+People you share a group with, and only them. They see your payment methods when they settle up with you. When you delete your account, your payment methods are deleted too.
 
 ## Sign in and security
 
@@ -190,6 +225,6 @@ Your friends' money should not change because you left, so Potluck keeps the sha
 - **Expenses and payments** you were part of stay, so everyone's totals still add up.
 - **Open balances stay.** If you owed someone, the group still shows that debt against **Former member**. Settle up first so nobody is left waiting. See [Recording a payment](/balances/settle-up/).
 - **Groups you own** pass to the longest-standing admin, or the longest-standing member if there is no admin. Groups with nobody else in them are deleted.
-- Your availability, RSVPs, notifications, push and email notification settings, friends list and calendar feed are deleted. Invite links you made stop working.
+- Your availability, RSVPs, notifications, push and email notification settings, friends list, payment methods and calendar feed are deleted. Invite links you made stop working.
 
 See [Privacy and security](/privacy-and-security/) for what Potluck stores in the first place.
