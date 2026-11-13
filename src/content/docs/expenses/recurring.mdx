@@ -4,7 +4,6 @@ description: Set up rent, subscriptions and other bills that come back every wee
 ---
 
 import { Steps } from '@astrojs/starlight/components'
-import Screenshot from '~/components/Screenshot.astro'
 
 Rent, the internet bill, a shared streaming subscription. Set them up once and Potluck adds a copy on the day each one is due. When the rent goes up, change it once and every copy after that uses the new amount.
 
@@ -57,11 +56,6 @@ Changing only how often keeps that day too. If you switch from **Every week** or
 
 Everything that repeats in a group is listed under **Repeating** on the group's **Expenses** tab. Tap **Repeating** to open the list. It shows how many are running or paused, how often each one repeats, who pays and the next date.
 
-<Screenshot
-  name="roommates-repeating"
-  alt="The Expenses tab of a two-person group called Flat 4B. A Repeating panel says 1 running and lists Rent, monthly, Next on Dec 5, with pause and delete buttons. Below it, today's Rent expense of 1,450.00 euros shows a repeat icon and you lent 725.00 euros."
-/>
-
 Tap one to open it. If you can change it (see [Who can change it](#who-can-change-it)), it opens in the same form as an expense. If not, you see a summary: the amount, when the next one comes, who pays, how it splits, your share each time and any notes.
 
 You can also open it from any copy. On the expense's page, the **Repeats** card says how often it repeats and when the next one comes. Tap **Edit repeat** (or **Details** if you cannot change it).
@@ -112,7 +106,7 @@ Receipts are not copied. Add one to each copy if you need it. See [Receipts](/ex
 
 ## Who can change it
 
-The same people who can change an expense:
+A repeating expense can be changed by more people than an ordinary [expense](/expenses/editing/):
 
 - Anyone it involves: whoever set it up, anyone who pays and anyone in the split.
 - The group's owner and admins.
@@ -131,7 +125,7 @@ The day before a copy goes in, everyone in it gets a heads-up: the people who pa
 
 If you pay but are not in the split, it says **You cover the $1,500.00 in Flat 4B.** instead. Tap it to open the repeating expense.
 
-The deadline is when the copy goes in, shown in your own time. Copies go in just after midnight UTC on their date, which can be the evening before where you live. In New York, that is 7:10 PM the day before.
+The deadline is when the copy goes in, shown in your own time. Copies go in just after midnight UTC on their date, which can be the evening before where you live. In New York in winter, that is 7:10 PM the day before (8:10 PM in summer).
 
 If someone sets it up or moves the date after 09:00 has passed, you hear as soon as Potluck can, still before the copy goes in. If that late heads-up would land at night (between 22:00 and 07:00 your time), it goes to your inbox only, with no push or email, so it does not wake you.
 
