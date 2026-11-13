@@ -37,6 +37,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          # The action's default Wrangler (3.90) cannot deploy an assets-only Worker.
+          wranglerVersion: '4.157.0'
           command: deploy
 
       - name: Skip deploy
