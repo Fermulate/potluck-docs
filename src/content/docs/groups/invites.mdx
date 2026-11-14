@@ -1,6 +1,6 @@
 ---
 title: Inviting people
-description: Make an invite link, choose who it lets in and for how long, join a group from a link, take a seat saved for you, and the daily invite limit.
+description: Make an invite link or show it as a QR code, choose who it lets in and for how long, join a group from a link, take a seat saved for you, and the daily invite limit.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -27,6 +27,22 @@ Someone not on Potluck yet? You can also [add them by name](/groups/#people-not-
 
 </Steps>
 
+### Show a QR code
+
+Inviting someone sitting across the table? Show them a QR code instead of sending the link.
+
+<Steps>
+
+1. Tap **Invite**. Your newest open link is the card at the top, with **Copy link** and **Share**. No link yet? Tap **Create link** first.
+2. Tap **Show QR code** under it.
+3. They point their phone camera at it, and the invite opens on their phone. From there it works like [joining with a link](#join-with-a-link).
+
+</Steps>
+
+The QR code is the same link, with the same rules: who it lets in, how many uses are left and when it expires. Someone who joins by scanning it uses up one use, as if they had tapped the link. Tap **Hide QR code** to put it away.
+
+To show a QR code for a link with different settings, make a [new link](#change-what-a-link-allows) first. It becomes your newest one.
+
 ### Change what a link allows
 
 Tap **Link settings** before you create the link:
@@ -46,7 +62,8 @@ Tap the **X** next to a link (**Revoke**). Anyone who opens it afterwards sees t
 :::note[Good to know]
 - Owners and admins can always invite. Regular members can too, unless an owner or admin turns off **Members can invite people** in [Group settings](/groups/settings/#house-rules).
 - Archived groups and [one-on-one tabs](/friends/) cannot have invite links.
-- The invite page shows the group's name, emoji, how many people are in it and their first names. Anyone holding the link can see that much, so share it with the people you mean to invite.
+- The invite page shows the group's name, emoji, [cover photo](/groups/settings/#cover-photo), how many people are in it and their first names. Anyone holding the link can see that much, so share it with the people you mean to invite.
+- Deleting a group closes its invite links. If someone [restores it](/groups/settings/#restore-a-deleted-group), the links that were open work again.
 :::
 
 ## Join with a link
