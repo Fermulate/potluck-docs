@@ -1,6 +1,6 @@
 ---
 title: Privacy and security
-description: What Potluck stores about you, who can see it, what your backup contains, what a saved seat's email is used for, why blocks stay private, how two-step sign in and security emails protect you, and what leaves the app.
+description: What Potluck stores about you, who can see it, how receipts and scanning stay private, what your backup contains, what a saved seat's email is used for, why blocks stay private, how two-step sign in and security emails protect you, and what leaves the app.
 ---
 
 Potluck is free software with no ads and no tracking code. It stores what it needs to split money and plan things, and shows it only to your friends and the people you share a group with.
@@ -17,7 +17,7 @@ Potluck is free software with no ads and no tracking code. It stores what it nee
 | A group's [cover photo](/groups/settings/#cover-photo) | The members of that group, and anyone who opens one of its invite links. The image itself is a public link, like the group's name on the invite page. |
 | A group's [notes](/groups/#group-notes) | The members of that group |
 | Expenses, splits, payments and comments | The members of that group |
-| Receipts | The members of that group. They are private files, not public links. |
+| [Receipts, photos and PDFs](/expenses/receipts/) on an expense | The members of that group. They are private files, not public links. |
 | Plans, availability and RSVPs | The members of that group |
 | Invite links | Owners and admins, and whoever made the link |
 | The name of someone [not on Potluck yet](/groups/#people-not-on-potluck-yet) | The members of that group |
@@ -28,6 +28,15 @@ Potluck is free software with no ads and no tracking code. It stores what it nee
 
 Someone who leaves a group, or is removed, loses access to it right away.
 
+## Receipts and scanning
+
+- **Scanning happens on your device.** When you [scan a receipt](/expenses/receipts/#scan-a-receipt), the photo is read right there in the app. It is never sent anywhere to be read, not to Potluck and not to anyone else. The reader itself is downloaded once from Potluck's own site, not from another company.
+- **A photo leaves your device only if you attach it and save.** Then it is stored with the expense like any other file.
+- **Files are private to the group.** Only its members can open them. There is no public link to share.
+- **Photos are shrunk before they upload**, which also strips the location your camera saved with them. PDFs, and HEIC photos outside Safari, are uploaded as they are.
+- **Unused uploads do not linger.** A file uploaded for a save that never happened, or taken off an expense by someone who could not delete it, is removed by a daily cleanup once it is more than a day old.
+- **Deleted groups.** A [deleted group](/groups/settings/#delete-the-group) keeps its files for the 30 days it can be restored. When it is gone for good, its files are deleted with it.
+
 ## What your backup contains
 
 The [backup](/account/#download-a-backup) on **Me** holds only what you can already see in the app. The full list is under [Download a backup](/account/#download-a-backup). For your privacy and other people's:
@@ -36,7 +45,7 @@ The [backup](/account/#download-a-backup) on **Me** holds only what you can alre
 - It names the other people in your groups, but has no one else's email, not even the one saved for someone not on Potluck yet.
 - It leaves out groups that were [deleted](/groups/settings/#delete-the-group), even while they can still be restored.
 
-It does **not** hold your password, your two-step sign in key or recovery codes, receipt photos, your calendar feed link, your notifications or who you blocked.
+It does **not** hold your password, your two-step sign in key or recovery codes, the receipts and photos on expenses, your calendar feed link, your notifications or who you blocked.
 
 The file is made on Potluck's servers and saved straight to your device. Nothing is sent anywhere else. Once it is saved, it is yours to keep safe: it has your groups' history and your friends' names in it.
 
@@ -83,12 +92,13 @@ These always arrive. They have no setting on **Me** and no unsubscribe link, and
 - **Profile photos** are stored at a link that is hard to guess but not secret. Anyone who has seen the link can open the photo.
 - **Invite links** show the group's name, emoji, member count and first names to whoever opens them. Make links that run out (see [Inviting people](/groups/invites/#change-what-a-link-allows)) and revoke the ones you do not need.
 - **Your calendar feed link** shows your plans' titles, times, places and group names to whoever has it. Keep it to yourself, and [reset it](/account/#reset-the-link) if it leaks.
-- **Receipt photos** can contain card digits, addresses or location data. Crop before you upload.
+- **Receipt photos** can contain card digits or addresses. Crop before you upload.
 
 ## What leaves the app
 
 - **Push notifications** pass through your browser maker's push service (Google, Mozilla or Apple). They are encrypted for your device, so that service cannot read them.
 - **Exchange rates** are fetched from a public source of reference rates. Nothing about you is sent.
+- **Receipt scans** do not leave the app. The photo is read on your device. See [Receipts and scanning](#receipts-and-scanning).
 - **Emails** for sign-in links, password resets, email changes and [security alerts](#security-emails) are sent by Potluck's email provider. Once email notifications are on, so are the notification emails you get. Unlike push, they are not encrypted for your device: they carry the update itself, like an expense, payment, comment or your balances, and your mail service and the email provider can read them. To stop them, turn off the **Email** switches on **Me** (see [What to hear about](/notifications/#what-to-hear-about)).
 - **Calendar files** you download, and Google Calendar links you open, contain the plan's details. That copy is yours to manage.
 - **Backups and spreadsheets** you [export](/account/#export-your-data) are saved to your device. That copy is yours to manage too.
