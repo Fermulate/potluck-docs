@@ -1,32 +1,135 @@
 ---
 title: Receipts
-description: Attach a photo or PDF of the receipt to an expense, and who can see it.
+description: Attach up to five photos or PDFs to an expense, look through them, scan a receipt to fill in the form, and who can see the files.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
 
-A receipt settles arguments before they start. Attach one to any expense.
+A receipt settles arguments before they start. Attach it to the expense, along with anything else worth keeping: the second page of a long bill, the booking confirmation, a photo of the menu. Or scan it, and let Potluck fill in the expense for you.
+
+## Add receipts and photos
 
 <Steps>
 
-1. On **New expense** (or **Edit expense**), tap **Add receipt** near the bottom of the form.
-2. Take a photo or pick a file. Photos and PDFs up to 10 MB work.
-3. Save the expense. The receipt uploads with it.
+1. On **New expense** (or **Edit expense**), find **Receipts and photos** near the bottom of the form.
+2. Tap **Add**, then take a photo or pick files. You can pick several at once.
+3. Save the expense. The files upload with it.
 
 </Steps>
 
-To swap it, tap **Replace**. To take it off, tap **Remove receipt**.
+An expense holds up to five files. The count next to **Receipts and photos** keeps track, for example **2 of 5**. Pick more than there is room for and Potluck adds the first ones and says **Five is the limit, so the rest were left out.** With five on, **Add** goes away until you remove one.
 
-On the expense's page, the receipt appears under **Receipt**. Tap it to open it full size. PDFs show as **Receipt (PDF)**.
+Files keep the order you add them in, and are named that way: **Photo 1**, **Photo 2**, **PDF 3**. To take one off, tap the **x** on its corner. To move one to the end, remove it and add it again.
+
+Nothing uploads until you save. If you close the form without saving, the files you picked are thrown away.
+
+### Which files work
+
+- **Photos in PNG, JPEG, WebP or HEIC, and PDFs.** Anything else gets **Use a photo or a PDF.**
+- **Up to 10 MB each.** Potluck shrinks photos on your device before uploading them, to at most 2000 pixels on the longest side, so most phone photos fit easily. PDFs, and HEIC photos outside Safari, go up as they are. If a file is still over 10 MB, Potluck says **That file is over 10 MB.**
+
+Shrinking a photo also strips the extra information your camera saved with it, like where it was taken.
+
+If an upload fails, see [Troubleshooting](/troubleshooting/#a-receipt-will-not-upload).
+
+## Look at them on the expense
+
+On the expense's page, the files show under **Receipt** (or **Receipts and photos** when there are several). Tap a PDF to open it in a new tab. Tap a photo to open it full screen, where you can:
+
+- **Zoom**: pinch, double tap (double click with a mouse), or use the **Zoom in** and **Zoom out** buttons under the photo. A photo zooms up to four times.
+- **Move around**: drag a zoomed photo to see the rest of it.
+- **Go to the next one**: swipe sideways while the photo is not zoomed, or tap **Previous** and **Next**. The top says where you are, like **2 of 3**.
+- **See the file itself**: **Open the original** opens it in a new tab.
+
+On a keyboard, the left and right arrow keys go to the previous and next photo. Click or tab to the photo first, and **+** and **-** zoom, the arrow keys move a zoomed photo, and **0** starts over.
+
+## Scan a receipt
+
+Let Potluck read the receipt and fill in the expense from it: the name, the date, the total, and every item for a [by-item split](/expenses/splits/#by-item).
+
+<Steps>
+
+1. On **New expense** (or **Edit expense**), tap **Scan a receipt** under the amount.
+2. Take a photo of the receipt, or pick one you already have. Scanning reads photos, not PDFs. Potluck reads it right there on your device and shows how far along it is.
+3. Check what it read on **Here is what it says**. Untick anything that came out wrong, and fix any price that does not match the photo.
+4. Tap **Fill in the expense**.
+5. Check the form, pick who had what, and save.
+
+</Steps>
+
+To start again with a different photo, tap **Try another photo**. To stop a reading that is taking too long, tap **Stop**.
+
+:::note[A scan is a suggestion]
+A scan only fills in the form. Nothing is saved until you save the expense, so check it against the receipt first. The reader guesses, and a smudge can turn an 8 into a 3.
+:::
+
+### What it reads
+
+- **The name** of the shop or restaurant.
+- **The date.** A date after today is a misread, so it is left out.
+- **The currency**, when the receipt shows it, like € or EUR. A plain $ is read as your expense's dollar currency, or US dollars.
+- **The total.**
+- **The items**, each with its price, and how many when a line says so (for example **2× Coffee**).
+- **Tax, tip and discount**, but only when they make the receipt add up: items plus tax and tip, minus the discount, equals the total. VAT that is already inside the prices is left out, since nobody pays it on top.
+
+It knows both decimal marks, so 1,234.50 and 1.234,50 both work. Payment lines, like what went on the card or the change you got, are not items.
+
+### Check what it read
+
+**Here is what it says** shows the photo next to what Potluck read. Pinch or use the zoom buttons to look closer.
+
+Every part has its own box: the name, the **Date**, the items and the **Total**. Untick a part and the form keeps what you already had for it. Every price, including tax, tip, discount and the total, can be corrected right there.
+
+Two things start unticked:
+
+- **The name**, if you already typed something in **What was it?**
+- **The items**, if they come nowhere near the total. The total alone is safer.
+
+Watch for these notes under the receipt:
+
+- **The items come to $41.20; the receipt says $44.80.** A line was misread or missed. Check the prices against the photo, or untick the items to use the total only. The note goes away once the prices add up.
+- **No total line was found, so the total was worked out from the receipt. Check it against the photo.** The receipt had no total Potluck could read, so the total is the subtotal, or the items added up. When it is the items added up, correcting a price changes the total with it.
+
+The **Currency** line shows up only when the receipt is in a different currency from the expense.
+
+If nothing on the photo looks like a price, Potluck says **Nothing on it looked like prices. Attach the photo and fill it in by hand.** Tap **Just attach the photo** to keep it on the expense anyway.
+
+### What Fill in the expense does
+
+- The name goes into **What was it?**, the date into **Date**, and the total into the amount.
+- The items become a [by-item split](/expenses/splits/#by-item), with everyone who was in the split on every line. Tap names off each line to say who had what. Tax, tip and discount come along.
+- If the total printed on the receipt is clearly more than the items add up to, the difference becomes one more line, **Everything else**, so the expense matches the receipt.
+- A receipt in another currency switches the expense to that currency. See [Currencies](/expenses/currencies/).
+- With the items unticked, only the total goes in, and a by-item split goes back to **Equal**.
+
+**Attach the photo** is ticked to start with, so the receipt joins the expense's files too and counts toward the five. Untick it to leave the photo off. It does not show when the expense already has five files.
+
+Potluck says **Filled in from the receipt. Check it, then pick who had what.**
+
+### Getting a good read
+
+- **Printed till receipts work best.** Crumpled, faded, handwritten or very long receipts read less well.
+- **Lay it flat, in good light**, and fill the photo with the receipt.
+- **English only.** The reader knows the Latin alphabet with an English model. Receipts in other scripts, like Japanese or Arabic, are not read.
+
+If it cannot read the photo at all, Potluck says **That one did not read. Try a sharper photo, flat and well lit.** When the items do not add up the first time, it reads the photo again and says **Taking a closer look**. That takes a second or two more.
+
+### The first scan
+
+The first time you scan, Potluck downloads the reader, about 7 MB, and says **Getting the reader ready**. It comes from Potluck's own site and is kept on your device, so later scans start faster and work offline too.
+
+Without a connection on that first scan, Potluck says **The first scan needs a connection to fetch the reader. Try again online.**
+
+Scanning is not there while editing a [repeating expense](/expenses/recurring/), or on an expense that names someone who has left the group.
 
 ## Who can see a receipt
 
-Receipts are private to the group. Only members of the group the expense belongs to can open them, and they are not reachable by a public link.
+Receipts, photos and PDFs are private to the group. Only members of the group the expense belongs to can open them, and they are not reachable by a public link.
 
-The person who uploaded a receipt can replace or remove it, and so can the group's owner and admins.
+Anyone who can [edit the expense](/expenses/editing/) can add or remove its files: the person who added it, anyone who paid it, and the group's owner and admins. Each change shows in the expense's [history](/expenses/editing/#edit-history).
+
+Scanning happens on your device. The photo is never sent anywhere to be read. It leaves your device only if you attach it and save. See [Privacy and security](/privacy-and-security/#receipts-and-scanning).
 
 :::caution[Before you upload]
-Photos can carry more than the receipt: card digits, an address, or the location saved by your camera. Crop the photo, or attach a screenshot of it, if that matters to you.
+Photos can carry more than the receipt: card digits, an address, or the location saved by your camera. Potluck strips the location from the photos it shrinks, but PDFs and HEIC photos uploaded as they are keep theirs. Crop the photo, or attach a screenshot of it, if that matters to you.
 :::
-
-If an upload fails, see [Troubleshooting](/troubleshooting/#a-receipt-will-not-upload).
