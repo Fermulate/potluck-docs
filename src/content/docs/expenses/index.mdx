@@ -1,6 +1,6 @@
 ---
 title: Adding an expense
-description: Record who paid for what and who it was for, and read the expense list and details.
+description: Record who paid for what and who it was for, pick a category, and read the expense list and details.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -21,7 +21,7 @@ An expense says three things: how much, who paid, and who it was for. Potluck wo
      alt="The New expense screen. A large amount field reads 0 next to a yellow USD chip. Below are the What was it? field with the hint Tacos, gas, the cabin, a set of category chips from Food to Other, a Paid by menu set to You, a Date field, and a red Save expense button."
    />
 
-3. Fill in **What was it?** and pick a **Category**: Food, Groceries, Drinks, Transport, Gas, Lodging, Tickets, Rent, Utilities, Shopping, Gifts or Other.
+3. Fill in **What was it?**. Potluck usually suggests a **Category** from what you type. Keep it, or tap another one. See [Categories](#categories).
 
 4. Check **Paid by** (you, unless you change it) and the **Date**. If more than one person paid, see [Several people paid](#several-people-paid).
 
@@ -36,6 +36,54 @@ An expense says three things: how much, who paid, and who it was for. Potluck wo
 :::note[Good to know]
 You can add an expense that someone else paid. Pick them under **Paid by**. Anyone in the group can add expenses, and the person who added it or anyone who paid it can change it later. See [Editing and deleting](/expenses/editing/).
 :::
+
+## Categories
+
+A category says what kind of expense it was. It powers the [category filter](#filter-the-list) and the **By category** chart on [Totals](/expenses/search-and-totals/#totals-and-charts). It is optional. When you filter, an expense without one counts as **Other**.
+
+There are 16 categories: Food, Groceries, Drinks, Transport, Gas, Lodging, Tickets, Fun, Rent, Utilities, Home, Shopping, Gifts, Health, Life and Other.
+
+### Subcategories
+
+Want to be more exact? Pick a category and a second row, **More exact**, opens under it with its subcategories. Tap one, like **Taxi** under Transport.
+
+| Category | Subcategories |
+| --- | --- |
+| **Food** | Eating out, Takeout, Coffee, Snacks |
+| **Drinks** | Bar, Wine and spirits |
+| **Transport** | Taxi, Train and bus, Flights, Car rental, Parking, Tolls, Bike, Ferry |
+| **Gas** | Charging |
+| **Lodging** | Hotel, Holiday rental, Camping |
+| **Fun** | Movies, Concerts, Games, Sports |
+| **Rent** | Mortgage |
+| **Utilities** | Electricity, Heating, Water, Internet, Phone, Trash, Cleaning |
+| **Home** | Furniture, Household supplies, Repairs, Electronics, Pets, Services |
+| **Shopping** | Clothes |
+| **Health** | Doctor, Pharmacy, Fitness |
+| **Life** | Childcare, Education, Insurance, Taxes |
+
+Groceries, Tickets, Gifts and Other have no subcategories.
+
+- Tap the picked subcategory again to go back to just its category.
+- Tap the picked category again to clear the category.
+
+Subcategories always count toward their category:
+
+- **Totals** add them up under their category. A taxi counts as Transport in the **By category** chart.
+- **Filtering** by a category includes its subcategories. Filter by Transport and taxis and flights show up too. Filter by Taxi and you see only taxis.
+- **Spreadsheets** name a subcategory by its own name, like Taxi, and an [import](/groups/settings/#import-expenses) reads it back.
+
+### Suggested categories
+
+As you type **What was it?**, Potluck picks a category for you and marks it **Suggested**. It looks in three places, in this order:
+
+1. **This group's own expenses.** If the same description was used here before, it suggests the category that expense had, newest first. So if your group files "Costco" under Home, so does Potluck.
+2. **A list of common words**, in every language Potluck speaks. "Uber" is Taxi, "Starbucks" is Coffee, "Airbnb" is Holiday rental. The longest match wins, so "Uber Eats" is Takeout, not Taxi.
+3. **A word you used before.** If a longer word in your description (four letters or more) appeared in an earlier description in this group, it suggests that expense's category.
+
+The suggestion follows what you type until you tap a category yourself. After that, Potluck leaves your choice alone. If nothing fits, no category is picked.
+
+Editing an expense keeps the category it was saved with. Potluck only suggests while you add a new one.
 
 ## Several people paid
 
@@ -106,7 +154,7 @@ Tap the filters button next to **Search expenses** to narrow the **Expenses** ta
 
 - **When**: **Any time**, **This month**, **Last month**, **This year**, or **Pick dates** for your own **From** and **To**.
 - **Who**: one person, who paid or is in the split. Pick yourself to see only what you are part of.
-- **Category**: one or more categories.
+- **Category**: one or more of the categories used in this group. A category includes its [subcategories](#subcategories).
 - **Type**: **Everything**, just **Expenses**, or just **Payments**.
 
 The list updates as you pick. Each filter that is on shows as a chip above the list: tap a chip to remove it, or tap **Clear all** in the filters. The button shows how many filters are on.

@@ -1,6 +1,6 @@
 ---
 title: Groups
-description: Start a group for the people you split things with, and find your way around a group's tabs.
+description: Start a group for the people you split things with, find your way around a group's tabs, and keep shared notes.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
@@ -14,13 +14,15 @@ A group is a shared tab: the roommates, a trip, the Thursday dinner crew. Everyt
 
 1. Open **Groups** and tap **New group**. (Home and the first-run screen have the same button.)
 
-2. Give it a **Group name**, pick an **Emoji** (or type your own in **Or type your own**) and a **Color**.
+2. Give it a **Group name**, and answer **What kind of group?**: **Home**, **Trip**, **Couple** or **Other**. A trip can also have a **First day** and **Last day**. See [Group type](/groups/settings/#group-type) for what each one does.
 
-3. Choose the **Currency**. Balances in this group are kept in it, and it locks once the first expense or payment is added. People can still add expenses in other currencies; see [Currencies](/expenses/currencies/).
+3. Pick an **Emoji** (or type your own in **Or type your own**) and a **Color**. Until you pick one, the emoji follows the type.
 
-4. Got friends who are not on Potluck yet? Type each name under **Anyone not on Potluck yet?** and tap **Add**. They are in the group as soon as it opens. See [People not on Potluck yet](#people-not-on-potluck-yet).
+4. Choose the **Currency**. Balances in this group are kept in it, and it locks once the first expense or payment is added. People can still add expenses in other currencies; see [Currencies](/expenses/currencies/).
 
-5. Tap **Create group**.
+5. Got friends who are not on Potluck yet? Type each name under **Anyone not on Potluck yet?** and tap **Add**. They are in the group as soon as it opens. See [People not on Potluck yet](#people-not-on-potluck-yet).
+
+6. Tap **Create group**.
 
 </Steps>
 
@@ -35,7 +37,7 @@ Tap **Create link** and send it to your friends. [Inviting people](/groups/invit
 
 ## Your groups
 
-**Groups** lists every group you are in, with your balance in each and who is in it. Tap one to open it.
+**Groups** lists every group you are in, with your balance in each and who is in it. Tap one to open it. Groups deleted in the last 30 days wait under **Recently deleted** at the bottom, where anyone who was in them can [restore them](/groups/settings/#restore-a-deleted-group).
 
 <Screenshot
   name="groups"
@@ -49,7 +51,7 @@ Tap **Create link** and send it to your friends. [Inviting people](/groups/invit
   alt="The Supper club group. The header shows the group emoji, six member avatars and the line You are owed $282.44 next to an Invite button. Below are the tabs Expenses, Balances, Plans and Members, a Search expenses field with a download button, and today's expenses and payments."
 />
 
-The header shows the group's emoji, who is in it and your balance in plain words: **You are owed**, **You owe**, or **All square here**. The **Invite** button is always one tap away.
+The header shows the group's emoji, who is in it and your balance in plain words: **You are owed**, **You owe**, or **All square here**. A group with a [cover photo](/groups/settings/#cover-photo) shows it at the top, and a trip shows its dates under its name. The **Invite** button is always one tap away.
 
 The tabs underneath:
 
@@ -59,14 +61,58 @@ The tabs underneath:
 | **Balances** | Who owes whom, and the **Settle up** button. See [Balances](/balances/). |
 | **Totals** | What the group spent and your share, by month and category, plus **Recently deleted**. See [Totals and charts](/expenses/search-and-totals/#totals-and-charts). |
 | **Plans** | The group's open polls and what is on the calendar. See [Plans](/plans/). |
+| **Notes** | A shared page for the wifi password, the door code or the plan for Saturday. See [Group notes](#group-notes). |
 | **Members** | Everyone in the group, their role and their balance. See [Roles](/groups/roles/). |
-| **Settings** | Name, emoji, color, currency, house rules, default split, export and import, archive, leave and delete. See [Group settings](/groups/settings/). |
+| **Settings** | Name, type, emoji, color, currency, cover photo, house rules, default split, export and import, archive, leave and delete. See [Group settings](/groups/settings/). |
 
-On a phone the tabs scroll sideways, so swipe left to reach **Members** and **Settings**.
+On a phone the tabs scroll sideways, so swipe left to reach **Notes**, **Members** and **Settings**.
 
 :::note[Good to know]
 A one-on-one tab with a friend works like a small group with only **Expenses**, **Balances** and **Totals**. See [Friends](/friends/).
 :::
+
+## Group notes
+
+The **Notes** tab is one shared page for the whole group: wifi passwords, door codes, who has the spare key, bin day. Anyone in the group can read it and write on it.
+
+### Write in the notes
+
+Tap the page and type. There is no save button. Potluck saves a moment after you stop typing, and when you tap away from the page. The line under it says where things stand:
+
+- **Not saved yet** while you type,
+- **Saving** while it goes up,
+- **Saved** once it is in.
+
+Next to that, Potluck says who changed the notes last and when, like **Edited by Ava, 5 minutes ago** or **Edited by you, 2 hours ago**.
+
+The notes hold up to 10,000 characters. Near the end, a counter shows how many you have used, like **9,200 of 10,000**.
+
+### Live for everyone
+
+Notes update as people write. If someone else saves while you have the page open and you are not typing, their changes show up right away and Potluck says **Ava just edited these notes.**
+
+### When two people edit at once
+
+Potluck never mixes two people's edits together, and it never quietly writes over someone else's.
+
+If someone saves a newer version while you were typing, your changes are held back and Potluck says **Ava saved a newer version while you were typing.** It shows the start of **Their version** and asks you to choose:
+
+- **Use their version** drops what you typed and shows their notes.
+- **Keep mine** keeps what you typed and saves it over theirs.
+
+Until you choose, nothing you type is saved. If you try to leave the page, Potluck asks **Your notes have not saved yet. Leave anyway?** It asks the same when a save failed, for example because you went offline.
+
+### Edit history
+
+Tap **Edit history** under the notes to see who edited them and when, with the start of the notes after each edit. Edits by the same person within ten minutes count as one. Before anyone writes, it says **No edits yet. Be the first.**
+
+The history shows the start of each version, not the whole thing, so there is no way to go back to an older version.
+
+Edits also show in the group's activity, like **Ava edited the notes**. Tap one to open the notes.
+
+### Archived groups
+
+In an [archived group](#archived-groups), the notes are read only: **This group is archived, so its notes are read only.** Unarchive the group to write in them again.
 
 ## People not on Potluck yet
 

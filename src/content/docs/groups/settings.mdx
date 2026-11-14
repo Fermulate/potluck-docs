@@ -1,12 +1,12 @@
 ---
 title: Group settings
-description: Rename a group, change its look, set the house rules and the default split, export it, import expenses from Splitwise or a Potluck spreadsheet, and archive, leave or delete it.
+description: Rename a group, pick its type, change its look and cover photo, set the house rules and the default split, export it, import expenses from Splitwise or a Potluck spreadsheet, and archive, leave, delete or restore it.
 ---
 
 import { Steps } from '@astrojs/starlight/components'
 import Screenshot from '~/components/Screenshot.astro'
 
-Open a group and tap the **Settings** tab (swipe the tabs left on a phone). Owners and admins can change everything here. Members see the same page read-only, with the note **Only owners and admins can change these.** The exceptions are the [default split](#default-split) and [Spreadsheets](#spreadsheets), which anyone in the group can use.
+Open a group and tap the **Settings** tab (swipe the tabs left on a phone). Owners and admins can change everything here. Members see the house rules read-only, with the note **Only owners and admins can change these.**, and do not see **Details** or **Cover photo** at all. The exceptions are the [default split](#default-split) and [Spreadsheets](#spreadsheets), which anyone in the group can use.
 
 <Screenshot
   name="group-settings"
@@ -16,9 +16,58 @@ Open a group and tap the **Settings** tab (swipe the tabs left on a phone). Owne
 ## Details
 
 - **Group name**, **Emoji** and **Color** change how the group looks on everyone's lists.
+- **What kind of group?** sets the [group type](#group-type).
 - **Currency** is the currency balances are kept in. It is **Locked once money has been added**, because changing it would change what everyone owes. To track a trip in a new currency, start a new group or add expenses in the other currency (see [Currencies](/expenses/currencies/)).
 
 Tap **Save** when you are done.
+
+## Group type
+
+Every group is a **Home**, a **Trip**, a **Couple** or **Other**. You pick one when you [create the group](/groups/#create-a-group), and owners and admins can change it under **Details** at any time. A new group is **Other** unless you pick something else.
+
+The type is mostly a label. It never changes balances, splits or who can do what. A few things follow from it:
+
+**Home**
+: While the group has no expenses or payments yet, its **Expenses** tab offers **Start with the regulars**: **Monthly rent** and **Utilities**, one tap from a repeating expense. See [Start with the regulars](/expenses/recurring/#start-with-the-regulars).
+
+**Trip**
+: A trip can have a **First day** and a **Last day**. Both are optional. They show under the group's name, in the group and on the **Groups** page, like **Jun 3 to Jun 10**, **From Jun 3** or **Until Jun 10**. The last day cannot come before the first: Potluck says **The last day comes before the first.** and will not save until you fix it.
+
+**Couple** and **Other**
+: Just a label.
+
+When you create a group, its emoji follows the type you pick (🏠 for a home, 🧳 for a trip, 💞 for a couple) until you pick an emoji yourself. Changing the type later in settings keeps the emoji you have.
+
+Switching a trip to another type clears its dates.
+
+## Cover photo
+
+Give the group a photo of the flat, the beach or the crew. The cover shows at the top of the group, on its card on the **Groups** page, and on the page people see when they open one of its [invite links](/groups/invites/). Only owners and admins can add, change or remove it.
+
+<Steps>
+
+1. In **Settings**, under **Cover photo**, tap **Add a cover photo** (or the empty frame above it).
+2. Pick a photo.
+
+</Steps>
+
+Potluck says **New cover is up.** and everyone in the group sees it.
+
+- To pick another one, tap **Change photo**.
+- To go back to no cover, tap **Remove photo**. Potluck says **Cover removed.**
+
+The cover is shown wide and cropped to fit, so keep the good part near the middle.
+
+### Which photos work
+
+- **PNG, JPEG or WebP.** Anything else gets **Use a PNG, JPEG or WebP photo.**
+- **Up to 10 MB.** Potluck shrinks big photos to 1600 pixels wide before uploading, so most phone photos fit. If one is still over 10 MB after that, or is very large to begin with, Potluck says **That photo is over 10 MB.**
+
+If the upload fails, Potluck says **The photo did not upload. Try again?** and the old cover stays.
+
+:::note[Good to know]
+Anyone holding an invite link to the group can see its cover on the invite page. Pick a photo you are happy for them to see.
+:::
 
 ## House rules
 
@@ -161,8 +210,48 @@ While a group is archived, nobody can add or change its expenses or payments, or
 
 ### Delete the group
 
-Only the owner can delete a group, and only once every balance in it is settled. Until then the button explains **Settle all balances before deleting the group.**
+Only the owner can delete a group, and only once nobody in it owes anybody anything. Until then the button is off and explains **Settle all balances before deleting the group.**
 
-:::danger[This cannot be undone]
-**Delete group** removes the group for everyone, with all its expenses, payments and plans. If you only want it out of sight, archive it instead.
+That means every debt on the **Balances** tab, not just everyone's total. With **Simplify debts** off, debts can run in a circle: Ava owes Ben $10, Ben owes Cam $10 and Cam owes Ava $10. Everyone's balance adds up to zero, but those three debts are still open, so the group cannot be deleted until they are settled. See [Settle up](/balances/settle-up/).
+
+<Steps>
+
+1. In **Settings**, under **The exit**, tap **Delete group**.
+2. Potluck asks **Delete Supper club for everyone? Anyone in it can restore it from Groups for 30 days, then it is gone for good.** Tap **Delete group** again.
+
+</Steps>
+
+Potluck says **Supper club was deleted. Restore it from Groups for 30 days.** and takes you to **Groups**. Changed your mind already? Tap **Undo** on that message.
+
+What happens next:
+
+- **The group disappears for everyone**, with its expenses, payments, notes and plans. Its plans leave everyone's calendar, and nobody can add anything to it.
+- **Its invite links and plan guest links close.** They open again if the group is restored.
+- **Everyone else in it gets a notification**, **Supper club was deleted**, that says who deleted it and that anyone in it can bring it back for 30 days. Tapping it opens the group's page, with a button to restore it.
+- **The delete stays in the activity feed**, like **Ava deleted Supper club**, so everyone who was in it can see what happened.
+
+A [one-on-one tab](/friends/#split-something-with-one-friend) cannot be deleted. Settle up and it simply stays quiet.
+
+:::caution[30 days, then it is gone]
+A deleted group waits 30 days for someone to [restore it](#restore-a-deleted-group). After that it is removed for good, with everything in it, and cannot come back. If you only want it out of sight, archive it instead.
 :::
+
+### Restore a deleted group
+
+For 30 days after a group is deleted, anyone who was in it can bring it back for everyone. You do not need to be the owner.
+
+<Steps>
+
+1. Open **Groups**. Below your groups, tap **Recently deleted** (it shows how many there are, like **Recently deleted (1)**).
+2. Each deleted group says how long is left and who deleted it, like **12 days left, deleted by Ava**. On the last day it says **Last day to restore**.
+3. Tap **Restore** next to the group.
+
+</Steps>
+
+Potluck says **Supper club is back on the table.** and opens the group. You can also restore it from the **Supper club was deleted** notification, or by opening a link to the group: the page says **Supper club was deleted** and has a **Restore Supper club** button.
+
+Everything comes back as it was: members, roles, expenses, payments, balances, notes and plans. The invite links and guest links that were open when it was deleted work again. [Repeating expenses](/expenses/recurring/) that came due while it was gone go in once it is back.
+
+Everyone else in the group gets a notification, **Supper club is back**, with who brought it back, and the group's activity says so too.
+
+After 30 days the group is gone for good. Trying to restore it then gives **That group is gone for good.**
