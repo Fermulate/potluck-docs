@@ -53,7 +53,7 @@ No groups yet? Potluck asks you to start one first. See [Groups](/groups/).
 Tap a friend on **Friends** to open their page. At the top is their name and where you stand overall, like **You are owed** $20.00, or **All settled up**. Below that:
 
 **Add expense**
-: Opens a new expense on your [one-on-one tab](#split-something-with-one-friend). The first time, it starts the tab.
+: Opens a new expense on your [one-on-one tab](#split-something-with-one-friend). The first time, it starts the tab. When a new expense with them cannot go in, the button is greyed out and a line under it says why. If you blocked them, it says something like **You blocked Kai, so nothing new goes in between you. Unblock them in Me to split again.** In any other case, like when they blocked you, it says **You can only split with friends.**
 
 **Settle up**
 : Shows when you have a balance. It works like [settling up with a friend](#settle-up-with-a-friend).
@@ -62,9 +62,24 @@ Tap a friend on **Friends** to open their page. At the top is their name and whe
 : Your one-on-one tab and every group you share, each with your balance there. Tap one to open it.
 
 **Everything you share**
-: Every expense and payment between the two of you, newest day first, each marked **One-on-one** or **In** and the group's name.
+: Every expense and payment between the two of you, newest day first, each marked **One-on-one** or **In** and the group's name. See [What each row shows](#what-each-row-shows).
 
-The **…** button holds **Remove friend**, **Report** and **Block**. See [Remove a friend](#remove-a-friend) and [Block and report](#block-and-report).
+The **…** button holds **Export as a spreadsheet**, **Remove friend**, **Report** and **Block**. The spreadsheet is every expense and payment between you two, from every group, the same file as [What you share with one person](/account/#what-you-share-with-one-person) on **Me**. See [Remove a friend](#remove-a-friend) and [Block and report](#block-and-report) for the rest.
+
+### What each row shows
+
+Each expense under **Everything you share** shows only what it left between you and this friend, not your whole part of it:
+
+- **you lent** an amount: they owe you that much for it.
+- **you borrowed** an amount: you owe them that much for it.
+- **nothing between you**: you are both in it, but no money passes between the two of you. Say a third person paid and you each owe them your share.
+
+[Refunds](/expenses/#refunds) read **you get back** or **you owe** instead.
+
+How the rows add up depends on the group's [simplify debts](/balances/#simplified-debts) setting:
+
+- **Simplify debts off**: the rows and payments in a group add up to your balance with this friend there.
+- **Simplify debts on**: your balance there is the simplified one, which can move money between people. The rows are the history behind it, so they may not add up to it.
 
 ## What the totals mean
 
@@ -104,6 +119,8 @@ Not everything belongs in a group. Coffee with a roommate, a concert ticket for 
 </Steps>
 
 To open the tab itself, tap **One-on-one** under **Where you stand** on their page.
+
+Wherever Potluck names the tab, it goes by your friend: on Home, in the activity feed, on expense and payment pages, and in spreadsheets. Notifications call it your tab with them, like **New expense in your tab with Jules**.
 
 A one-on-one tab has only **Expenses**, **Balances** and **Totals** (see [Totals and charts](/expenses/search-and-totals/#totals-and-charts)). There are no plans, invite links or roles to manage. You settle up the same way as in a group: see [Recording a payment](/balances/settle-up/).
 
@@ -148,7 +165,7 @@ While someone is blocked:
 
 - **You stop being friends**, in both directions.
 - **You get no notifications about what they do**, even in groups you share. Their expenses and payments still show in those groups, and your balances there still count.
-- **No new one-on-one tabs.** Neither of you can start one with the other.
+- **No new one-on-one tabs.** Neither of you can start one with the other, and **Add expense** on their page is greyed out.
 - **No friend links.** They cannot use your friend link or add you back from a group, and you cannot add them.
 - **No joining groups across the block.** Neither of you can join a group the other is in. The invite link looks revoked.
 - **Groups you already share keep working** for everyone in them.
