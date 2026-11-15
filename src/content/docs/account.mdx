@@ -6,7 +6,7 @@ description: Change your profile, language, theme, time zone and currency, save 
 import { Steps } from '@astrojs/starlight/components'
 import Screenshot from '~/components/Screenshot.astro'
 
-Everything about you lives on **Me**: your profile, your preferences, and, in the app's words, your exit.
+Everything about you lives on **Me**: your profile, your preferences, and, in the app's words, your exit. On a phone, the bell at the top of **Me** opens your [notifications](/notifications/).
 
 <Screenshot
   name="me"
@@ -114,6 +114,8 @@ Once it is saved, your other devices are signed out. The one you are using stays
 
 Lost a phone, or signed in on a shared computer? Next to **Devices**, tap **Sign out everywhere** and confirm. Every phone, tablet and browser on your account has to sign in again, including the one you are using.
 
+Your other devices are signed out the next time they load or save anything, when Potluck is opened or brought back to the front there, or within about 30 seconds while it is on screen. Their sign in page then says why: **You were signed out here because your account was signed out everywhere or its password changed. Sign in again to pick up where you left off.**
+
 ## Two-step sign in
 
 Two-step sign in adds a second check. After your password, sign-in link, or Google or Apple, Potluck asks for a 6-digit code from an authenticator app on your phone. Someone who learns your password still cannot get in without it.
@@ -203,7 +205,7 @@ Anyone with your feed link can see your plans' titles, times, places and group n
 
 **Blocked people** on **Me** lists everyone you blocked. When the list is empty, it says **Nobody blocked. Lovely.**
 
-To unblock someone, tap **Unblock** next to their name. Potluck says they are unblocked. They are not told when you block or unblock them, and while they are blocked, nothing they do notifies you.
+To unblock someone, tap **Unblock** next to their name. Potluck says they are unblocked. They are not told when you block or unblock them, and while they are blocked, no new expense can include you both, and only their payments with you notify you. Once unblocked (and unless they blocked you too), the two of you can share new expenses again, and repeating expenses with both of you in them go in again on their next date.
 
 Unblocking does not make you friends again. Add them back with your [friend link](/friends/#your-friend-link), or from a group you share. Any invite email that was held back because of the block goes out now, unless another block still stands in the way, the group is archived, or the person who sent it has left the group. See [Block and report](/friends/#block-and-report).
 
@@ -220,7 +222,7 @@ Under **Backup**, tap **Download a backup**. You get one JSON file with:
 - your profile: name, sign-in email, photo link, time zone, default currency and language,
 - your own [payment methods](#payment-methods), and nobody else's,
 - your friends list,
-- every group you are in, archived ones and your [one-on-one tabs](/friends/#split-something-with-one-friend) too, with its members and roles,
+- every group you are in, archived ones and your [one-on-one tabs](/friends/#split-something-with-one-friend) too (each tab named after your friend), with its members and roles,
 - every expense, with who paid, each share, line items and comments,
 - every payment, with its comments,
 - repeating expenses,
@@ -237,9 +239,9 @@ Under **Every group as a spreadsheet**, tap **Export everything**. You get one C
 
 ### What you share with one person
 
-Under **What you share with one person**, pick a friend and tap **Export**. You get every expense and payment between the two of you, from your one-on-one tab and every group you share.
+Under **What you share with one person**, pick a friend and tap **Export**. Or open their page from **Friends**, tap **…**, then **Export as a spreadsheet**. You get every expense and payment between the two of you, from your one-on-one tab and every group you share.
 
-This file keeps only your columns and theirs. Everyone else is still named in **Paid by**, so each row makes sense. Instead of balance columns, it has **Between you and** their name: what each row did between you two. Positive means they owe you. The total for each group, and for your one-on-one tab, is what the two of you owe each other there.
+This file keeps only your columns and theirs. Everyone else is still named in **Paid by**, so each row makes sense. Instead of balance columns, it has **Between you and** their name: what each row did between you two. Positive means they owe you. The **Balance** row for each group, and for your one-on-one tab, is where the two of you stand there, the same as on [their page](/friends/#the-friend-page). In a group that [simplifies debts](/balances/#simplified-debts), that is the simplified amount, so the rows above may not add up to it: they are the history behind it, and the Balance row's notes say so.
 
 This file leaves the others out, so it cannot be imported into a group. Export the whole group for that.
 

@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: Fixes for sign-in links, invites, uploads, push notifications and other things that can go wrong.
+description: Fixes for sign-in links, invites, uploads, push notifications, saving while offline, and other things that can go wrong.
 ---
 
 Start with the message Potluck shows you. Most of them say what to do next. If yours is not here, open an issue on [GitHub](https://github.com/Fermulate/potluck/issues).
@@ -52,8 +52,10 @@ It may be archived. On **Groups**, tap **Show archived**. If it is not there, so
 Read the message under the form:
 
 - **The split needs to add up to the total.** In **Exact**, the amounts must match the total exactly.
-- **Percentages need to add up to 100%.** Drag the bar or tap **Even it out**.
+- **Percentages need to add up to 100%.** The line under the percentages says how much is **left to assign** or **too much**. Fix the numbers or tap **Even it out**.
+- **You are offline.** **Save expense** waits until you are back. See [Offline and errors](#offline-and-errors).
 - **Pick at least one person to split with.**
+- **This expense can't include everyone you picked. Take someone out.** Some of the people you picked cannot be on one expense together. The message never says who. Take someone out of **Paid by** or the split and save again.
 - **No exchange rate for that currency yet.** Pick another currency, or convert it yourself. See [Currencies](/expenses/currencies/).
 
 ### I cannot edit or delete an expense
@@ -82,6 +84,8 @@ See [Getting a good read](/expenses/receipts/#getting-a-good-read).
 ### My balance looks wrong
 
 Open the group's **Expenses** tab and check each line's **you lent** or **you borrowed**. Common causes: the wrong person under **Paid by**, someone left out of the split, or a payment recorded twice. If simplify debts is on, the list of who pays whom may look different from your own expenses but totals the same. See [Balances](/balances/#simplified-debts).
+
+On a friend's page, each row shows only what it left between the two of you, so the amounts can differ from the group's **Expenses** tab. See [What each row shows](/friends/#what-each-row-shows).
 
 ## Plans
 
@@ -115,6 +119,26 @@ Potluck shows times in the zone set on **Me**. Check **Time zone** there, or tap
 ### The calendar feed is not updating
 
 Calendar apps refresh subscribed feeds on their own schedule, sometimes only every few hours. If it never updates, check that you did not [reset the link](/account/#reset-the-link) since subscribing.
+
+## Offline and errors
+
+### "Offline for now. Some things will wait."
+
+This banner shows while your device has no connection, and goes away once you are back.
+
+On the expense and payment forms, the save button is greyed out, and Potluck says **You are offline. What you entered stays here; save it once you are back.** Nothing you typed is lost, and if you try to close or reload the tab, your browser asks first.
+
+### "Potluck could not confirm this save"
+
+If the connection drops while you save an expense or payment, Potluck cannot tell whether it went in. It says **Potluck could not confirm this save. What you entered stays as it is until it goes through, and trying again never saves it twice.**
+
+The form is held exactly as you sent it, so nothing can change while you wait, and the save button now says **Try again**. Tap it once you are back. If the first save did go in, Potluck hands back that one instead of saving a second copy. Potluck never tries again on its own.
+
+When it goes through, the confirmation shows what was actually saved, like your share of the expense. After a payment in the group's currency, the settled screen shows what is truly still owed.
+
+### "Well, that spilled."
+
+Something on the page broke, and Potluck shows its own error page instead. Tap **Try again** to load it again, or **Go home** to start fresh from Home. If it keeps happening, open an issue on [GitHub](https://github.com/Fermulate/potluck/issues) and say what you were doing.
 
 ## Everything else
 

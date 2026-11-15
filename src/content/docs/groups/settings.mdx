@@ -175,10 +175,12 @@ Every row in the preview is converted with the rate it will be saved with, so **
 
 ### Rows already in the group
 
-Potluck points out anything that might come in twice. It never refuses it on its own.
+Potluck points out anything that might come in twice, and leaves it out unless you say otherwise.
 
 - **The same file.** If this file went into the group before, it says so, like **This file already went into Trip 2 days ago**.
-- **Matching rows.** An expense with the same day, amount, currency and description, or a payment with the same **Paid on** day, amount, currency and people, counts as already there. Tick **Leave those rows out** to skip them.
+- **Matching rows.** An expense with the same day, amount, currency and description, or a payment with the same **Paid on** day, amount, currency and people, counts as already there. Those rows stay out, like **3 rows look like expenses or payments already in Trip, so they stay out.** If they really are new, tick **Bring all 3 in anyway** (or **Bring this row in anyway** for one).
+
+The **Import** button counts only the rows that will go in, so rows left out are not in its number. If every row is already in the group, it says **Nothing new to import**.
 
 ### Dates from a spreadsheet
 
@@ -194,7 +196,7 @@ One import takes up to 5,000 rows. A longer file, up to 50,000 rows, goes in as 
 
 Each import of up to 5,000 rows is all or nothing. If one row has a problem, none of that part is saved, and Potluck names the row, like **Row 12: ...**. Fix it, or leave it out, and import again.
 
-In a file that goes in as several parts, the parts before the failed one stay in. Potluck says how many rows went in, updates the balances, and ticks **Leave those rows out** for you, so importing again does not bring those rows in twice.
+In a file that goes in as several parts, the parts before the failed one stay in. Potluck says how many rows went in and updates the balances. Importing again leaves those rows out, so they do not come in twice.
 
 ## The exit
 
@@ -202,7 +204,7 @@ In a file that goes in as several parts, the parts before the failed one stay in
 
 **Archive group** hides the group from your list. Balances stay put and nothing is deleted. You can tap **Undo** right away, or find it later under **Show archived** on the **Groups** page and tap **Unarchive group**.
 
-While a group is archived, nobody can add or change its expenses or payments, or make invite links. See [Archived groups are read only](/expenses/editing/#archived-groups-are-read-only) and, for payments, [Archived groups](/balances/settle-up/#archived-groups).
+While a group is archived, nobody can add or change its expenses or payments, start or lock in plans, or make invite links. See [Archived groups](/groups/#archived-groups), and for the details, [Archived groups are read only](/expenses/editing/#archived-groups-are-read-only) for expenses and [Archived groups](/balances/settle-up/#archived-groups) for payments.
 
 ### Leave the group
 

@@ -53,18 +53,35 @@ No groups yet? Potluck asks you to start one first. See [Groups](/groups/).
 Tap a friend on **Friends** to open their page. At the top is their name and where you stand overall, like **You are owed** $20.00, or **All settled up**. Below that:
 
 **Add expense**
-: Opens a new expense on your [one-on-one tab](#split-something-with-one-friend). The first time, it starts the tab.
+: Opens a new expense on your [one-on-one tab](#split-something-with-one-friend). The first time, it starts the tab. When a new expense with them cannot go in, the button is greyed out and a line under it says why. If you blocked them, it says something like **You blocked Kai, so nothing new goes in between you. Unblock them in Me to split again.** In any other case, like when they blocked you, it says **You can only split with friends.**
 
 **Settle up**
 : Shows when you have a balance. It works like [settling up with a friend](#settle-up-with-a-friend).
 
 **Where you stand**
-: Your one-on-one tab and every group you share, each with your balance there. Tap one to open it.
+: Your one-on-one tab and every group you share, each with your balance there. Tap one to open it. On a phone, a long group name is cut short so the page still fits the screen.
 
 **Everything you share**
-: Every expense and payment between the two of you, newest day first, each marked **One-on-one** or **In** and the group's name.
+: Every expense and payment between the two of you, newest day first, each marked **One-on-one** or **In** and the group's name. See [What each row shows](#what-each-row-shows).
 
-The **…** button holds **Remove friend**, **Report** and **Block**. See [Remove a friend](#remove-a-friend) and [Block and report](#block-and-report).
+The **…** button holds **Export as a spreadsheet**, **Remove friend**, **Report** and **Block**. The spreadsheet is every expense and payment between you two, from every group, the same file as [What you share with one person](/account/#what-you-share-with-one-person) on **Me**. See [Remove a friend](#remove-a-friend) and [Block and report](#block-and-report) for the rest.
+
+### What each row shows
+
+Each expense under **Everything you share** shows only what it left between you and this friend, not your whole part of it:
+
+- **you lent** an amount: they owe you that much for it.
+- **you borrowed** an amount: you owe them that much for it.
+- **nothing between you**: you are both in it, but no money passes between the two of you. Say a third person paid and you each owe them your share.
+
+[Refunds](/expenses/#refunds) read **you get back** or **you owe** instead.
+
+A payment between you reads **payment**, or its note if it has one. Only the newest payment in a group where the two of you are now square reads **settled up**.
+
+How the rows add up depends on the group's [simplify debts](/balances/#simplified-debts) setting:
+
+- **Simplify debts off**: the rows and payments in a group add up to your balance with this friend there.
+- **Simplify debts on**: your balance there is the simplified one, which can move money between people. The rows are the history behind it, so they may not add up to it.
 
 ## What the totals mean
 
@@ -105,9 +122,11 @@ Not everything belongs in a group. Coffee with a roommate, a concert ticket for 
 
 To open the tab itself, tap **One-on-one** under **Where you stand** on their page.
 
+Wherever Potluck names the tab, it goes by your friend: on Home, in the activity feed, on expense and payment pages, and in spreadsheets. Your inbox calls it your tab with them, like **New expense in your tab with Jules**.
+
 A one-on-one tab has only **Expenses**, **Balances** and **Totals** (see [Totals and charts](/expenses/search-and-totals/#totals-and-charts)). There are no plans, invite links or roles to manage. You settle up the same way as in a group: see [Recording a payment](/balances/settle-up/).
 
-You can only start a one-on-one tab with someone on your Friends list. Otherwise Potluck says **You can only split with friends.**
+You can only start a one-on-one tab with someone on your Friends list. Otherwise Potluck says **You can only split with friends.** Once either of you blocks the other, the tab takes no new expenses, but you can still settle up there. See [Block and report](#block-and-report).
 
 :::note[Good to know]
 A one-on-one tab is separate from the groups you share. Money you owe someone in a group stays in that group, and money on your one-on-one tab stays there. The total on **Friends** adds them up, and [Settle up with a friend](#settle-up-with-a-friend) pays each one separately.
@@ -147,19 +166,36 @@ On their page, tap **…**, then **Block** and their name, and confirm. Their pa
 While someone is blocked:
 
 - **You stop being friends**, in both directions.
-- **You get no notifications about what they do**, even in groups you share. Their expenses and payments still show in those groups, and your balances there still count.
-- **No new one-on-one tabs.** Neither of you can start one with the other.
+- **You get no notifications about what they do**, even in groups you share, except payments. You still hear when they record, change, delete or restore a payment with you, so nothing moves your balance without you knowing. Their expenses and payments still show in those groups, and your balances there still count.
+- **No new expense with both of you in it, anywhere.** Not in a group, and not in a one-on-one tab, whoever adds it. See [Expenses across a block](#expenses-across-a-block).
+- **No new one-on-one tabs.** Neither of you can start one with the other, and **Add expense** on their page is greyed out.
 - **No friend links.** They cannot use your friend link or add you back from a group, and you cannot add them.
 - **No joining groups across the block.** Neither of you can join a group the other is in. The invite link looks revoked.
 - **Groups you already share keep working** for everyone in them.
+- **Settling up still works**, for both of you. See [Settling up across a block](#settling-up-across-a-block).
 
-#### An existing one-on-one tab
+#### Expenses across a block
 
-If you already had a one-on-one tab, it stays, but it freezes for them. They can no longer add, edit, delete or restore expenses, payments or repeating expenses there, or comment. They are told **You can only split with friends.**
+Once either of you has blocked the other, Potluck keeps the two of you off any new expense, as payers or with a share:
 
-You can still do all of that, including settling up, so nothing changes your balance behind your back.
+- **In a group**, if you blocked someone and put them on an expense with you, the form says so before you save, like **You blocked Kai, so you two cannot share an expense. Take them out first.** Saving waits until they are out. Anyone else who tries to save an expense with both of you in it is told **This expense can't include everyone you picked. Take someone out.** That names nobody and never mentions a block.
+- **In a one-on-one tab**, **Add expense** is turned off, and a line on the tab says why, the same way as on [their page](#the-friend-page). When the tab is settled up, its **Balances** tab gives the same reason instead of offering **Add expense**. Inside the tab, the big plus button shows **Add expense** greyed out with the same reason. Settling up stays on.
+- **Edits** to older expenses still work, unless the change would bring one of you into an expense the other is already in.
+- **Restoring** a deleted expense with both of you in it is refused like adding it.
+- **Imports** stop at a row with both of you in it. Leave one of you out of it and import again. See [Import expenses](/groups/settings/#import-expenses).
+- **Repeating expenses** with both of you in them skip their dates while the block stands. See [Repeating expenses and blocks](/expenses/recurring/#repeating-expenses-and-blocks).
 
-A repeating expense on that tab keeps running until one of you turns it off. Either of you can always turn it off.
+In a one-on-one tab, the person who was blocked also cannot edit, delete or restore expenses or repeating expenses, or comment. They are told **You can only split with friends.** They can still turn a repeating expense off. You can still edit and delete older expenses there, and comment.
+
+#### Settling up across a block
+
+Payments always go through, so the two of you can square up. Either of you can record a payment, in a group or in your one-on-one tab. In a group, changing, deleting and restoring payments works the same as for anyone. See [Who can change a payment](/balances/settle-up/#who-can-change-a-payment).
+
+In your one-on-one tab, the person who was blocked can record new payments, but can only edit, delete or restore the ones they recorded themselves. On a payment the other person recorded, they see no **Edit** or **Delete**, just the note **Only whoever recorded this payment can change it.** The same words show if a change to such a payment is refused.
+
+Settling up is never silent. Whoever blocked still gets a notification for every payment with them that the other person records, changes, deletes or restores, in a group or in the tab, even though everything else they do is muted.
+
+You are no longer friends, so their page has no **Settle up** and [Settle up with a friend](#settle-up-with-a-friend) is not there. Settle up from each group's **Balances** tab instead, or from the **Balances** tab of your one-on-one tab.
 
 #### Seats and held invites
 
@@ -175,4 +211,4 @@ On **Me**, find **Blocked people** and tap **Unblock** next to them. See [Blocke
 
 On their page, tap **…**, then **Report** and their name. Write **What happened** in a few words and tap **Send report**. The Potluck team reads every report, and the person is not told.
 
-Reporting and blocking are separate. Block them as well if you want to stop hearing from them.
+Reporting and blocking are separate. Block them as well if you want to stop hearing from them (payments aside).
