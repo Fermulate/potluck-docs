@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: Fixes for sign-in links, invites, uploads, push notifications, saving while offline, and other things that can go wrong.
+description: Fixes for sign-in links, Google sign in, invites, uploads, push notifications, saving while offline, and other things that can go wrong.
 ---
 
 Start with the message Potluck shows you. Most of them say what to do next. If yours is not here, open an issue on [GitHub](https://github.com/Fermulate/potluck/issues).
@@ -17,7 +17,15 @@ Check your spam folder, then tap **Send it again**. Make sure the address is rig
 
 ### "Confirm your email first"
 
-Your account needs the confirmation link Potluck sent when you signed up. Find that email and open the link, then sign in again.
+Potluck says **Confirm your email first. Check your inbox.** when you signed up with an email and password and have not opened the confirmation link yet. Find that email and open the link, then sign in again.
+
+Accounts made with **Continue with Google** never see this, because Google has already confirmed the address. If you have a Google account on the same email, you can tap **Continue with Google** instead of waiting for the link. The password you picked then stops working; [set a new one](/account/#change-your-password) on **Me** if you want it.
+
+### Google sign in did not work
+
+If you come back from Google to **That link has expired or was already used.**, the sign in was cancelled or did not finish. Tap **Back to sign in** and tap **Continue with Google** again.
+
+If Google shows its own error page instead of letting you pick an account, go back to Potluck and sign in with your email: type your password, or tap **Email me a sign-in link**. If it keeps happening, open an issue on [GitHub](https://github.com/Fermulate/potluck/issues) and say what Google's page said.
 
 ### I forgot my password
 
