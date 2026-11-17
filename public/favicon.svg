@@ -1,7 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#1d1a16"/>
-  <path d="M206 112c-20 20 20 40 0 60M256 104c-20 20 20 40 0 60M306 112c-20 20 20 40 0 60" fill="none" stroke="#fbf5ea" stroke-opacity="0.55" stroke-width="18" stroke-linecap="round"/>
-  <circle cx="256" cy="212" r="24" fill="#f5b53d"/>
-  <path d="M116 246h280c0 86-62.7 154-140 154s-140-68-140-154Z" fill="#e8492f"/>
-  <rect x="100" y="234" width="312" height="26" rx="13" fill="#fbf5ea"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .page { fill: #fbf5ea; stroke: #1d1a16 }
+    .text { stroke: #716759 }
+    .mark { stroke: #f5b53d }
+    .bowl { fill: #e8492f }
+    .lid { stroke: #1d1a16 }
+    .shine { stroke: #ffffff }
+    @media (prefers-color-scheme: dark) {
+      .page { fill: #14110e; stroke: #f6efe3 }
+      .text { stroke: #a89d8f }
+      .mark { stroke: #ffc65c }
+      .bowl { fill: #ff6a4d }
+      .lid { stroke: #f6efe3 }
+      .shine { stroke: #1d1a16 }
+    }
+  </style>
+  <g transform="rotate(-9 16 14)">
+    <rect class="page" x="9" y="1.8" width="14" height="15" rx="1.6" stroke-width="1.6"/>
+    <path class="mark" d="M12.2 5.6h7.6" stroke-width="1.8" stroke-linecap="round"/>
+    <path class="text" d="M12.2 8.9h7.6M12.2 11.8h5" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+  <path class="bowl" d="M4 14h24c0 7.2-5.4 13-12 13S4 21.2 4 14Z"/>
+  <path class="lid" d="M3 14h26" stroke-width="2" stroke-linecap="round"/>
+  <path class="shine" d="M9.5 18.5c1 2.6 3.3 4.4 6.5 4.6" fill="none" stroke-opacity="0.55" stroke-width="1.6" stroke-linecap="round"/>
 </svg>
