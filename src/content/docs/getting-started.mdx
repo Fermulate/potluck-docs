@@ -5,8 +5,14 @@ description: Create a Potluck account with Google or your email, set up your pro
 
 import { Steps } from '@astrojs/starlight/components'
 import Screenshot from '~/components/Screenshot.astro'
+import FirstSteps from '~/components/FirstSteps.astro'
+import ColorKey from '~/components/ColorKey.astro'
 
 Potluck runs in your browser, on your phone and on your computer. There is nothing to download first, and it costs nothing.
+
+No account yet? Start with [Create an account](#create-an-account), right below. Already signed in? These are the three steps from the **Set the table** card on Home, each with the page that walks you through it:
+
+<FirstSteps />
 
 ## Create an account
 
@@ -115,6 +121,28 @@ Home is where Potluck tells you what needs you right now.
 - **Coming up** shows plans that are on the calendar. **See all** opens [Plans](/plans/).
 - **Your groups** lists your groups, with a shortcut to a **New group**.
 
+Not in a group yet? Home leaves out **Coming up** and **Your groups**, because both need a group, and shows your first steps instead.
+
+### Your first steps
+
+Until one of your groups has someone else in it, Home shows a card called **Set the table**. It has three steps and keeps count, like **1 of 3 done**:
+
+1. **Start a group.** Tap **Create a group**. See [Create a group](/groups/#create-a-group).
+2. **Add your people.** Once you have a group, tap **Add people**. It opens the group's **Members** tab, where you can send an invite link or add someone by name. See [Inviting people](/groups/invites/).
+3. **Add the first expense.** See [Adding an expense](/expenses/).
+
+Only the step you are on has a button. **Getting started** at the bottom of the card opens this page.
+
+The card goes away by itself as soon as one of your groups has more than one member. To put it away sooner, tap the X in its corner (**Hide these steps**). That hides it in the browser you are using, so another phone or computer still shows it.
+
+### What the colors mean
+
+Each color means the same thing on every screen:
+
+<ColorKey />
+
+So a red amount is always something you owe, and a green one is always coming back to you.
+
 ### Getting around
 
 On a phone, the tab bar at the bottom has **Home**, **Groups**, **Plans** and **Me**. The big plus button in the middle opens **What are we doing?** with three shortcuts: **Add expense**, **Plan something** and **Settle up**.
@@ -132,4 +160,9 @@ On a computer, the same places sit in a rail on the left, with an **Add** button
   alt="Home on a computer. A rail on the left holds the Potluck name, an Add button, and links to Home, Groups, Plans, Notifications with a badge of 6, and Me. The balance card and Needs you sit in the middle, with Coming up and Your groups on the right."
 />
 
-Next: [start a group](/groups/).
+## Where to next
+
+- Splitting costs with people? [Start a group](/groups/#create-a-group), then [add an expense](/expenses/).
+- Trying to find a night that works? [Plan something](/plans/).
+- Just one other person? Keep a [one-on-one tab with a friend](/friends/#split-something-with-one-friend).
+- Got an invite link? Open it and see [Joining a group](/groups/invites/#join-with-a-link).

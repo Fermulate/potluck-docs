@@ -1,0 +1,89 @@
+---
+// For readers who already use Potluck: the jobs people come back for, set like the lines of a bill.
+const lines = [
+  { name: 'The tab', page: 'Adding an expense', href: '/expenses/' },
+  { name: 'The split', page: 'Six ways to split', href: '/expenses/splits/' },
+  { name: 'The night', page: 'Planning something', href: '/plans/' },
+  { name: 'The square up', page: 'Recording a payment', href: '/balances/settle-up/' },
+  { name: 'The hiccup', page: 'Troubleshooting', href: '/troubleshooting/' },
+]
+---
+
+<nav class="pl-jump not-content" aria-labelledby="pl-jump-title">
+  <h2 id="pl-jump-title">Already at the table?</h2>
+  <p>Go straight to the part you need.</p>
+  <ul>
+    {
+      lines.map((line) => (
+        <li>
+          <a href={line.href}>
+            <span class="pl-jump__name">{line.name}</span>
+            <span class="pl-jump__leader" aria-hidden="true" />
+            <span class="pl-jump__page">{line.page}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .pl-jump {
+    padding: 1.25rem 0 0;
+  }
+  h2 {
+    margin: 0;
+    font-family: var(--pl-font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--pl-ink);
+  }
+  p {
+    margin: 0.5rem 0 0;
+    font-size: var(--sl-text-sm);
+    color: var(--pl-mute);
+  }
+  ul {
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  li + li {
+    border-top: 1px dashed var(--pl-line-strong);
+  }
+  a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.7rem 0;
+    color: var(--pl-ink);
+    text-decoration: none;
+  }
+  .pl-jump__name {
+    font-family: var(--pl-font-display);
+    font-style: italic;
+    font-size: 1.375rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .pl-jump__leader {
+    flex: 1;
+    min-width: 0.75rem;
+    border-bottom: 2px dotted var(--pl-line-strong);
+    transform: translateY(-0.3rem);
+  }
+  .pl-jump__page {
+    color: var(--pl-tomato-ink);
+    font-weight: 650;
+    text-align: right;
+  }
+  a:hover .pl-jump__page {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+  }
+</style>
