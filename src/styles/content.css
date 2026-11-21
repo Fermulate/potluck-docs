@@ -35,6 +35,8 @@ h1#_top {
   color: var(--pl-tomato-ink);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.2em;
+  /* Long links and addresses wrap instead of pushing the page sideways. */
+  overflow-wrap: anywhere;
 }
 
 .sl-markdown-content a:not(:where(.not-content *)):hover {
@@ -65,7 +67,7 @@ h1#_top {
 
 /* Steps: tomato counters, like the app's primary buttons. */
 .sl-steps > li::before {
-  background-color: var(--pl-tomato);
+  background-color: var(--pl-tomato-strong);
   color: var(--pl-on-tomato);
   font-weight: 800;
   box-shadow: none;
@@ -94,28 +96,35 @@ h1#_top {
   display: none;
 }
 
+/* Each kind of aside takes the color that does the same job in the app. */
 .starlight-aside--note {
-  --sl-color-asides-text-accent: var(--pl-olive-ink);
-  --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-olive) 30%, transparent);
-  background-color: var(--pl-olive-soft);
-}
-
-.starlight-aside--tip {
+  /* A gentle notice: saffron. */
   --sl-color-asides-text-accent: var(--pl-saffron-ink);
   --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-saffron) 40%, transparent);
   background-color: var(--pl-saffron-soft);
 }
 
-.starlight-aside--caution {
-  --sl-color-asides-text-accent: var(--pl-plum-ink);
-  --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-plum) 30%, transparent);
-  background-color: var(--pl-plum-soft);
+.starlight-aside--tip {
+  /* Something to try: olive, the color of things going well. */
+  --sl-color-asides-text-accent: var(--pl-olive-ink);
+  --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-olive) 35%, transparent);
+  background-color: var(--pl-olive-soft);
 }
 
+.starlight-aside--caution,
 .starlight-aside--danger {
+  /* Something that cannot be taken back: tomato. */
   --sl-color-asides-text-accent: var(--pl-tomato-ink);
   --sl-color-asides-border-soft: color-mix(in srgb, var(--pl-tomato) 35%, transparent);
   background-color: var(--pl-tomato-soft);
+}
+
+.starlight-aside--danger {
+  border-width: 2px;
+}
+
+.starlight-aside a {
+  color: inherit;
 }
 
 /* Tables read like a bill: hairlines, tabular figures, no zebra. */
@@ -156,11 +165,11 @@ h1#_top {
   color: var(--sl-color-white);
 }
 
-/* Sidebar: current page gets a saffron pill, like the app's tab bar. */
+/* Sidebar: the current page is lit in tomato, like the selected tab in the app. */
 .sidebar-content a[aria-current='page'],
 .sidebar-content a[aria-current='page']:hover {
-  background: var(--pl-saffron-soft);
-  color: var(--sl-color-white);
+  background: var(--pl-tomato-soft);
+  color: var(--pl-tomato-ink);
   font-weight: 650;
   border-radius: 999px;
 }
@@ -187,4 +196,14 @@ h1#_top {
   font-family: var(--pl-font-display);
   font-size: 1.5rem;
   color: var(--sl-color-white);
+}
+
+/* Wide tables (four columns or more) keep readable columns and scroll sideways on a phone,
+   instead of squeezing every cell down to one word a line. */
+.sl-markdown-content table:has(th:nth-child(4)):not(:where(.not-content *)) :is(th, td) {
+  min-width: 8.5rem;
+}
+
+.sl-markdown-content table:not(:where(.not-content *)):focus-visible {
+  outline-offset: 4px;
 }

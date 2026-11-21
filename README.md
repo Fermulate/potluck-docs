@@ -28,8 +28,9 @@ The build fails if any internal link or `#anchor` points nowhere ([starlight-lin
 | --- | --- |
 | `src/content/docs/` | One `.mdx` file per page. The file path is the URL. |
 | `src/components/Screenshot.astro` | Shows an app screenshot that matches the reader's theme. |
-| `src/components/` | The landing hero, the page menu, the header title and the footer. |
-| `src/styles/` | Fonts, the Supper Club colors, and type. |
+| `src/components/` | The landing hero, the first steps card, the jump list, the page menu, the color key, the header title and the footer. |
+| `src/styles/` | Fonts, the Supper Club colors, and type. The colors follow `packages/tokens/src/color.ts` in the app repo. |
+| `src/content/docs/404.mdx` | The guide's own not-found page. |
 | `public/screenshots/` | Real screenshots from the app, phone and desktop, light and dark. |
 | `astro.config.mjs` | Site settings and the sidebar. |
 
