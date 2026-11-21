@@ -5,13 +5,11 @@
  * the app's tablecloth, and this card is the only place the guide uses it.
  */
 interface Props {
-  /** Heading level for the card title, so it fits the page outline. */
-  as?: 'h2' | 'h3'
   /** Adds a line for readers who have not signed up yet. */
   signUpHint?: boolean
 }
 
-const { as: Heading = 'h2', signUpHint = false } = Astro.props
+const { signUpHint = false } = Astro.props
 
 const steps = [
   {
@@ -35,7 +33,7 @@ const steps = [
 <section class="pl-first not-content" aria-labelledby="pl-first-title">
   <div class="pl-first__cloth" aria-hidden="true"></div>
   <div class="pl-first__body">
-    <Heading id="pl-first-title" class="pl-first__title">Set the table</Heading>
+    <h2 id="pl-first-title" class="pl-first__title">Set the table</h2>
     <p class="pl-first__lede">Three small steps and Potluck starts keeping the tab.</p>
     <ol>
       {

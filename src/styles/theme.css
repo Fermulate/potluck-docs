@@ -2,7 +2,7 @@
  * Supper Club, the Potluck look: paper and ink, and a picnic set of three colors with
  * one job each. Tomato is the thing to press or follow, money you owe and anything that
  * cannot be undone, olive is money coming back and things that went well, saffron is
- * plans, dates and gentle notices. Plum stays a quiet accent.
+ * plans, dates and gentle notices.
  * Values follow packages/tokens/src/color.ts in the app repo.
  */
 
@@ -28,16 +28,11 @@
   --pl-olive: #8fc46a;
   --pl-olive-ink: #a8d587;
   --pl-olive-soft: #1f2b17;
-  --pl-on-olive: #14110e;
-  --pl-plum: #c79bd0;
-  --pl-plum-ink: #d6b3dc;
-  --pl-plum-soft: #2d2030;
 
   /* The balance hero turns into a lit paper slip in the dark. */
   --pl-hero: #f3e9d8;
   --pl-on-hero: #1d1a16;
   --pl-hero-mute: #6c6152;
-  --pl-hero-tomato: #b23a22;
   /* The primary button on the hero slip, the same tomato on either slip. */
   --pl-hero-action: #d63f25;
   --pl-on-hero-action: #ffffff;
@@ -81,9 +76,9 @@
   --sl-color-red-low: var(--pl-tomato-soft);
   --sl-color-red: var(--pl-tomato);
   --sl-color-red-high: var(--pl-tomato-ink);
-  --sl-color-purple-low: var(--pl-plum-soft);
-  --sl-color-purple: var(--pl-plum);
-  --sl-color-purple-high: var(--pl-plum-ink);
+  --sl-color-purple-low: var(--pl-olive-soft);
+  --sl-color-purple: var(--pl-olive);
+  --sl-color-purple-high: var(--pl-olive-ink);
   --sl-color-blue-low: var(--pl-olive-soft);
   --sl-color-blue: var(--pl-olive);
   --sl-color-blue-high: var(--pl-olive-ink);
@@ -103,7 +98,7 @@
   --pl-line-strong: #d8cab3;
 
   --pl-tomato: #e8492f;
-  --pl-tomato-strong: #cf3d24;
+  --pl-tomato-strong: #d63f25;
   --pl-tomato-ink: #bc3720;
   --pl-tomato-soft: #fde4da;
   --pl-on-tomato: #ffffff;
@@ -113,15 +108,10 @@
   --pl-olive: #4a8431;
   --pl-olive-ink: #3a6f24;
   --pl-olive-soft: #e4f0d9;
-  --pl-on-olive: #ffffff;
-  --pl-plum: #6b3d6e;
-  --pl-plum-ink: #6b3d6e;
-  --pl-plum-soft: #f1e4ef;
 
   --pl-hero: #1d1a16;
   --pl-on-hero: #fbf5ea;
   --pl-hero-mute: #b9ad9c;
-  --pl-hero-tomato: #ff7a5c;
   --pl-hero-action: #d63f25;
   --pl-on-hero-action: #ffffff;
 
@@ -160,9 +150,9 @@
   --sl-color-red-low: var(--pl-tomato-soft);
   --sl-color-red: var(--pl-tomato);
   --sl-color-red-high: var(--pl-tomato-ink);
-  --sl-color-purple-low: var(--pl-plum-soft);
-  --sl-color-purple: var(--pl-plum);
-  --sl-color-purple-high: var(--pl-plum-ink);
+  --sl-color-purple-low: var(--pl-olive-soft);
+  --sl-color-purple: var(--pl-olive);
+  --sl-color-purple-high: var(--pl-olive-ink);
   --sl-color-blue-low: var(--pl-olive-soft);
   --sl-color-blue: var(--pl-olive);
   --sl-color-blue-high: var(--pl-olive-ink);
