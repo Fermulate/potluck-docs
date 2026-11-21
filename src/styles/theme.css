@@ -1,5 +1,8 @@
 /*
- * Supper Club, the Potluck look: paper and ink, a splash of tomato and saffron.
+ * Supper Club, the Potluck look: paper and ink, and a picnic set of three colors with
+ * one job each. Tomato is the thing to press or follow, money you owe and anything that
+ * cannot be undone, olive is money coming back and things that went well, saffron is
+ * plans, dates and gentle notices.
  * Values follow packages/tokens/src/color.ts in the app repo.
  */
 
@@ -14,24 +17,25 @@
   --pl-line-strong: #4a4037;
 
   --pl-tomato: #ff6a4d;
+  /* Tomato as a filled surface under text (buttons, counters). */
+  --pl-tomato-strong: #ff6a4d;
   --pl-tomato-ink: #ff8a70;
   --pl-tomato-soft: #3b1f18;
   --pl-on-tomato: #1d1a16;
   --pl-saffron: #ffc65c;
   --pl-saffron-ink: #ffc65c;
   --pl-saffron-soft: #382c15;
-  --pl-olive: #8fb062;
-  --pl-olive-ink: #a6c47c;
-  --pl-olive-soft: #222a18;
-  --pl-plum: #c79bd0;
-  --pl-plum-ink: #d6b3dc;
-  --pl-plum-soft: #2d2030;
+  --pl-olive: #8fc46a;
+  --pl-olive-ink: #a8d587;
+  --pl-olive-soft: #1f2b17;
 
   /* The balance hero turns into a lit paper slip in the dark. */
   --pl-hero: #f3e9d8;
   --pl-on-hero: #1d1a16;
   --pl-hero-mute: #6c6152;
-  --pl-hero-tomato: #b23a22;
+  /* The primary button on the hero slip, the same tomato on either slip. */
+  --pl-hero-action: #d63f25;
+  --pl-on-hero-action: #ffffff;
 
   --pl-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.7);
   --pl-radius-card: 18px;
@@ -47,7 +51,7 @@
   --sl-color-black: var(--pl-paper);
 
   --sl-color-accent-low: var(--pl-tomato-soft);
-  --sl-color-accent: var(--pl-tomato);
+  --sl-color-accent: var(--pl-tomato-strong);
   --sl-color-accent-high: var(--pl-tomato-ink);
 
   --sl-color-text: var(--sl-color-gray-2);
@@ -57,7 +61,7 @@
   --sl-color-bg-nav: var(--pl-paper);
   --sl-color-bg-sidebar: var(--pl-paper);
   --sl-color-bg-inline-code: var(--pl-card);
-  --sl-color-bg-accent: var(--pl-tomato);
+  --sl-color-bg-accent: var(--pl-tomato-strong);
   --sl-color-hairline-light: var(--pl-line);
   --sl-color-hairline: var(--pl-line);
   --sl-color-hairline-shade: var(--pl-sunken);
@@ -72,9 +76,9 @@
   --sl-color-red-low: var(--pl-tomato-soft);
   --sl-color-red: var(--pl-tomato);
   --sl-color-red-high: var(--pl-tomato-ink);
-  --sl-color-purple-low: var(--pl-plum-soft);
-  --sl-color-purple: var(--pl-plum);
-  --sl-color-purple-high: var(--pl-plum-ink);
+  --sl-color-purple-low: var(--pl-olive-soft);
+  --sl-color-purple: var(--pl-olive);
+  --sl-color-purple-high: var(--pl-olive-ink);
   --sl-color-blue-low: var(--pl-olive-soft);
   --sl-color-blue: var(--pl-olive);
   --sl-color-blue-high: var(--pl-olive-ink);
@@ -94,23 +98,22 @@
   --pl-line-strong: #d8cab3;
 
   --pl-tomato: #e8492f;
+  --pl-tomato-strong: #d63f25;
   --pl-tomato-ink: #bc3720;
   --pl-tomato-soft: #fde4da;
   --pl-on-tomato: #ffffff;
   --pl-saffron: #f5b53d;
   --pl-saffron-ink: #8f5c00;
   --pl-saffron-soft: #fdf0d4;
-  --pl-olive: #5f7a3a;
-  --pl-olive-ink: #4f6a2c;
-  --pl-olive-soft: #e9eedd;
-  --pl-plum: #6b3d6e;
-  --pl-plum-ink: #6b3d6e;
-  --pl-plum-soft: #f1e4ef;
+  --pl-olive: #4a8431;
+  --pl-olive-ink: #3a6f24;
+  --pl-olive-soft: #e4f0d9;
 
   --pl-hero: #1d1a16;
   --pl-on-hero: #fbf5ea;
   --pl-hero-mute: #b9ad9c;
-  --pl-hero-tomato: #ff7a5c;
+  --pl-hero-action: #d63f25;
+  --pl-on-hero-action: #ffffff;
 
   --pl-shadow: 0 18px 40px -20px rgb(80 52 20 / 0.35);
 
@@ -125,7 +128,7 @@
   --sl-color-black: var(--pl-paper);
 
   --sl-color-accent-low: var(--pl-tomato-soft);
-  --sl-color-accent: var(--pl-tomato);
+  --sl-color-accent: var(--pl-tomato-strong);
   --sl-color-accent-high: var(--pl-tomato-ink);
 
   --sl-color-text-accent: var(--pl-tomato-ink);
@@ -133,7 +136,7 @@
   --sl-color-bg-nav: var(--pl-paper);
   --sl-color-bg-sidebar: var(--pl-paper);
   --sl-color-bg-inline-code: var(--pl-sunken);
-  --sl-color-bg-accent: var(--pl-tomato-ink);
+  --sl-color-bg-accent: var(--pl-tomato-strong);
   --sl-color-hairline-light: var(--pl-line);
   --sl-color-hairline-shade: var(--pl-line);
   --sl-color-backdrop-overlay: rgb(29 26 22 / 0.42);
@@ -147,9 +150,9 @@
   --sl-color-red-low: var(--pl-tomato-soft);
   --sl-color-red: var(--pl-tomato);
   --sl-color-red-high: var(--pl-tomato-ink);
-  --sl-color-purple-low: var(--pl-plum-soft);
-  --sl-color-purple: var(--pl-plum);
-  --sl-color-purple-high: var(--pl-plum-ink);
+  --sl-color-purple-low: var(--pl-olive-soft);
+  --sl-color-purple: var(--pl-olive);
+  --sl-color-purple-high: var(--pl-olive-ink);
   --sl-color-blue-low: var(--pl-olive-soft);
   --sl-color-blue: var(--pl-olive);
   --sl-color-blue-high: var(--pl-olive-ink);

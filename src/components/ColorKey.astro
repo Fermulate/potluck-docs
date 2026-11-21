@@ -1,0 +1,67 @@
+---
+// What each color means in the app, as a small key. The swatches use the same values as the app.
+const colors = [
+  { tone: 'tomato', name: 'Red', job: 'the thing to press: the main button on a screen, the + button, the tab you are on. It is also money you owe, anything that deletes, and the badge that counts what you have not read.' },
+  { tone: 'olive', name: 'Green', job: 'money owed to you or that you lent, and things that went through.' },
+  { tone: 'saffron', name: 'Yellow', job: 'plans, date chips, highlights and gentle notices.' },
+  { tone: 'mute', name: 'Grey', job: 'settled up, or nothing owed either way.' },
+]
+---
+
+<ul class="pl-key not-content">
+  {
+    colors.map((c) => (
+      <li>
+        <span class={`pl-key__dot pl-key__dot--${c.tone}`} aria-hidden="true" />
+        <span>
+          <strong>{c.name}</strong> is {c.job}
+        </span>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .pl-key {
+    list-style: none;
+    margin: 1.25rem 0;
+    padding: 0.35rem 1.1rem;
+    border: 1px solid var(--pl-line);
+    border-radius: var(--pl-radius-card);
+    background: var(--pl-card);
+    color: var(--sl-color-text);
+  }
+  li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    padding: 0.6rem 0;
+    line-height: 1.5;
+  }
+  li + li {
+    border-top: 1px solid var(--pl-line);
+  }
+  strong {
+    color: var(--pl-ink);
+    font-weight: 650;
+  }
+  .pl-key__dot {
+    flex-shrink: 0;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 999px;
+    transform: translateY(0.1rem);
+  }
+  .pl-key__dot--tomato {
+    background: var(--pl-tomato);
+  }
+  .pl-key__dot--olive {
+    background: var(--pl-olive);
+  }
+  .pl-key__dot--saffron {
+    background: var(--pl-saffron);
+  }
+  .pl-key__dot--mute {
+    background: var(--pl-mute);
+  }
+</style>

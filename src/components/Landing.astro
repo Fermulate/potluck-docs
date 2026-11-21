@@ -1,0 +1,26 @@
+---
+// Under the hero: the two ways into the guide, side by side. New readers get the first steps,
+// returning readers get a short list of the jobs they come back for.
+import FirstSteps from './FirstSteps.astro'
+import JumpList from './JumpList.astro'
+---
+
+<div class="pl-ways not-content">
+  <FirstSteps signUpHint />
+  <JumpList />
+</div>
+
+<style>
+  .pl-ways {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    align-items: start;
+  }
+  @media (min-width: 50rem) {
+    .pl-ways {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 3.5rem;
+    }
+  }
+</style>
