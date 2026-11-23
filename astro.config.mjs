@@ -69,7 +69,14 @@ export default defineConfig({
         { label: 'Balances', items: ['balances', 'balances/settle-up'] },
         {
           label: 'Plans',
-          items: ['plans', 'plans/availability', 'plans/best-time', 'plans/lock-in', 'plans/timeline'],
+          items: [
+            'plans',
+            'plans/availability',
+            'plans/best-time',
+            'plans/lock-in',
+            'plans/timeline',
+            'plans/quick-polls',
+          ],
         },
         { label: 'You', items: ['notifications', 'account', 'privacy-and-security'] },
         { label: 'Help', items: ['faq', 'troubleshooting'] },
