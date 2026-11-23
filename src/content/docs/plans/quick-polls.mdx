@@ -1,0 +1,143 @@
+---
+title: Quick polls
+description: Find a time with anyone, no account needed. Make a poll, send the link, and see when everyone is free.
+---
+
+import { Steps } from '@astrojs/starlight/components'
+
+A quick poll finds a time with a few people, and nobody needs an account, not even you. You pick the days and hours, send a link, and everyone paints when they are free on the same kind of grid as a [plan](/plans/). Everyone with the link sees everyone's times.
+
+A quick poll is not part of any group. It does not show up on **Plans** or Home, even if you are signed in. It ends after 24 hours or 7 days, and then Potluck deletes it with every answer.
+
+## When to use a quick poll
+
+Use a quick poll when all you need is a time:
+
+- the people are not in a Potluck group, or not on Potluck at all,
+- it is a one-off, like a call or a single dinner,
+- nobody wants to sign up.
+
+Use a [plan](/plans/#start-a-poll) when the time is for your group. A plan stays with the group, and once you [lock in](/plans/lock-in/) a time, people RSVP and it goes on the calendar. A quick poll does none of that. To let a few people from outside the group answer a plan, share a [guest link](/plans/availability/#guest-links). Guests on a plan see only how many people are free at each time, never who. In a quick poll, everyone sees everyone's answers.
+
+## Make a quick poll
+
+<Steps>
+
+1. Open [Potluck](https://potluck.fermulate.com) and tap **Find a time, no sign-up**. Further down the same page, **Or start with a quick poll, no account needed** opens it too.
+
+2. Under **What is it for?**, give the poll a title if you like, up to 80 characters. Without one, it is called **Find a time**.
+
+3. Under **When could it be?**, set:
+   - **First day** and **Last day**. Potluck starts with tomorrow through a week from today. A poll covers 1 to 14 days, starting today at the earliest.
+   - **From** and **To**: the hours of each day people can choose from. The default is 10 AM to 10 PM.
+   - **How long?**: how long the get-together lasts, from 30 minutes to 12 hours. The default is 1 hour.
+
+   The grid always has 30-minute cells. Times are in your time zone, and the form says which one. People in other time zones see the poll in their own local time.
+
+4. Check the settings under [More options](#more-options). Its summary line shows them, for example **Names on, up to 10 people, open for 7 days**.
+
+5. Tap **Create poll**.
+
+</Steps>
+
+The poll opens with **Your poll is ready** at the top. [Send the link](#share-the-link), then add your own times below it.
+
+:::note[Signed in?]
+Potluck's front page takes you to Home when you are signed in. To make a quick poll, go to potluck.fermulate.com/poll instead.
+:::
+
+### More options
+
+Tap **More options** to change three settings:
+
+- **Ask for names** is on by default. Each person types a name, and everyone sees who is free when. Turn it off for anonymous answers. People then show up as **Anonymous 1**, **Anonymous 2** and so on, in the order they answered.
+- **People who can answer** is 2 to 15, and 10 by default. The number includes you, once you add your own times. Change it with the minus and plus buttons.
+- **Poll stays open for** is **24 hours** or **7 days**, and 7 days by default. The time starts when you make the poll.
+
+The line under **Create poll** repeats it: **When the poll ends, it is deleted with every answer.**
+
+You cannot change the title, the days or these settings after you make the poll. To change them, delete the poll and make a new one.
+
+## Share the link
+
+The link is the only way into a poll. Send it to everyone you want to ask.
+
+- **Copy link** copies it, and Potluck says **Poll link copied**.
+- **Share** opens your device's share sheet with a short message and the link. It appears only on devices that have a share sheet, like most phones.
+
+Both buttons stay at the top of the poll for everyone who opens it, so anyone with the link can pass it on.
+
+## Add your times
+
+The poll shows its title, the days, how long the get-together lasts, how many people have answered (for example **3 of 10 answered**), and when it closes, after **Open until**.
+
+<Steps>
+
+1. Under **When are you free?**, paint the times that work for you with the **Free** and **Maybe** brushes. **Erase** clears cells. Painting works the same way as on a plan, with a mouse, a finger or the keyboard. See [Paint your times](/plans/availability/#paint-your-times).
+
+2. If the poll asks for names, type yours under **Your name**, up to 40 characters. Everyone in the poll sees it. An anonymous poll has no name field and says **Answers are anonymous.**
+
+3. Tap **Send my times**.
+
+</Steps>
+
+Unlike a plan, a quick poll does not save as you paint. Nothing is sent until you tap **Send my times**. Your first answer needs at least one painted time, or Potluck says **Paint at least one time first.**
+
+Potluck then says **Thanks, Sam. You are on the list.** with your name. On an anonymous poll it says **Thanks. You are on the list as Anonymous 3.**
+
+### Change your times
+
+Open the link again in the same browser on the same device and tap **Change my times**. Paint, then tap **Update my times**. **Keep my times** leaves them as they were. You can change your times until the poll closes or ends.
+
+Your browser remembers which answer is yours. In another browser, on another device, or after you clear this browser's site data, Potluck cannot tell it is you. An answer from there counts as a new person and takes another spot.
+
+## Read the results
+
+Anyone who opens the link sees the results, whether or not they have answered. The results refresh by themselves while the page is on screen. Until someone answers, the poll says **Nobody has answered yet**.
+
+- **Best times** ranks the start times. The **Best bet** comes first, with **Runners up** under it. Each one says how many people can make it, like **3 yes, 1 maybe**, and who would miss out, like **Without Kai**. The rules are the same as on a plan (see [How best times are ranked](/plans/best-time/)), except that a quick poll has no minimum number of people. Nobody can lock in a time from a quick poll.
+- **Everyone** is the heatmap of all the answers. A cell gets warmer the more people are free then, from **Nobody** to **Everyone**. Hover over or tap a cell to see who is free, by name or as **Anonymous 2**. Cells you painted carry a small dot. See [The live heatmap](/plans/availability/#the-live-heatmap).
+
+## Close or delete your poll
+
+The browser you made the poll in shows **Your poll** with two buttons. Potluck asks before doing either one.
+
+- **Close poll** stops all new answers and changes. Everyone with the link still sees the results until the poll ends, and the poll says the times are final. You cannot open a closed poll again.
+- **Delete poll** removes the poll and every answer for everyone, right away. It cannot be undone. You land back on **Find a time**.
+
+Only the browser you made the poll in can close or delete it, because without an account that browser is the only proof the poll is yours. If you clear its site data or switch devices, you can no longer close or delete the poll. It still ends on its own when its time is up.
+
+Nobody can remove one person's answer. To clear the answers, delete the poll.
+
+## When a poll stops taking answers
+
+- **Full.** When every spot is taken, the poll says **This poll is full** to new visitors and shows them the results. People who already answered can still change their times.
+- **Closed.** Once the person who made it closes it, the poll says **This poll is closed**, and nobody can add or change times. The results stay up until the poll ends, and the poll shows that date after **Results stay up until**.
+- **Ended.** When its 24 hours or 7 days are up, the link shows **This poll has ended** and no answers. Within the hour, Potluck deletes the poll with every answer. Nobody can get them back.
+
+If the poll fills up, closes or ends while you are still painting, the page says **Your times were not saved.**
+
+A link that leads to no poll, for example after the poll is deleted, shows **No poll here**. It and **This poll has ended** both have a **Make a new poll** button.
+
+## Limits
+
+| What | Limit |
+| --- | --- |
+| People who can answer | 2 to 15, 10 by default, you included |
+| Days to choose from | 1 to 14 |
+| Grid | 30-minute cells |
+| How long the get-together lasts | 30 minutes to 12 hours |
+| How long the poll stays open | 24 hours or 7 days, then it is deleted |
+| Title | Up to 80 characters, optional |
+| Name | Up to 40 characters |
+
+Potluck also limits how many polls can be made in an hour. If you reach the limit, it says **Easy there. Try again a little later.** Deleting a poll does not make room under the limit.
+
+## Who can see a quick poll
+
+- **Anyone with the link** sees the title, the days, every name and every painted time, until the poll ends. Send the link only to people you are happy to show that to, and remember that they can pass it on.
+- **No accounts.** Nobody signs in to make or answer a quick poll. A poll is not tied to anyone's account, even when they are signed in. On an anonymous poll, Potluck stores no names at all.
+- **Not in search results.** Poll pages tell search engines not to list them.
+- **What your browser keeps.** For each poll you make or answer, your browser keeps a private key that shows the answer is yours, and the name you typed. For the person who made the poll, the same key closes and deletes it. Potluck's servers keep only a scrambled (hashed) copy of the key.
+- **Your IP address.** When you make a poll, Potluck keeps a scrambled (hashed) copy of your IP address for up to two hours, to count how many polls are made from one place. It is not stored with the poll, and nobody in the app can see it.
+- **Deleted at the end.** When the poll ends, or when you delete it, Potluck deletes the poll and every answer.
